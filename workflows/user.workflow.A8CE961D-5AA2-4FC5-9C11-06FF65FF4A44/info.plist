@@ -5,7 +5,34 @@
 	<key>bundleid</key>
 	<string>com.linenisgreat.gitup</string>
 	<key>connections</key>
-	<dict/>
+	<dict>
+		<key>3F38EF2A-4BC4-45BB-AEEA-24F2D0069888</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F91D47E7-65D1-40D2-957C-5E9F7082CC89</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EA398042-DE81-4BF6-84F7-7785A54AC31B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3F38EF2A-4BC4-45BB-AEEA-24F2D0069888</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
 	<key>createdby</key>
 	<string></string>
 	<key>description</key>
@@ -16,6 +43,50 @@
 	<string>Gitup</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>gitpull.bash</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>3F38EF2A-4BC4-45BB-AEEA-24F2D0069888</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:ERROR}</string>
+				<key>title</key>
+				<string>{var:MESSAGE}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>F91D47E7-65D1-40D2-957C-5E9F7082CC89</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -37,45 +108,29 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>127</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>B4666BF7-7FD2-4AFA-B9AE-92FCBA43D088</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>B4666BF7-7FD2-4AFA-B9AE-92FCBA43D088</key>
+		<key>3F38EF2A-4BC4-45BB-AEEA-24F2D0069888</key>
 		<dict>
 			<key>xpos</key>
-			<integer>335</integer>
+			<integer>325</integer>
 			<key>ypos</key>
-			<integer>170</integer>
+			<integer>165</integer>
 		</dict>
 		<key>EA398042-DE81-4BF6-84F7-7785A54AC31B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>90</integer>
+			<integer>130</integer>
+			<key>ypos</key>
+			<integer>165</integer>
+		</dict>
+		<key>F91D47E7-65D1-40D2-957C-5E9F7082CC89</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<integer>165</integer>
 		</dict>
