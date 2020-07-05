@@ -120,6 +120,7 @@ dl dd {
 }
 
 blockquote, q {
+  background-color: red;
   border-left: 4px solid #DDD;
   padding: 0 1em;
   color: #777;
