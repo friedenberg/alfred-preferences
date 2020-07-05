@@ -32,11 +32,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>1F2A15EC-0D18-4773-B18C-3BD26F2DEA21</key>
+		<key>1DF8E1D4-385D-49E7-8AEB-9720C13E4CC7</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1935C395-948C-4D90-89D5-02585AEAA75B</string>
+				<string>863BBE33-9F79-49AE-BF0C-CFC77BE1BFE0</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -58,11 +58,50 @@
 				<false/>
 			</dict>
 		</array>
+		<key>4B591F17-9CCC-4AD7-8858-956471069F9E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CFA84F24-E60F-4DDC-81A5-F5D098A5DBCA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>863BBE33-9F79-49AE-BF0C-CFC77BE1BFE0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1935C395-948C-4D90-89D5-02585AEAA75B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>946E48D0-BE12-45D6-8399-0A7399E33206</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>D65771B0-94B6-4C25-8B34-AD38CA36820A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>95EF07F3-7BB8-4B73-99A4-F52432776C1F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1DF8E1D4-385D-49E7-8AEB-9720C13E4CC7</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -97,6 +136,35 @@
 				<false/>
 			</dict>
 		</array>
+		<key>CFA84F24-E60F-4DDC-81A5-F5D098A5DBCA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>95EF07F3-7BB8-4B73-99A4-F52432776C1F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>5EBA3071-8BDD-4A8E-B380-46C5162A08B9</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D13BDD21-2C6B-4053-BB45-F0C79157C1AC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>E8BAF583-B94F-4DD6-9D51-9D3DBAAD1482</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D13BDD21-2C6B-4053-BB45-F0C79157C1AC</key>
+		<array/>
 		<key>E3B4E655-675B-41F1-8660-407A06B87200</key>
 		<array>
 			<dict>
@@ -127,7 +195,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1F2A15EC-0D18-4773-B18C-3BD26F2DEA21</string>
+				<string>4B591F17-9CCC-4AD7-8858-956471069F9E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -173,6 +241,23 @@
 	<string>Snippets</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
+				<string>t</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>EEA01FF2-A88B-49FF-96FA-1CF9C8697C99</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -224,23 +309,6 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<string>F3859476-8DFC-454E-80B2-64C6C6CBE477</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>keyword</key>
-				<string>t</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.snippet</string>
-			<key>uid</key>
-			<string>EEA01FF2-A88B-49FF-96FA-1CF9C8697C99</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -311,27 +379,6 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>s</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Capitalize Snippet</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>16EC1EC1-F669-470B-9136-572474CC5123</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -380,6 +427,27 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<string>3A8308B7-BA65-4662-9C74-270BA0B1BEC5</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>s</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Capitalize Snippet</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>16EC1EC1-F669-470B-9136-572474CC5123</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -450,6 +518,63 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>command.bash</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>863BBE33-9F79-49AE-BF0C-CFC77BE1BFE0</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string></string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>1DF8E1D4-385D-49E7-8AEB-9720C13E4CC7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>95EF07F3-7BB8-4B73-99A4-F52432776C1F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
@@ -481,49 +606,73 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>2</integer>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
+				<key>fixedorder</key>
+				<false/>
+				<key>items</key>
+				<string>[{"title":"Run command","arg":"command","subtitle":""},{"title":"Convert Markdown to RTF","arg":"markdown-to-rtf"}]</string>
 				<key>runningsubtext</key>
 				<string></string>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>sed.rb</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Run a terminal command</string>
-				<key>type</key>
-				<integer>8</integer>
+				<string></string>
 				<key>withspace</key>
 				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.input.listfilter</string>
 			<key>uid</key>
-			<string>1F2A15EC-0D18-4773-B18C-3BD26F2DEA21</string>
+			<string>4B591F17-9CCC-4AD7-8858-956471069F9E</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>command</string>
+						<key>outputlabel</key>
+						<string>command</string>
+						<key>uid</key>
+						<string>5EBA3071-8BDD-4A8E-B380-46C5162A08B9</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>markdown-to-rtf</string>
+						<key>outputlabel</key>
+						<string>markdown-to-rtf</string>
+						<key>uid</key>
+						<string>E8BAF583-B94F-4DD6-9D51-9D3DBAAD1482</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>CFA84F24-E60F-4DDC-81A5-F5D098A5DBCA</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -532,7 +681,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<string></string>
 				<key>variables</key>
 				<dict>
-					<key>input</key>
+					<key>INPUT</key>
 					<string>{query}</string>
 				</dict>
 			</dict>
@@ -549,23 +698,39 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>102</integer>
+				<integer>0</integer>
 				<key>script</key>
-				<string>curl -OL https://www.sashafriedenberg.com/resume
-osascript -e 'tell app "Finder" to set the clipboard to ( POSIX file "resume" )'</string>
+				<string></string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string></string>
+				<string>markdown-to-formatted-text.bash</string>
 				<key>type</key>
-				<integer>0</integer>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>E3B4E655-675B-41F1-8660-407A06B87200</string>
+			<string>D13BDD21-2C6B-4053-BB45-F0C79157C1AC</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
+				<string>r</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>9AAB7F05-208A-430F-86AD-2950FC5102C5</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -595,19 +760,26 @@ osascript -e 'tell app "Finder" to set the clipboard to ( POSIX file "resume" )'
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>focusedappvariable</key>
+				<key>concurrently</key>
 				<false/>
-				<key>focusedappvariablename</key>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>curl -OL https://www.sashafriedenberg.com/resume
+osascript -e 'tell app "Finder" to set the clipboard to ( POSIX file "resume" )'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
 				<string></string>
-				<key>keyword</key>
-				<string>r</string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.snippet</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>9AAB7F05-208A-430F-86AD-2950FC5102C5</string>
+			<string>E3B4E655-675B-41F1-8660-407A06B87200</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -652,105 +824,140 @@ osascript -e 'tell app "Finder" to set the clipboard to ( POSIX file "resume" )'
 		<key>16EC1EC1-F669-470B-9136-572474CC5123</key>
 		<dict>
 			<key>xpos</key>
-			<integer>135</integer>
+			<integer>280</integer>
 			<key>ypos</key>
 			<integer>390</integer>
 		</dict>
 		<key>1703B780-0EF6-4696-814C-C7DD881E75A7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>345</integer>
+			<integer>495</integer>
 			<key>ypos</key>
-			<integer>1060</integer>
+			<integer>1340</integer>
 		</dict>
 		<key>1935C395-948C-4D90-89D5-02585AEAA75B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>565</integer>
+			<integer>950</integer>
 			<key>ypos</key>
-			<integer>550</integer>
+			<integer>545</integer>
 		</dict>
-		<key>1F2A15EC-0D18-4773-B18C-3BD26F2DEA21</key>
+		<key>1DF8E1D4-385D-49E7-8AEB-9720C13E4CC7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>345</integer>
+			<integer>615</integer>
 			<key>ypos</key>
-			<integer>715</integer>
+			<integer>670</integer>
 		</dict>
 		<key>3A8308B7-BA65-4662-9C74-270BA0B1BEC5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>345</integer>
+			<integer>565</integer>
 			<key>ypos</key>
 			<integer>390</integer>
+		</dict>
+		<key>4B591F17-9CCC-4AD7-8858-956471069F9E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>245</integer>
+			<key>ypos</key>
+			<integer>740</integer>
+		</dict>
+		<key>863BBE33-9F79-49AE-BF0C-CFC77BE1BFE0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>760</integer>
+			<key>ypos</key>
+			<integer>670</integer>
 		</dict>
 		<key>946E48D0-BE12-45D6-8399-0A7399E33206</key>
 		<dict>
 			<key>xpos</key>
-			<integer>345</integer>
+			<integer>490</integer>
 			<key>ypos</key>
 			<integer>220</integer>
+		</dict>
+		<key>95EF07F3-7BB8-4B73-99A4-F52432776C1F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>550</integer>
+			<key>ypos</key>
+			<integer>700</integer>
 		</dict>
 		<key>9AAB7F05-208A-430F-86AD-2950FC5102C5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>105</integer>
+			<integer>255</integer>
 			<key>ypos</key>
-			<integer>895</integer>
+			<integer>1175</integer>
 		</dict>
 		<key>C4786F88-E720-4DBE-A941-A7C2AA9C02FB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>345</integer>
+			<integer>615</integer>
 			<key>ypos</key>
-			<integer>550</integer>
+			<integer>545</integer>
 		</dict>
 		<key>C846FE09-8F1D-4EAA-8D42-4E436AF2B142</key>
 		<dict>
 			<key>xpos</key>
-			<integer>565</integer>
+			<integer>715</integer>
 			<key>ypos</key>
-			<integer>895</integer>
+			<integer>1175</integer>
+		</dict>
+		<key>CFA84F24-E60F-4DDC-81A5-F5D098A5DBCA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>405</integer>
+			<key>ypos</key>
+			<integer>745</integer>
+		</dict>
+		<key>D13BDD21-2C6B-4053-BB45-F0C79157C1AC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>615</integer>
+			<key>ypos</key>
+			<integer>800</integer>
 		</dict>
 		<key>D65771B0-94B6-4C25-8B34-AD38CA36820A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>565</integer>
+			<integer>710</integer>
 			<key>ypos</key>
 			<integer>140</integer>
 		</dict>
 		<key>E3B4E655-675B-41F1-8660-407A06B87200</key>
 		<dict>
 			<key>xpos</key>
-			<integer>345</integer>
+			<integer>495</integer>
 			<key>ypos</key>
-			<integer>895</integer>
+			<integer>1175</integer>
 		</dict>
 		<key>E9C2FF22-FF52-4016-9EB1-B1DA7C223AB9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>100</integer>
+			<integer>35</integer>
 			<key>ypos</key>
-			<integer>715</integer>
+			<integer>740</integer>
 		</dict>
 		<key>EA30A82A-D8FB-4EA9-9382-1264C0D9F383</key>
 		<dict>
 			<key>xpos</key>
-			<integer>270</integer>
+			<integer>180</integer>
 			<key>ypos</key>
-			<integer>745</integer>
+			<integer>770</integer>
 		</dict>
 		<key>EEA01FF2-A88B-49FF-96FA-1CF9C8697C99</key>
 		<dict>
 			<key>xpos</key>
-			<integer>135</integer>
+			<integer>280</integer>
 			<key>ypos</key>
 			<integer>60</integer>
 		</dict>
 		<key>F3859476-8DFC-454E-80B2-64C6C6CBE477</key>
 		<dict>
 			<key>xpos</key>
-			<integer>345</integer>
+			<integer>490</integer>
 			<key>ypos</key>
 			<integer>60</integer>
 		</dict>
