@@ -17,13 +17,11 @@ if [[ "$1" -ne 1 ]]; then
   exit $?
 fi
 
-PASTEBOARD="$(dirname "$0")/set-pasteboard.py"
+cd "$(dirname "$0")"
 
-RTF=$(echo "$INPUT" | pandoc -s --to rtf | "$PASTEBOARD" --rtf)
-
-CSS_FILE="$(dirname "$0")/style.css"
-HTML_COMMAND="pandoc --css $CSS_FILE -H $CSS_FILE --to html"
-HTML=$(echo "$INPUT" | $HTML_COMMAND | "$PASTEBOARD" --html)
+FILE_HTML_OUT="$(mktemp)"
+echo -n "$INPUT" | pandoc -H style.css -t html -o "$FILE_HTML_OUT"
+cat "$FILE_HTML_OUT" | ./set-pasteboard.py --html
 
 osascript -e "$(cat <<-EOM
 tell application "System Events"
