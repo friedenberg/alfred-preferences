@@ -17,5 +17,20 @@ if [[ "$1" -ne 1 ]]; then
   exit $?
 fi
 
-echo "$INPUT" | pandoc -s --to rtf | pbcopy
-osascript -e 'tell application "System Events" to tell (name of application processes whose frontmost is true) to keystroke "v" using command down'
+PASTEBOARD="$(dirname "$0")/set-pasteboard.py"
+
+RTF=$(echo "$INPUT" | pandoc -s --to rtf | "$PASTEBOARD" --rtf)
+
+CSS_FILE="$(dirname "$0")/style.css"
+HTML_COMMAND="pandoc --css $CSS_FILE -H $CSS_FILE --to html"
+HTML=$(echo "$INPUT" | $HTML_COMMAND | "$PASTEBOARD" --html)
+
+osascript -e "$(cat <<-EOM
+tell application "System Events"
+  tell (name of application processes whose frontmost is true)
+    keystroke "v" using command down
+  end tell
+end tell
+EOM
+)"
+
