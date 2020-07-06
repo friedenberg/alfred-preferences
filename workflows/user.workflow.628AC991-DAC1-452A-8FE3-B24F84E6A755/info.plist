@@ -6,6 +6,19 @@
 	<string></string>
 	<key>connections</key>
 	<dict>
+		<key>0E7675B2-E28D-4C24-AF3E-6A9E9F56102F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8DC2EDDE-FB37-4DC7-943B-A0A59E7C27B6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>16EC1EC1-F669-470B-9136-572474CC5123</key>
 		<array>
 			<dict>
@@ -76,6 +89,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>1935C395-948C-4D90-89D5-02585AEAA75B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8DC2EDDE-FB37-4DC7-943B-A0A59E7C27B6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E37AE8D1-4C45-4563-84F3-82C25F7812CC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -159,6 +185,18 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>E8BAF583-B94F-4DD6-9D51-9D3DBAAD1482</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>0E7675B2-E28D-4C24-AF3E-6A9E9F56102F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>B7FD2C8D-EAEA-4987-990A-B5E2129FD2FA</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -575,6 +613,64 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>command</string>
+						<key>outputlabel</key>
+						<string>command</string>
+						<key>uid</key>
+						<string>5EBA3071-8BDD-4A8E-B380-46C5162A08B9</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>markdown-to-rtf</string>
+						<key>outputlabel</key>
+						<string>markdown-to-rtf</string>
+						<key>uid</key>
+						<string>E8BAF583-B94F-4DD6-9D51-9D3DBAAD1482</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>vim-format</string>
+						<key>outputlabel</key>
+						<string>vim-format</string>
+						<key>uid</key>
+						<string>B7FD2C8D-EAEA-4987-990A-B5E2129FD2FA</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>CFA84F24-E60F-4DDC-81A5-F5D098A5DBCA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
@@ -613,7 +709,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"Run command","arg":"command","subtitle":""},{"title":"Convert Markdown to RTF","arg":"markdown-to-rtf"}]</string>
+				<string>[{"title":"Run command","arg":"command","subtitle":""},{"title":"Convert Markdown to RTF","arg":"markdown-to-rtf"},{"title":"Format with Vim","arg":"vim-format","subtitle":""}]</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>subtext</key>
@@ -627,50 +723,6 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<string>alfred.workflow.input.listfilter</string>
 			<key>uid</key>
 			<string>4B591F17-9CCC-4AD7-8858-956471069F9E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>command</string>
-						<key>outputlabel</key>
-						<string>command</string>
-						<key>uid</key>
-						<string>5EBA3071-8BDD-4A8E-B380-46C5162A08B9</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string></string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>markdown-to-rtf</string>
-						<key>outputlabel</key>
-						<string>markdown-to-rtf</string>
-						<key>uid</key>
-						<string>E8BAF583-B94F-4DD6-9D51-9D3DBAAD1482</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>else</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>CFA84F24-E60F-4DDC-81A5-F5D098A5DBCA</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -714,6 +766,91 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<string>D13BDD21-2C6B-4053-BB45-F0C79157C1AC</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>vim-format.bash</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E37AE8D1-4C45-4563-84F3-82C25F7812CC</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>vim-filetypes.php</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>8DC2EDDE-FB37-4DC7-943B-A0A59E7C27B6</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>0E7675B2-E28D-4C24-AF3E-6A9E9F56102F</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -821,19 +958,26 @@ osascript -e 'tell app "Finder" to set the clipboard to ( POSIX file "resume" )'
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>0E7675B2-E28D-4C24-AF3E-6A9E9F56102F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>375</integer>
+			<key>ypos</key>
+			<integer>955</integer>
+		</dict>
 		<key>16EC1EC1-F669-470B-9136-572474CC5123</key>
 		<dict>
 			<key>xpos</key>
-			<integer>280</integer>
+			<integer>405</integer>
 			<key>ypos</key>
-			<integer>390</integer>
+			<integer>415</integer>
 		</dict>
 		<key>1703B780-0EF6-4696-814C-C7DD881E75A7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>495</integer>
+			<integer>420</integer>
 			<key>ypos</key>
-			<integer>1340</integer>
+			<integer>1235</integer>
 		</dict>
 		<key>1935C395-948C-4D90-89D5-02585AEAA75B</key>
 		<dict>
@@ -852,23 +996,30 @@ osascript -e 'tell app "Finder" to set the clipboard to ( POSIX file "resume" )'
 		<key>3A8308B7-BA65-4662-9C74-270BA0B1BEC5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>565</integer>
+			<integer>615</integer>
 			<key>ypos</key>
-			<integer>390</integer>
+			<integer>415</integer>
 		</dict>
 		<key>4B591F17-9CCC-4AD7-8858-956471069F9E</key>
 		<dict>
 			<key>xpos</key>
 			<integer>245</integer>
 			<key>ypos</key>
-			<integer>740</integer>
+			<integer>755</integer>
 		</dict>
 		<key>863BBE33-9F79-49AE-BF0C-CFC77BE1BFE0</key>
 		<dict>
 			<key>xpos</key>
-			<integer>760</integer>
+			<integer>775</integer>
 			<key>ypos</key>
 			<integer>670</integer>
+		</dict>
+		<key>8DC2EDDE-FB37-4DC7-943B-A0A59E7C27B6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>615</integer>
+			<key>ypos</key>
+			<integer>925</integer>
 		</dict>
 		<key>946E48D0-BE12-45D6-8399-0A7399E33206</key>
 		<dict>
@@ -880,16 +1031,16 @@ osascript -e 'tell app "Finder" to set the clipboard to ( POSIX file "resume" )'
 		<key>95EF07F3-7BB8-4B73-99A4-F52432776C1F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>550</integer>
+			<integer>555</integer>
 			<key>ypos</key>
 			<integer>700</integer>
 		</dict>
 		<key>9AAB7F05-208A-430F-86AD-2950FC5102C5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>255</integer>
+			<integer>245</integer>
 			<key>ypos</key>
-			<integer>1175</integer>
+			<integer>1090</integer>
 		</dict>
 		<key>C4786F88-E720-4DBE-A941-A7C2AA9C02FB</key>
 		<dict>
@@ -901,9 +1052,9 @@ osascript -e 'tell app "Finder" to set the clipboard to ( POSIX file "resume" )'
 		<key>C846FE09-8F1D-4EAA-8D42-4E436AF2B142</key>
 		<dict>
 			<key>xpos</key>
-			<integer>715</integer>
+			<integer>615</integer>
 			<key>ypos</key>
-			<integer>1175</integer>
+			<integer>1090</integer>
 		</dict>
 		<key>CFA84F24-E60F-4DDC-81A5-F5D098A5DBCA</key>
 		<dict>
@@ -926,26 +1077,33 @@ osascript -e 'tell app "Finder" to set the clipboard to ( POSIX file "resume" )'
 			<key>ypos</key>
 			<integer>140</integer>
 		</dict>
+		<key>E37AE8D1-4C45-4563-84F3-82C25F7812CC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>775</integer>
+			<key>ypos</key>
+			<integer>925</integer>
+		</dict>
 		<key>E3B4E655-675B-41F1-8660-407A06B87200</key>
 		<dict>
 			<key>xpos</key>
-			<integer>495</integer>
+			<integer>420</integer>
 			<key>ypos</key>
-			<integer>1175</integer>
+			<integer>1090</integer>
 		</dict>
 		<key>E9C2FF22-FF52-4016-9EB1-B1DA7C223AB9</key>
 		<dict>
 			<key>xpos</key>
 			<integer>35</integer>
 			<key>ypos</key>
-			<integer>740</integer>
+			<integer>755</integer>
 		</dict>
 		<key>EA30A82A-D8FB-4EA9-9382-1264C0D9F383</key>
 		<dict>
 			<key>xpos</key>
 			<integer>180</integer>
 			<key>ypos</key>
-			<integer>770</integer>
+			<integer>785</integer>
 		</dict>
 		<key>EEA01FF2-A88B-49FF-96FA-1CF9C8697C99</key>
 		<dict>
