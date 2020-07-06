@@ -17,5 +17,5 @@ if [[ "$1" -ne 1 ]]; then
   exit $?
 fi
 
-cat ./test.md | pandoc -H style.css -t html -o test.html
+pandoc -H style.css -t html -o test.html < ./test.md
 open test.html

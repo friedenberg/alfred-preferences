@@ -1,4 +1,4 @@
 #! /bin/bash
 
-echo "$INPUT" | $*
+echo "$INPUT" | "$@"
 

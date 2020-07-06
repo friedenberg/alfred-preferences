@@ -17,11 +17,11 @@ if [[ "$1" -ne 1 ]]; then
   exit $?
 fi
 
-cd "$(dirname "$0")"
+cd "$(dirname "$0")" || exit 1
 
 FILE_HTML_OUT="$(mktemp)"
 echo -n "$INPUT" | tr '\240' ' ' | pandoc -H style.css -t html -o "$FILE_HTML_OUT"
-cat "$FILE_HTML_OUT" | ./set-pasteboard.py --html
+./set-pasteboard.py --html < "$FILE_HTML_OUT"
 
 osascript -e "$(cat <<-EOM
 tell application "System Events"
