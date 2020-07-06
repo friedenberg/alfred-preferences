@@ -20,7 +20,7 @@ fi
 cd "$(dirname "$0")"
 
 FILE_HTML_OUT="$(mktemp)"
-echo -n "$INPUT" | pandoc -H style.css -t html -o "$FILE_HTML_OUT"
+echo -n "$INPUT" | tr '\240' ' ' | pandoc -H style.css -t html -o "$FILE_HTML_OUT"
 cat "$FILE_HTML_OUT" | ./set-pasteboard.py --html
 
 osascript -e "$(cat <<-EOM
