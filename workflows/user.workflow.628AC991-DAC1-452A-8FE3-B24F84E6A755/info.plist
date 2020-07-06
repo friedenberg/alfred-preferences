@@ -592,7 +592,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>relatedAppsMode</key>
 				<integer>0</integer>
 			</dict>
