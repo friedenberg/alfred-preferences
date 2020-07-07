@@ -1,10 +1,11 @@
 #! /bin/bash
 
-PATH="/usr/local/bin/:$PATH"
+DIR_SELF="$(dirname "$0")"
+# shellcheck source=/dev/null
+. "$DIR_SELF/../bootstrap.bash"
 
-if ! command -v gsed &> /dev/null; then
-  echo "gsed not found" >&2
-  exit 1
-fi
+cd "$DIR_SELF" || fail "Unable to cd into $DIR_SELF"
+
+test-missing-dependency gsed
 
 gsed -i "/^$1/d" ./favorite-characters.txt

@@ -1,18 +1,12 @@
 #! /bin/bash
 
-PATH="/usr/local/bin/:$PATH"
+DIR_SELF="$(dirname "$0")"
+# shellcheck source=/dev/null
+. "$DIR_SELF/../bootstrap.bash"
 
-if ! command -v reattach-to-user-namespace &> /dev/null; then
-  echo "reattach-to-usernamespace not found" >&2
-  exit 1
-fi
+cd "$DIR_SELF" || fail "Unable to cd into $DIR_SELF"
 
-if [[ "$1" -ne 1 ]]; then
-  reattach-to-user-namespace "$0" 1 "$@"
-  exit $?
-fi
-
-cd "$(dirname "$0")" || exit 1
+reattach-if-necessary "$0" "$@"
 
 FILE="$(mktemp)"
 
@@ -20,7 +14,7 @@ echo -n "$INPUT" > "$FILE"
 
 vim -e --clean \
   "+filetype plugin indent on" \
-  "+set filetype=$2" \
+  "+set filetype=$1" \
   '+normal gg=G' \
   '+%print' \
   '+q!' \

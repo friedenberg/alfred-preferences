@@ -1,25 +1,13 @@
 #! /bin/bash
 
-PATH="/usr/local/bin/:$PATH"
+DIR_SELF="$(dirname "$0")"
+# shellcheck source=/dev/null
+. "$DIR_SELF/../bootstrap.bash"
+
+cd "$DIR_SELF" || fail "Unable to cd into $DIR_SELF"
 
 # shellcheck disable=SC2154
 cd "$alfred_preferences/workflows/" || exit
-
-json_escape () {
-  printf '%s' "$1" | php -r 'echo json_encode(file_get_contents("php://stdin"));'
-}
-
-output-item() {
-cat <<EOM
-{"alfredworkflow": {"variables": {"TITLE": $(json_escape "$1"),
-"SUBTITLE": $(json_escape "$2")}}}
-EOM
-}
-
-fail() {
-  output-item "$1" "$2"
-  exit 1
-}
 
 if ! ERROR=$(git -c 'url.https://github.com/.insteadOf=git@github.com:' pull 2>&1); then
   fail "Failed to pull Alfred preferences." "$ERROR"
