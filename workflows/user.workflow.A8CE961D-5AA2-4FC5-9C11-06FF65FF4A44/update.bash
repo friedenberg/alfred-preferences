@@ -4,21 +4,45 @@ DIR_SELF="$(dirname "$0")"
 # shellcheck source=/dev/null
 . "$DIR_SELF/../bootstrap.bash"
 
-cd "$DIR_SELF" || fail "Unable to cd into $DIR_SELF"
-
 # shellcheck disable=SC2154
-cd "$alfred_preferences/workflows/" || exit
+cd "$alfred_preferences/workflows/" || fail "Unable to cd into $alfred_preferences/workflows/"
 
-if ! ERROR=$(git -c 'url.https://github.com/.insteadOf=git@github.com:' pull 2>&1); then
-  fail "Failed to pull Alfred preferences." "$ERROR"
+run-command() {
+  TITLE="$1"
+  shift
+
+  COMMAND=("$@")
+  COMMAND_STRING="${COMMAND[*]}"
+
+  post-notification "Starting: $TITLE" "$COMMAND_STRING"
+
+  if ! ERROR=$("$@" 2>&1); then
+    fail "Failed: $TITLE" "$ERROR"
+  fi
+
+  post-notification "Succeeded: $TITLE" "$COMMAND_STRING"
+}
+
+post-notification "Updating Alfred workflows" ""
+
+STAT_COMMAND=(stat -f '%m' "$0")
+MODTIME="$(${STAT_COMMAND[*]})"
+
+run-command \
+  "Pull Alfred Preferences" \
+  git -c 'url.https://github.com/.insteadOf=git@github.com:' pull
+
+if [[ "$MODTIME" -ne "$(${STAT_COMMAND[*]})" ]]; then
+  "./$0"
+  exit $?
 fi
 
-if ! ERROR=$(pip3 install --user -r requirements.txt 2>&1); then
-  fail "Failed to install Python modules." "$ERROR"
-fi
+run-command \
+  "Install Python Modules" \
+  python3 -m pip install --user -r requirements.txt
 
-if ! ERROR=$(brew bundle install); then
-  fail "Failed to install Brew formulae." "$ERROR"
-fi
+run-command \
+  "Install Brew Formulae" \
+  brew bundle install
 
-output-item "Successfully updated Alfred workflows." ""
+post-notification "Successfully updated Alfred workflows." ""

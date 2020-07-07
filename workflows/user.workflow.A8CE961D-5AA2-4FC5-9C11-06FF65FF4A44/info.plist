@@ -7,18 +7,7 @@
 	<key>connections</key>
 	<dict>
 		<key>3F38EF2A-4BC4-45BB-AEEA-24F2D0069888</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>F91D47E7-65D1-40D2-957C-5E9F7082CC89</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
+		<array/>
 		<key>EA398042-DE81-4BF6-84F7-7785A54AC31B</key>
 		<array>
 			<dict>
@@ -69,27 +58,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{var:SUBTITLE}</string>
-				<key>title</key>
-				<string>{var:TITLE}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>F91D47E7-65D1-40D2-957C-5E9F7082CC89</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -124,13 +92,6 @@
 		<dict>
 			<key>xpos</key>
 			<integer>130</integer>
-			<key>ypos</key>
-			<integer>165</integer>
-		</dict>
-		<key>F91D47E7-65D1-40D2-957C-5E9F7082CC89</key>
-		<dict>
-			<key>xpos</key>
-			<integer>510</integer>
 			<key>ypos</key>
 			<integer>165</integer>
 		</dict>

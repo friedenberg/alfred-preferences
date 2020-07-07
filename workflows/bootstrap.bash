@@ -6,6 +6,13 @@ json_escape () {
   printf '%s' "$1" | php -r 'echo json_encode(file_get_contents("php://stdin"));'
 }
 
+post-notification() {
+osascript -e "$(cat <<-EOM
+display notification "$2" with title "$1"
+EOM
+)"
+}
+
 output-item() {
 cat <<EOM
 {"alfredworkflow": {"variables": {"TITLE": $(json_escape "$1"),
@@ -14,7 +21,7 @@ EOM
 }
 
 fail() {
-  output-item "$1" "$2"
+  post-notification "$1" "$2"
   exit 1
 }
 
