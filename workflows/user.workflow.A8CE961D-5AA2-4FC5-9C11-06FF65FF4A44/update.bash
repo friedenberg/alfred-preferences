@@ -33,8 +33,7 @@ run-command \
   git -c 'url.https://github.com/.insteadOf=git@github.com:' pull
 
 if [[ "$MODTIME" -ne "$(${STAT_COMMAND[*]})" ]]; then
-  "./$0"
-  exit $?
+  exec "./$0"
 fi
 
 run-command \
