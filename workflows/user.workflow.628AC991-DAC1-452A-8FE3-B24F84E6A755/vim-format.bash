@@ -20,7 +20,7 @@ vim -e --clean \
   '+q!' \
   /dev/stdin \
   < "$FILE" \
-  | pbcopy
+  | ghead -c -1 | pbcopy
 
 osascript -e "$(cat <<-EOM
 tell application "System Events"
