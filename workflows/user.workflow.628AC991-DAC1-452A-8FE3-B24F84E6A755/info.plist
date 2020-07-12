@@ -466,6 +466,8 @@
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -597,6 +599,8 @@
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>INPUT</key>
@@ -708,6 +712,8 @@
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -740,8 +746,6 @@
 			<dict>
 				<key>autopaste</key>
 				<true/>
-				<key>clipboardtext</key>
-				<string>{clipboard}</string>
 				<key>clipboardtextrtf</key>
 				<string>{\rtf1\ansi\ansicpg1252\cocoartf2511
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
@@ -899,6 +903,8 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
