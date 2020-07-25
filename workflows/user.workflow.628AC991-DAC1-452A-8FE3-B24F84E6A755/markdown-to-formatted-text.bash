@@ -10,8 +10,20 @@ reattach-if-necessary "$0" "$@"
 test-missing-dependency pandoc
 
 FILE_HTML_OUT="$(mktemp)"
-echo -n "$INPUT" | tr '\240' ' ' | pandoc -H style.css -t html -o "$FILE_HTML_OUT"
-./set-pasteboard.py --html < "$FILE_HTML_OUT"
+FILE_ERROR_OUT="$(mktemp)"
+
+echo -n "$INPUT" \
+  | tr '\240' ' ' \
+  | pandoc -H style.css -t html -o "$FILE_HTML_OUT" 2> "$FILE_ERROR_OUT"
+
+if [[ "$(cat "$FILE_ERROR_OUT")" != "$(cat "expected_pandoc_html_error")" ]]; then
+  cat "$FILE_ERROR_OUT" >&2
+  exit 1
+fi
+
+sed -i' ' 's|<title>-</title>||' "$FILE_HTML_OUT"
+
+./set-pasteboard.py < "$FILE_HTML_OUT"
 
 osascript -e "$(cat <<-EOM
 tell application "System Events"
@@ -21,4 +33,3 @@ tell application "System Events"
 end tell
 EOM
 )"
-
