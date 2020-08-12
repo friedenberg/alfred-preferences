@@ -7,10 +7,9 @@ json_escape () {
 }
 
 post-notification() {
-osascript -e "$(cat <<-EOM
-display notification "$2" with title "$1"
-EOM
-)"
+  TITLE="$(echo -n $1 | sed 's/"/\\"/g')"
+  BODY="$(echo -n $2 | sed 's/"/\\"/g')"
+  osascript -e "display notification \"$BODY\" with title \"$TITLE\""
 }
 
 output-item() {
@@ -21,7 +20,13 @@ EOM
 }
 
 fail() {
-  post-notification "$1" "$2"
+  BODY="$2"
+
+  if [[ -a "$BODY" ]]; then
+    BODY="$(cat "$BODY")"
+  fi
+
+  post-notification "$1" "$BODY"
   exit 1
 }
 
