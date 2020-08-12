@@ -12,18 +12,22 @@ test-missing-dependency pandoc
 FILE_HTML_OUT="$(mktemp)"
 FILE_ERROR_OUT="$(mktemp)"
 
+
 echo -n "$INPUT" \
   | tr '\240' ' ' \
   | pandoc -H style.css -t html -o "$FILE_HTML_OUT" 2> "$FILE_ERROR_OUT"
 
 if [[ "$(cat "$FILE_ERROR_OUT")" != "$(cat "expected_pandoc_html_error")" ]]; then
-  cat "$FILE_ERROR_OUT" >&2
-  exit 1
+  fail "Failed to generate html from markdown via pandoc" "$FILE_ERROR_OUT"
 fi
 
-sed -i' ' 's|<title>-</title>||' "$FILE_HTML_OUT"
+if ! sed -i' ' 's|<title>-</title>||' "$FILE_HTML_OUT" 2> "$FILE_ERROR_OUT"; then
+  fail "Failed to remove html title from markdown" "$FILE_ERROR_OUT"
+fi
 
-./set-pasteboard.py < "$FILE_HTML_OUT"
+if ! ./set-pasteboard.py < "$FILE_HTML_OUT" 2> "$FILE_ERROR_OUT"; then
+  fail "Failed to set html pasteboard content" "$FILE_ERROR_OUT"
+fi
 
 osascript -e "$(cat <<-EOM
 tell application "System Events"
