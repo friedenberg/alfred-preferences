@@ -1,3 +1,4 @@
 #! /bin/bash
 
-echo "$1" | tee -a ./favorite-characters.txt
+echo -n "$1" | tee -a ./favorite-characters.txt
+echo "" >> ./favorite-characters.txt

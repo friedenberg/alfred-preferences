@@ -10,7 +10,11 @@ favorite_chars = set(line.strip() for line in open('favorite-characters.txt'))
 
 chars = []
 for char in favorite_chars:
-    c = ord(char)
+    try:
+        c = ord(char)
+    except TypeError as e:
+        #todo log error
+        continue
 
     name = unicodedata.name(char)
 
