@@ -404,7 +404,7 @@
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>utc_to_date.rb</string>
+				<string>dates/utc_to_date.rb</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -628,7 +628,7 @@
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>markdown-to-formatted-text.bash</string>
+				<string>markdown/markdown-to-formatted-text.bash</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -651,7 +651,7 @@
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>vim-format.bash</string>
+				<string>vim-format/vim-format.bash</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -692,7 +692,7 @@
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>vim-filetypes.php</string>
+				<string>vim-format/vim-filetypes.php</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -774,7 +774,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>curl -OL https://www.sashafriedenberg.com/resume
+				<string>curl -sSOL https://www.sashafriedenberg.com/resume
 osascript -e 'tell app "Finder" to set the clipboard to ( POSIX file "resume" )'</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -860,7 +860,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>unicode-chars.py</string>
+				<string>unicode/unicode-chars.py</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -889,7 +889,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>add-favorite-character.bash</string>
+				<string>unicode/add-favorite-character.bash</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -952,7 +952,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>favorite-unicode-chars.py</string>
+				<string>unicode/favorite-unicode-chars.py</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -1028,7 +1028,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>delete-favorite-character.bash</string>
+				<string>unicode/delete-favorite-character.bash</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -1108,7 +1108,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>today_date_format.rb</string>
+				<string>dates/today_date_format.rb</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -1157,7 +1157,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>utc_to_date.rb</string>
+				<string>dates/utc_to_date.rb</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
