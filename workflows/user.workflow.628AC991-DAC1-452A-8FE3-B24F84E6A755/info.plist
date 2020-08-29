@@ -829,7 +829,7 @@ osascript -e 'tell app "Finder" to set the clipboard to ( POSIX file "resume" )'
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<false/>
+				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>2</integer>
 				<key>argumenttreatemptyqueryasnil</key>
@@ -851,12 +851,11 @@ osascript -e 'tell app "Finder" to set the clipboard to ( POSIX file "resume" )'
 				<key>runningsubtext</key>
 				<string>Searching for matching characters</string>
 				<key>script</key>
-				<string>exec /usr/local/bin/fish
-
-set json "[{'title': 'Week Number', 'value':  '(date +%V)', 'id': 'snippets.date.week_number'}]"
-echo "$json" | tr "'" '"' | \
-jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, autocomplete: .value}]}"
-</string>
+				<string>set -ex
+. "$alfred_preferences/workflows/bootstrap.bash" 
+pushd unicode &gt;&amp;2
+make build/results-all-chars.json &gt;&amp;2
+cat build/results-all-chars.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -866,7 +865,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>title</key>
 				<string></string>
 				<key>type</key>
-				<integer>8</integer>
+				<integer>0</integer>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -889,7 +888,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>unicode/add-favorite-character.bash</string>
+				<string>unicode/add-favorite-character.py</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -921,7 +920,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<false/>
+				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>2</integer>
 				<key>argumenttreatemptyqueryasnil</key>
@@ -943,12 +942,11 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>exec /usr/local/bin/fish
-
-set json "[{'title': 'Week Number', 'value':  '(date +%V)', 'id': 'snippets.date.week_number'}]"
-echo "$json" | tr "'" '"' | \
-jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, autocomplete: .value}]}"
-</string>
+				<string>set -ex
+. "$alfred_preferences/workflows/bootstrap.bash" 
+pushd unicode &gt;&amp;2
+make build/results-fav-chars.json &gt;&amp;2
+cat build/results-fav-chars.json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -958,7 +956,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>title</key>
 				<string></string>
 				<key>type</key>
-				<integer>8</integer>
+				<integer>0</integer>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -1028,7 +1026,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>unicode/delete-favorite-character.bash</string>
+				<string>unicode/rm-favorite-character.py</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
