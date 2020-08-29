@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/bash -e
 
 DIR_SELF="$(dirname "$0")"
 # shellcheck source=/dev/null
@@ -23,17 +23,22 @@ run-command() {
   post-notification "Succeeded: $TITLE" "$COMMAND_STRING"
 }
 
-post-notification "Updating Alfred workflows" ""
+if [[ -z "$UPDATED" ]]; then
+  post-notification "Updating Alfred workflows" ""
 
-STAT_COMMAND=(stat -f '%m' "$0")
-MODTIME="$(${STAT_COMMAND[*]})"
+  run-command \
+    "Force Brewfile.lock.json to be unchanged" \
+    git update-index --assume-unchanged Brewfile.lock.json
 
-run-command \
-  "Pull Alfred Preferences" \
-  git -c 'url.https://github.com/.insteadOf=git@github.com:' pull
+  run-command \
+    "Pull Alfred Preferences" \
+    git -c 'url.https://github.com/.insteadOf=git@github.com:' pull
 
-if [[ "$MODTIME" -ne "$(${STAT_COMMAND[*]})" ]]; then
-  exec "./$0"
+  run-command \
+    "Return Brewfile.lock.json to normal" \
+    git update-index --no-assume-unchanged Brewfile.lock.json
+
+  UPDATED=1 exec "$0"
 fi
 
 run-command \
@@ -45,3 +50,4 @@ run-command \
   brew bundle install
 
 post-notification "Successfully updated Alfred workflows." ""
+
