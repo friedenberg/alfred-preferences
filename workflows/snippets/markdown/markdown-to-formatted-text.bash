@@ -25,7 +25,7 @@ if ! sed -i' ' 's|<title>-</title>||' "$FILE_HTML_OUT" 2> "$FILE_ERROR_OUT"; the
   fail "Failed to remove html title from markdown" "$FILE_ERROR_OUT"
 fi
 
-if ! ./set-pasteboard.py < "$FILE_HTML_OUT" 2> "$FILE_ERROR_OUT"; then
+if ! ./../set-pasteboard.py < "$FILE_HTML_OUT" 2> "$FILE_ERROR_OUT"; then
   fail "Failed to set html pasteboard content" "$FILE_ERROR_OUT"
 fi
 
