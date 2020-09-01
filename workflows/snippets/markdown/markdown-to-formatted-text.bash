@@ -2,7 +2,7 @@
 
 DIR_SELF="$(dirname "$0")"
 # shellcheck source=/dev/null
-. "$DIR_SELF/../bootstrap.bash"
+. "$alfred_preferences/workflows/bootstrap.bash"
 
 cd "$DIR_SELF" || fail "Unable to cd into $DIR_SELF"
 
