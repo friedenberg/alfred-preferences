@@ -261,6 +261,30 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F9253A9F-70C5-4F9B-A931-8981AC870DA5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>788747EE-13DC-4898-924A-596992505CCA</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>EE91E88A-410F-4741-A3BD-A910AAEC178E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>AF37208F-B09E-43A9-9E53-912796491F24</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>D13BDD21-2C6B-4053-BB45-F0C79157C1AC</key>
 		<array/>
@@ -318,6 +342,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>EE91E88A-410F-4741-A3BD-A910AAEC178E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1935C395-948C-4D90-89D5-02585AEAA75B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>EEA01FF2-A88B-49FF-96FA-1CF9C8697C99</key>
 		<array>
 			<dict>
@@ -344,6 +381,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>F9253A9F-70C5-4F9B-A931-8981AC870DA5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1935C395-948C-4D90-89D5-02585AEAA75B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string></string>
@@ -362,6 +412,8 @@
 				<true/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
 				<key>transient</key>
 				<true/>
 			</dict>
@@ -527,6 +579,34 @@
 						<key>uid</key>
 						<string>B7FD2C8D-EAEA-4987-990A-B5E2129FD2FA</string>
 					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>html-escape</string>
+						<key>outputlabel</key>
+						<string>html-escape</string>
+						<key>uid</key>
+						<string>788747EE-13DC-4898-924A-596992505CCA</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>js-apostrophe-escape</string>
+						<key>outputlabel</key>
+						<string>js-apostrophe-escape</string>
+						<key>uid</key>
+						<string>AF37208F-B09E-43A9-9E53-912796491F24</string>
+					</dict>
 				</array>
 				<key>elselabel</key>
 				<string>else</string>
@@ -579,7 +659,7 @@
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"Run command","arg":"command","subtitle":""},{"title":"Convert Markdown to RTF","arg":"markdown-to-rtf"},{"title":"Format with Vim","arg":"vim-format","subtitle":""}]</string>
+				<string>[{"title":"Run command","arg":"command","subtitle":""},{"title":"Convert Markdown to RTF","arg":"markdown-to-rtf"},{"title":"Format with Vim","arg":"vim-format","subtitle":""},{"title":"HTML Escape","arg":"html-escape","subtitle":""},{"title":"JavaScript Apostrophe Escape","arg":"js-apostrophe-escape","subtitle":""}]</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>subtext</key>
@@ -729,6 +809,52 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>html-escape.bash</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F9253A9F-70C5-4F9B-A931-8981AC870DA5</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>js-apostrophe-escape.bash</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>EE91E88A-410F-4741-A3BD-A910AAEC178E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>focusedappvariable</key>
 				<false/>
 				<key>focusedappvariablename</key>
@@ -756,6 +882,8 @@
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \f0\fs26 \cf2 \{clipboard\}}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
 				<key>transient</key>
 				<true/>
 			</dict>
@@ -1044,6 +1172,8 @@ cat build/results-fav-chars.json</string>
 				<true/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
 				<key>transient</key>
 				<true/>
 			</dict>
@@ -1180,16 +1310,16 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 		<key>0E7675B2-E28D-4C24-AF3E-6A9E9F56102F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>535</integer>
+			<integer>645</integer>
 			<key>ypos</key>
-			<integer>470</integer>
+			<integer>455</integer>
 		</dict>
 		<key>1703B780-0EF6-4696-814C-C7DD881E75A7</key>
 		<dict>
 			<key>xpos</key>
 			<integer>225</integer>
 			<key>ypos</key>
-			<integer>670</integer>
+			<integer>780</integer>
 		</dict>
 		<key>1935C395-948C-4D90-89D5-02585AEAA75B</key>
 		<dict>
@@ -1259,9 +1389,9 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 		<key>8DC2EDDE-FB37-4DC7-943B-A0A59E7C27B6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>600</integer>
+			<integer>810</integer>
 			<key>ypos</key>
-			<integer>440</integer>
+			<integer>345</integer>
 		</dict>
 		<key>946E48D0-BE12-45D6-8399-0A7399E33206</key>
 		<dict>
@@ -1282,7 +1412,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>xpos</key>
 			<integer>55</integer>
 			<key>ypos</key>
-			<integer>525</integer>
+			<integer>635</integer>
 		</dict>
 		<key>9C890B63-6E60-42C6-821A-6F06F1B89679</key>
 		<dict>
@@ -1303,7 +1433,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>xpos</key>
 			<integer>410</integer>
 			<key>ypos</key>
-			<integer>525</integer>
+			<integer>635</integer>
 		</dict>
 		<key>CFA84F24-E60F-4DDC-81A5-F5D098A5DBCA</key>
 		<dict>
@@ -1329,16 +1459,16 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 		<key>E37AE8D1-4C45-4563-84F3-82C25F7812CC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>760</integer>
+			<integer>970</integer>
 			<key>ypos</key>
-			<integer>440</integer>
+			<integer>345</integer>
 		</dict>
 		<key>E3B4E655-675B-41F1-8660-407A06B87200</key>
 		<dict>
 			<key>xpos</key>
 			<integer>225</integer>
 			<key>ypos</key>
-			<integer>525</integer>
+			<integer>635</integer>
 		</dict>
 		<key>E7729357-C4ED-467D-83B0-3014754F2A81</key>
 		<dict>
@@ -1361,6 +1491,13 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>ypos</key>
 			<integer>300</integer>
 		</dict>
+		<key>EE91E88A-410F-4741-A3BD-A910AAEC178E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>820</integer>
+			<key>ypos</key>
+			<integer>540</integer>
+		</dict>
 		<key>EEA01FF2-A88B-49FF-96FA-1CF9C8697C99</key>
 		<dict>
 			<key>xpos</key>
@@ -1374,6 +1511,13 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<integer>630</integer>
 			<key>ypos</key>
 			<integer>1165</integer>
+		</dict>
+		<key>F9253A9F-70C5-4F9B-A931-8981AC870DA5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>605</integer>
+			<key>ypos</key>
+			<integer>535</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

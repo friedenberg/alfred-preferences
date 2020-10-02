@@ -12,8 +12,9 @@ test-missing-dependency pandoc
 FILE_HTML_OUT="$(mktemp)"
 FILE_ERROR_OUT="$(mktemp)"
 
+TEXT_INPUT="$(./../get-pasteboard.py)"
 
-echo -n "$INPUT" \
+echo -n "$TEXT_INPUT" \
   | tr '\240' ' ' \
   | pandoc -H style.css -t html -o "$FILE_HTML_OUT" 2> "$FILE_ERROR_OUT"
 
