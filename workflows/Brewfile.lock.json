@@ -71,6 +71,27 @@
             }
           }
         }
+      },
+      "blueutil": {
+        "version": "2.6.0",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/blueutil-2.6.0.catalina.bottle.tar.gz",
+              "sha256": "9e82b1bcb5a3737fb75474f4f1e793f1954d6cc2ebf8cde4c538efc046998dbf"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/blueutil-2.6.0.mojave.bottle.tar.gz",
+              "sha256": "151d723172aaf7acd9b23cf2a0b41f0fe5100357f511fea170cf34bc05093bb5"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/blueutil-2.6.0.high_sierra.bottle.tar.gz",
+              "sha256": "afceca3182b5a43540b44c2b61bb0d510888f0744e924468ee3208d8ab612a4a"
+            }
+          }
+        }
       }
     }
   },
@@ -79,7 +100,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.5.2",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "1c6b48c3564ef3a6e77d7dc5afa402a55b53828a",
+        "Homebrew/homebrew-core": "de3ea8273623ae2674ff372922d5e39426ed27bc",
         "CLT": "11.0.33.16",
         "Xcode": "11.5",
         "macOS": "10.15.6"

@@ -1,14 +1,13 @@
 #! /bin/bash
 
 DIR_SELF="$(dirname "$0")"
-# shellcheck source=/dev/null
+: shellcheck source=/dev/null
 . "$alfred_preferences/workflows/bootstrap.bash"
 
 cd "$DIR_SELF" || fail "Unable to cd into $DIR_SELF"
 
 reattach-if-necessary "$0" "$@"
-test-missing-dependency SwitchAudioSource
+test-missing-dependency blueutil
 
-SwitchAudioSource -a | \
-  awk -F' \\(' "/.*($1)/ { print \$1 }" | \
-  $DIR_SELF/list_devices.py
+blueutil --paired --format=json | \
+  $DIR_SELF/bt_list_devices.py

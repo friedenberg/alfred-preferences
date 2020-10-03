@@ -1,3 +1,4 @@
 brew "pandoc"
 brew "coreutils"
 brew "switchaudio-osx"
+brew "blueutil"
