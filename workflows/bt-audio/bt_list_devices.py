@@ -3,6 +3,10 @@
 import json
 import sys
 import urllib.parse
+import iso8601
+
+from datetime import timedelta, datetime
+from babel.dates import format_timedelta
 
 class Device(dict):
     def __init__(self, device):
@@ -13,7 +17,12 @@ class Device(dict):
         recentAccessDate = device["recentAccessDate"]
 
         if recentAccessDate is not None:
-            self["subtitle"] = device["recentAccessDate"]
+            recentAccessDate = iso8601.parse_date(recentAccessDate)
+            recentAccessDate = format_timedelta(
+                    datetime.now() - recentAccessDate.replace(tzinfo=None),
+                    locale='en_US'
+                    )
+            self["subtitle"] = recentAccessDate + " ago"
 
         self["uid"] = urllib.parse.quote("bt-device." + device["address"])
         self["arg"] = device["address"]
