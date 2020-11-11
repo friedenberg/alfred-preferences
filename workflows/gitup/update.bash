@@ -43,7 +43,7 @@ fi
 
 run-command \
   "Install Python Modules" \
-  python3 -m pip install --user -r requirements.txt
+  /usr/bin/python3 -m pip install --user -r requirements.txt
 
 run-command \
   "Install Brew Formulae" \
