@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/bash -ex
 
 DIR_SELF="$(dirname "$0")"
 # shellcheck source=/dev/null
@@ -9,4 +9,4 @@ cd "$DIR_SELF" || fail "Unable to cd into $DIR_SELF"
 reattach-if-necessary "$0" "$@"
 test-missing-dependency SwitchAudioSource
 
-SwitchAudioSource -t "$1" -s "$2"
+SwitchAudioSource $1

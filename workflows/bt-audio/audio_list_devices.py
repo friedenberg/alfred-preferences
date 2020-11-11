@@ -1,18 +1,39 @@
 #! /usr/bin/env python3
 
-import json
-import sys
-import urllib.parse
+import os, sys
+
+sys.path.append(os.path.join(os.environ['alfred_preferences'], 'workflows'))
+
+import re
+
+import alfred
+
+pattern_device = re.compile(r'(.*)\((.*)\)')
 
 class Device(dict):
     def __init__(self, device):
         dict.__init__(self)
 
-        self["title"] = device
-        self["uid"] = urllib.parse.quote("audio-device." + device)
-        self["arg"] = device
+        match = pattern_device.match(device)
+        device_name = ""
+        device_type = ""
+
+        if match is not None:
+            device_name = match.group(1).strip()
+            device_type = match.group(2).strip()
+
+        self["title"] = device_name
+        self["subtitle"] = device_type
+        self["uid"] = f"audio-device.{device_name}.{device_type}"
+        self["arg"] = f"-t {device_type} -s '{device_name}'"
 
 devices = sys.stdin.read().splitlines()
 items = [Device(d) for d in devices]
 
-print(json.dumps({'items': items}))
+alfred.pipeline(
+        [
+            "SwitchAudioSource",
+            "-a",
+            ],
+        item_class = Device
+        )

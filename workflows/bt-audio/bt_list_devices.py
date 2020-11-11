@@ -1,8 +1,13 @@
-#! /usr/bin/env python3
+#! /usr/bin/python3
+
+import os, sys
+
+sys.path.append(os.path.join(os.environ['alfred_preferences'], 'workflows'))
 
 import json
-import sys
 import urllib.parse
+
+import alfred
 import iso8601
 
 from datetime import timedelta, datetime
@@ -24,12 +29,21 @@ class Device(dict):
                     )
             self["subtitle"] = recentAccessDate + " ago"
 
-        self["uid"] = urllib.parse.quote("bt-device." + device["address"])
+        self["uid"] = "bt-device." + device["address"]
         self["arg"] = device["address"]
 
-in_devices = sys.stdin.read()
-in_devices = json.loads(in_devices)
 
-out_items = [Device(d) for d in in_devices]
+option = sys.argv[1]
 
-print(json.dumps({'items': out_items}))
+device_json = alfred.pipeline(
+        [
+            "blueutil",
+            f"--{option}",
+            "--format=json",
+            ]
+        )
+
+raw_devices = json.loads(device_json)
+
+item_outputter = alfred.ItemOutputter(raw_devices, Device)
+item_outputter.process()

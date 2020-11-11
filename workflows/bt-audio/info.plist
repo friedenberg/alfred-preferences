@@ -8,37 +8,11 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
-		<key>089ADEC1-015E-425D-AFAF-4F4D87E5EA6F</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>F4A122B9-7537-4455-ADBD-076B6389F33A</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>291ECDC5-A8CA-4CE6-BD85-0B25485CDE6F</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>D46B398A-461D-419C-97CF-01BC88955BD0</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>37C3F261-28F7-471A-A772-2226F0FFD736</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>089ADEC1-015E-425D-AFAF-4F4D87E5EA6F</string>
+				<string>F4A122B9-7537-4455-ADBD-076B6389F33A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -138,19 +112,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>D46B398A-461D-419C-97CF-01BC88955BD0</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>F4A122B9-7537-4455-ADBD-076B6389F33A</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>D68A9BB4-E7DF-423D-813B-B45C94239684</key>
 		<array>
 			<dict>
@@ -191,75 +152,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>ai</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>loading audio input devices</string>
-				<key>script</key>
-				<string>./audio_list_devices.bash input</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>list_devices.bash</string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Select audio input device</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>37C3F261-28F7-471A-A772-2226F0FFD736</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{query}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>io</key>
-					<string>input</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>089ADEC1-015E-425D-AFAF-4F4D87E5EA6F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -286,7 +178,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./audio_select_device.bash "$io" "$1"</string>
+				<string>./audio_select_device.bash $1</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -317,7 +209,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>ao</string>
+				<string>audio</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -327,17 +219,17 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>loading output devices</string>
+				<string>Loading audio devices</string>
 				<key>script</key>
-				<string>./audio_list_devices.bash output</string>
+				<string>./audio_list_devices.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string></string>
+				<string>list_devices.bash</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Select audio output device</string>
+				<string>Select audio devices</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -346,29 +238,9 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>291ECDC5-A8CA-4CE6-BD85-0B25485CDE6F</string>
+			<string>37C3F261-28F7-471A-A772-2226F0FFD736</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{query}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>io</key>
-					<string>output</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>D46B398A-461D-419C-97CF-01BC88955BD0</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -421,7 +293,7 @@
 				<key>runningsubtext</key>
 				<string>loading discoverable bluetooth devices</string>
 				<key>script</key>
-				<string>./bt_discover_devices.bash</string>
+				<string>./bt_list_devices.py inquiry</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -510,7 +382,7 @@
 				<key>runningsubtext</key>
 				<string>loading bluetooth devices</string>
 				<key>script</key>
-				<string>./bt_list_devices.bash</string>
+				<string>./bt_list_devices.py paired</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -603,7 +475,7 @@
 				<key>runningsubtext</key>
 				<string>loading bluetooth devices</string>
 				<key>script</key>
-				<string>./bt_list_devices.bash</string>
+				<string>./bt_list_devices.py paired</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -649,110 +521,89 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>089ADEC1-015E-425D-AFAF-4F4D87E5EA6F</key>
-		<dict>
-			<key>xpos</key>
-			<integer>350</integer>
-			<key>ypos</key>
-			<integer>95</integer>
-		</dict>
-		<key>291ECDC5-A8CA-4CE6-BD85-0B25485CDE6F</key>
-		<dict>
-			<key>xpos</key>
-			<integer>175</integer>
-			<key>ypos</key>
-			<integer>215</integer>
-		</dict>
 		<key>304567E5-3F1D-4D0B-BA03-F5C15E9B6B46</key>
 		<dict>
 			<key>xpos</key>
-			<integer>605</integer>
+			<integer>375</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>25</integer>
 		</dict>
 		<key>37C3F261-28F7-471A-A772-2226F0FFD736</key>
 		<dict>
 			<key>xpos</key>
-			<integer>175</integer>
+			<integer>30</integer>
 			<key>ypos</key>
-			<integer>60</integer>
+			<integer>25</integer>
 		</dict>
 		<key>5AD85A70-6BB5-4C12-A7ED-C5734400F9FE</key>
 		<dict>
 			<key>xpos</key>
-			<integer>810</integer>
+			<integer>715</integer>
 			<key>ypos</key>
-			<integer>600</integer>
+			<integer>410</integer>
 		</dict>
 		<key>8144EE46-2579-436A-9B78-069C5B595476</key>
 		<dict>
 			<key>xpos</key>
-			<integer>380</integer>
+			<integer>285</integer>
 			<key>ypos</key>
-			<integer>515</integer>
+			<integer>325</integer>
 		</dict>
 		<key>85146F22-4EBA-4ED1-BF30-CCFAECCA38C9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>645</integer>
+			<integer>550</integer>
 			<key>ypos</key>
-			<integer>600</integer>
+			<integer>410</integer>
 		</dict>
 		<key>97217F8D-0837-41F3-BD1E-BAB703E0A9FF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>550</integer>
+			<integer>455</integer>
 			<key>ypos</key>
-			<integer>680</integer>
+			<integer>490</integer>
 		</dict>
 		<key>A7BE5357-53CB-435E-B6A9-BE8035748F2E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>380</integer>
+			<integer>285</integer>
 			<key>ypos</key>
-			<integer>370</integer>
+			<integer>180</integer>
 		</dict>
 		<key>AD16A844-737F-4E29-BC9D-3B10FAE6D5CB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>380</integer>
+			<integer>285</integer>
 			<key>ypos</key>
-			<integer>650</integer>
+			<integer>460</integer>
 		</dict>
 		<key>C323B64B-8CCF-4E55-8072-24C786B5CC7E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>125</integer>
+			<integer>30</integer>
 			<key>ypos</key>
-			<integer>370</integer>
+			<integer>180</integer>
 		</dict>
 		<key>C32C1F98-9C82-468A-A04A-4211C2C3AA9D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>550</integer>
+			<integer>455</integer>
 			<key>ypos</key>
-			<integer>495</integer>
-		</dict>
-		<key>D46B398A-461D-419C-97CF-01BC88955BD0</key>
-		<dict>
-			<key>xpos</key>
-			<integer>350</integer>
-			<key>ypos</key>
-			<integer>250</integer>
+			<integer>305</integer>
 		</dict>
 		<key>D68A9BB4-E7DF-423D-813B-B45C94239684</key>
 		<dict>
 			<key>xpos</key>
-			<integer>295</integer>
+			<integer>200</integer>
 			<key>ypos</key>
-			<integer>400</integer>
+			<integer>210</integer>
 		</dict>
 		<key>F4A122B9-7537-4455-ADBD-076B6389F33A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>440</integer>
+			<integer>210</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>25</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>

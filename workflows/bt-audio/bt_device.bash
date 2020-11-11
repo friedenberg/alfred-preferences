@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/bash -e
 
 DIR_SELF="$(dirname "$0")"
 # shellcheck source=/dev/null
