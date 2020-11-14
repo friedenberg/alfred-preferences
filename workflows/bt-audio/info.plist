@@ -382,7 +382,7 @@
 				<key>runningsubtext</key>
 				<string>loading bluetooth devices</string>
 				<key>script</key>
-				<string>./bt_list_devices.py paired</string>
+				<string>./bt_list_devices.py paired connected</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -475,7 +475,7 @@
 				<key>runningsubtext</key>
 				<string>loading bluetooth devices</string>
 				<key>script</key>
-				<string>./bt_list_devices.py paired</string>
+				<string>./bt_list_devices.py paired disconnected</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

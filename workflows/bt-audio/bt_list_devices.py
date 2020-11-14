@@ -34,6 +34,10 @@ class Device(dict):
 
 
 option = sys.argv[1]
+connected_status = ""
+
+if len(sys.argv) > 2:
+    connected_status = sys.argv[2]
 
 device_json = alfred.pipeline(
         [
@@ -43,7 +47,8 @@ device_json = alfred.pipeline(
             ]
         )
 
-raw_devices = json.loads(device_json)
+connected = connected_status == "connected"
+raw_devices = [d for d in json.loads(device_json) if d['connected'] != connected]
 
 item_outputter = alfred.ItemOutputter(raw_devices, Device)
 item_outputter.process()
