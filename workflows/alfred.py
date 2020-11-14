@@ -91,3 +91,6 @@ class ItemOutputter():
                     end = '')
 
         print(']}')
+
+if __name__ == "__main__":
+    output = pipeline(sys.argv)

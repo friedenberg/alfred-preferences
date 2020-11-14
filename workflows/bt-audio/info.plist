@@ -178,7 +178,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./audio_select_device.bash $1</string>
+				<string>$alfred_preferences/workflows/alfred.py SwitchAudioSource $1</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -250,7 +250,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./bt_device.bash "$mode" "$1"</string>
+				<string>$alfred_preferences/workflows/alfred.py blueutil "$mode" $1</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -432,7 +432,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./bt_device.bash "$mode" "$1"</string>
+				<string>$alfred_preferences/workflows/alfred.py blueutil "$mode" $1</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
