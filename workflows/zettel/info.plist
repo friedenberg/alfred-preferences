@@ -6,7 +6,7 @@
 	<string>com.linenisgreat.zettel</string>
 	<key>connections</key>
 	<dict>
-		<key>7EC61A78-361D-4576-AFC2-7D813B27AD2A</key>
+		<key>AD3F803A-5A0D-473C-B68D-A3DD4E69A343</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -19,7 +19,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>AD3F803A-5A0D-473C-B68D-A3DD4E69A343</key>
+		<key>FBA58F14-AD61-4D11-8E40-3C116C96D758</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -46,6 +46,57 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>zt</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>PATH="$PATH /usr/local/bin"
+export PATH
+ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>zt.py</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search for notes with a certain tag</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>FBA58F14-AD61-4D11-8E40-3C116C96D758</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>browser</key>
 				<string></string>
 				<key>spaces</key>
@@ -61,55 +112,6 @@
 			<string>E2E0671B-543F-4861-A33F-8645AEBD09E6</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>pb</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>alfred_urls_from_pb_items.py</string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Search and open pins</string>
-				<key>type</key>
-				<integer>8</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>7EC61A78-361D-4576-AFC2-7D813B27AD2A</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -167,13 +169,6 @@ ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>7EC61A78-361D-4576-AFC2-7D813B27AD2A</key>
-		<dict>
-			<key>xpos</key>
-			<integer>205</integer>
-			<key>ypos</key>
-			<integer>90</integer>
-		</dict>
 		<key>AD3F803A-5A0D-473C-B68D-A3DD4E69A343</key>
 		<dict>
 			<key>xpos</key>
@@ -188,11 +183,18 @@ ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
 			<key>ypos</key>
 			<integer>90</integer>
 		</dict>
+		<key>FBA58F14-AD61-4D11-8E40-3C116C96D758</key>
+		<dict>
+			<key>xpos</key>
+			<integer>205</integer>
+			<key>ypos</key>
+			<integer>90</integer>
+		</dict>
 	</dict>
 	<key>variables</key>
 	<dict>
 		<key>ZETTEL_PATH</key>
-		<string>/Users/sasha/Google Drive/Zettelkasten</string>
+		<string>/Users/sasha/Library/Mobile\ Documents/com\~apple\~CloudDocs/Zettelkasten</string>
 	</dict>
 	<key>version</key>
 	<string></string>

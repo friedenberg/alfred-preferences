@@ -14,83 +14,57 @@ class ItemException(RuntimeError):
         self.exception
         super().__init__("")
 
-def pipeline(*commands, item_class = None):
-    processes = []
-    stdin = subprocess.DEVNULL
+def pipeline(*commands, item_class = None, chunk_size = 1):
+    output = subprocess.check_output(
+            "|".join([" ".join(a) for a in commands]),
+            shell = True,
+            )
 
-    for command in commands:
-        if len(processes) > 0:
-            stdin = processes[-1].stdout
+    item_outputter = ItemOutputter(item_class, chunk_size)
+    item_outputter.process(output.splitlines())
 
-        process = subprocess.Popen(
-                command,
-                stdin = stdin,
-                stdout = subprocess.PIPE,
-                stderr = subprocess.PIPE,
-                )
+@contextlib.contextmanager
+def output_wrapped_item_json():
+    print('{"items":[', end = '')
+    yield
+    print(']}')
 
-        processes.append(process)
-
-    def close_and_wait():
-        for process in processes[:-1]:
-            process.stdout.close()
-
-        for process in processes:
-            process.wait()
-
-    if item_class is None:
-        close_and_wait()
-
-        errors = [
-                {
-                    "title": f"Command error ({p.returncode}): {p.args}",
-                    "subtitle": f"Output: ${p.stderr.read()}",
-                    }
-                for p in processes
-                if p.returncode != 0
-                ]
-
-        if len(errors) is 0:
-            return processes[-1].stdout.read()
-        else:
-            item_outputter = ItemOutputter(errors)
-            item_outputter.process()
-            return None
-    else:
-        try:
-            item_outputter = ItemOutputter(process.stdout, item_class)
-            item_outputter.process()
-
-        finally:
-            close_and_wait()
-
+def output_item(item):
+    print(json.dumps(item),
+            ',',
+            sep = '',
+            end = '')
 
 class ItemOutputter():
-    def __init__(self, line_iterator, item_class = None):
-        self.line_iterator = line_iterator
+    def __init__(self, item_class = None, chunk_size = 1):
         self.item_class = item_class
+        self.chunk_size = chunk_size
 
-    def process(self):
-        print('{"items":[', end = '')
+    def process(self, line_iterator):
+        with output_wrapped_item_json():
+            collector = []
 
-        for line_object in self.line_iterator:
-            line = line_object
+            for line_object in line_iterator:
+                line = line_object
 
-            try:
-                line = line_object.decode("utf-8").strip()
-            except AttributeError as e:
-                pass
+                try:
+                    line = line_object.decode("utf-8").strip()
+                except AttributeError as e:
+                    pass
 
-            if self.item_class is None:
-                item = line
-            else:
-                item = self.item_class(line)
-            print(json.dumps(item),
-                    ',',
-                    sep = '',
-                    end = '')
+                collector.append(line)
 
-        print(']}')
+                if len(collector) == self.chunk_size:
+                    item = collector
+
+                    if len(collector) == 1:
+                        item = collector[0]
+
+                    if self.item_class is not None:
+                        item = self.item_class(item)
+
+                    output_item(item)
+                    collector = []
 
 if __name__ == "__main__":
     output = pipeline(sys.argv)
