@@ -252,10 +252,10 @@ ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
 )"
 
 FILENAME="$(date '+%Y%m%d%H%M') ${*//\//-/}.md"
+ZETTEL_PATH_EXPANDED="$(readlink "${ZETTEL_PATH/#\~/$HOME}")"
 
-pushd "$ZETTEL_PATH"
-echo "#kind-pb" &gt;&gt; "$FILENAME"
-echo "$URL" &gt;&gt; "$FILENAME"</string>
+echo "#kind-pb" &gt;&gt; "$ZETTEL_PATH_EXPANDED/$FILENAME"
+echo "$URL" &gt;&gt; "$ZETTEL_PATH_EXPANDED/$FILENAME"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

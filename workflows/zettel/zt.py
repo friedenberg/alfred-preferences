@@ -103,8 +103,13 @@ alfred.pipeline(
             os.path.realpath(os.path.expanduser(os.environ['ZETTEL_PATH'])),
             '-type',
             'f',
+            '(',
             '-iname',
             '*.md',
+            '-o',
+            '-iname',
+            '*.txt',
+            ')',
             '-print0',
             ],
         [
