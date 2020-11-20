@@ -5,23 +5,10 @@ import json
 import os
 import subprocess
 import sys
+import shlex
+import abc
 
 os.environ['PATH'] = '/usr/local/bin/:' + os.environ['PATH']
-
-class ItemException(RuntimeError):
-    def __init__(self, original_line, exception):
-        self.original_line = original_line
-        self.exception
-        super().__init__("")
-
-def pipeline(*commands, item_class = None, chunk_size = 1):
-    output = subprocess.check_output(
-            "|".join([" ".join(a) for a in commands]),
-            shell = True,
-            )
-
-    item_outputter = ItemOutputter(item_class, chunk_size)
-    item_outputter.process(output.splitlines())
 
 @contextlib.contextmanager
 def output_wrapped_item_json():
@@ -35,36 +22,68 @@ def output_item(item):
             sep = '',
             end = '')
 
-class ItemOutputter():
-    def __init__(self, item_class = None, chunk_size = 1):
+class Chunker(abc.ABC):
+    def __enter__(self):
+        pass
+
+    def process_line(self, line):
+        pass
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        pass
+
+class LineChunker(Chunker):
+    def __init__(self, item_class, line_count):
+        self.acc = []
         self.item_class = item_class
-        self.chunk_size = chunk_size
+        self.line_count = line_count
 
-    def process(self, line_iterator):
-        with output_wrapped_item_json():
-            collector = []
+    def process_line(self, line):
+        try:
+            line = line.decode("utf-8").strip()
+        except AttributeError as e:
+            pass
 
-            for line_object in line_iterator:
-                line = line_object
+        self.acc.append(line)
 
-                try:
-                    line = line_object.decode("utf-8").strip()
-                except AttributeError as e:
-                    pass
+        if len(self.acc) == self.line_count:
+            output_item(self.item_class(self.acc))
+            self.acc = []
 
-                collector.append(line)
+class FullReadChunker(Chunker):
+    def __init__(self, item_class):
+        self.acc = []
+        self.item_class = item_class
 
-                if len(collector) == self.chunk_size:
-                    item = collector
+    def process_line(self, line):
+        self.acc.append(line)
 
-                    if len(collector) == 1:
-                        item = collector[0]
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        collected = "".join(self.acc)
+        output_item(self.item_class(collected))
 
-                    if self.item_class is not None:
-                        item = self.item_class(item)
+class JSONChunker(FullReadChunker):
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        collected = b"".join(self.acc)
+        for obj in json.loads(collected):
+            output_item(self.item_class(obj))
 
-                    output_item(item)
-                    collector = []
+def pipeline(*commands, chunker = None):
+    commands = [
+            [shlex.quote(s) for s in command]
+            for command in commands
+            ]
+
+    output = subprocess.check_output(
+            "|".join([" ".join(a) for a in commands]),
+            shell = True,
+            )
+
+    lines = output.splitlines()
+
+    with output_wrapped_item_json(), chunker:
+        for line in lines:
+            chunker.process_line(line)
 
 if __name__ == "__main__":
     output = pipeline(sys.argv)

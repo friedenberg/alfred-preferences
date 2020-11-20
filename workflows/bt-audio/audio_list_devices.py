@@ -11,8 +11,9 @@ import alfred
 pattern_device = re.compile(r'(.*)\((.*)\)')
 
 class Device(dict):
-    def __init__(self, device):
+    def __init__(self, lines):
         dict.__init__(self)
+        device = lines[0]
 
         match = pattern_device.match(device)
         device_name = ""
@@ -35,5 +36,5 @@ alfred.pipeline(
             "SwitchAudioSource",
             "-a",
             ],
-        item_class = Device
+        chunker = alfred.LineChunker(Device, 1)
         )

@@ -13,9 +13,21 @@ import iso8601
 from datetime import timedelta, datetime
 from babel.dates import format_timedelta
 
+
+option = sys.argv[1]
+connected_status = ""
+
+if len(sys.argv) > 2:
+    connected_status = sys.argv[2]
+
+connected = connected_status == "connected"
+
 class Device(dict):
     def __init__(self, device):
         dict.__init__(self)
+
+        if device['connected'] != connected:
+            return
 
         self["title"] = device["name"]
 
@@ -32,23 +44,11 @@ class Device(dict):
         self["uid"] = "bt-device." + device["address"]
         self["arg"] = device["address"]
 
-
-option = sys.argv[1]
-connected_status = ""
-
-if len(sys.argv) > 2:
-    connected_status = sys.argv[2]
-
-device_json = alfred.pipeline(
+alfred.pipeline(
         [
             "blueutil",
             f"--{option}",
             "--format=json",
-            ]
+            ],
+        chunker = alfred.JSONChunker(Device)
         )
-
-connected = connected_status == "connected"
-raw_devices = [d for d in json.loads(device_json) if d['connected'] != connected]
-
-item_outputter = alfred.ItemOutputter(raw_devices, Device)
-item_outputter.process()

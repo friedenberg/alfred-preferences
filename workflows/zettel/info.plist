@@ -6,6 +6,32 @@
 	<string>com.linenisgreat.zettel</string>
 	<key>connections</key>
 	<dict>
+		<key>017C074C-2345-49E9-9F6D-C00608D1760D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>053E2BCD-2185-4F37-82E3-1C3E9DA11564</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>57FFBB8B-16C2-4781-A762-803E26CCACF1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>017C074C-2345-49E9-9F6D-C00608D1760D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>AD3F803A-5A0D-473C-B68D-A3DD4E69A343</key>
 		<array>
 			<dict>
@@ -164,11 +190,112 @@ ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>1</integer>
+				<key>hotmod</key>
+				<integer>786432</integer>
+				<key>hotstring</key>
+				<string>S</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>57FFBB8B-16C2-4781-A762-803E26CCACF1</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Enter title for resource note</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>017C074C-2345-49E9-9F6D-C00608D1760D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>URL="$(osascript -e 'tell application "Google Chrome"	set theUrl to URL of active tab of first windowend tellreturn theUrl'
+)"
+
+FILENAME="$(date '+%Y%m%d%H%M') ${*//\//-/}.md"
+
+pushd "$ZETTEL_PATH"
+echo "#kind-pb" &gt;&gt; "$FILENAME"
+echo "$URL" &gt;&gt; "$FILENAME"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>053E2BCD-2185-4F37-82E3-1C3E9DA11564</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>017C074C-2345-49E9-9F6D-C00608D1760D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>415</integer>
+		</dict>
+		<key>053E2BCD-2185-4F37-82E3-1C3E9DA11564</key>
+		<dict>
+			<key>xpos</key>
+			<integer>435</integer>
+			<key>ypos</key>
+			<integer>415</integer>
+		</dict>
+		<key>57FFBB8B-16C2-4781-A762-803E26CCACF1</key>
+		<dict>
+			<key>xpos</key>
+			<integer>85</integer>
+			<key>ypos</key>
+			<integer>415</integer>
+		</dict>
 		<key>AD3F803A-5A0D-473C-B68D-A3DD4E69A343</key>
 		<dict>
 			<key>xpos</key>
@@ -194,7 +321,7 @@ ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
 	<key>variables</key>
 	<dict>
 		<key>ZETTEL_PATH</key>
-		<string>/Users/sasha/Library/Mobile\ Documents/com\~apple\~CloudDocs/Zettelkasten</string>
+		<string>~/Zettelkasten</string>
 	</dict>
 	<key>version</key>
 	<string></string>
