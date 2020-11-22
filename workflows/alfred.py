@@ -7,6 +7,7 @@ import subprocess
 import sys
 import shlex
 import abc
+import asyncio
 
 os.environ['PATH'] = '/usr/local/bin/:' + os.environ['PATH']
 
@@ -69,21 +70,29 @@ class JSONChunker(FullReadChunker):
             output_item(self.item_class(obj))
 
 def pipeline(*commands, chunker = None):
-    commands = [
-            [shlex.quote(s) for s in command]
-            for command in commands
-            ]
+    async def run_pipeline(*commands, chunker):
+        commands = [
+                [shlex.quote(s) for s in command]
+                for command in commands
+                ]
 
-    output = subprocess.check_output(
-            "|".join([" ".join(a) for a in commands]),
-            shell = True,
-            )
+        process = await asyncio.create_subprocess_shell(
+                "|".join([" ".join(a) for a in commands]),
+                stdin = asyncio.subprocess.DEVNULL,
+                stdout = asyncio.subprocess.PIPE,
+                )
 
-    lines = output.splitlines()
+        with output_wrapped_item_json(), chunker:
+            while True:
+                if process.stdout.at_eof():
+                    break
 
-    with output_wrapped_item_json(), chunker:
-        for line in lines:
-            chunker.process_line(line)
+                line = await process.stdout.readline()
+                chunker.process_line(line)
+
+        code = await process.wait()
+
+    asyncio.run(run_pipeline(*commands, chunker = chunker))
 
 if __name__ == "__main__":
     output = pipeline(sys.argv)
