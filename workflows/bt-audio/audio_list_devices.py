@@ -16,12 +16,12 @@ class Device(dict):
         device = lines[0]
 
         match = pattern_device.match(device)
-        device_name = ""
-        device_type = ""
 
-        if match is not None:
-            device_name = match.group(1).strip()
-            device_type = match.group(2).strip()
+        if match is None:
+            return
+
+        device_name = match.group(1).strip()
+        device_type = match.group(2).strip()
 
         self["title"] = device_name
         self["subtitle"] = device_type

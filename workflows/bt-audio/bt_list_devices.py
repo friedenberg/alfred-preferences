@@ -26,7 +26,7 @@ class Device(dict):
     def __init__(self, device):
         dict.__init__(self)
 
-        if device['connected'] != connected:
+        if device['connected'] == connected:
             return
 
         self["title"] = device["name"]
