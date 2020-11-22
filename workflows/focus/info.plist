@@ -6,19 +6,6 @@
 	<string>com.linenisgreat.alfred.focus</string>
 	<key>connections</key>
 	<dict>
-		<key>11531E72-FAF9-44A9-94EB-FDDE3A81388F</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>89E0FA42-ABA3-487F-87F7-F9EBBA8EDF44</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>29564986-4D50-4F3E-88C3-A5E572B09F05</key>
 		<array>
 			<dict>
@@ -164,10 +151,12 @@
 			</dict>
 		</array>
 		<key>C8C8E889-155F-43DD-B7F7-6633312FB041</key>
+		<array/>
+		<key>C95CF67D-885C-4004-98D0-398C7B8B1B0D</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>11531E72-FAF9-44A9-94EB-FDDE3A81388F</string>
+				<string>0E69F742-1AE9-4816-9026-EFEE19CB969B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -176,11 +165,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>C95CF67D-885C-4004-98D0-398C7B8B1B0D</key>
+		<key>D60256A2-3200-4394-9FAE-8FF05F53BD15</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>0E69F742-1AE9-4816-9026-EFEE19CB969B</string>
+				<string>37E347D2-50DA-4841-A45E-6AD628E971DC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -389,48 +378,6 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>count</key>
-				<integer>1</integer>
-				<key>keychar</key>
-				<string>c</string>
-				<key>keycode</key>
-				<integer>-1</integer>
-				<key>keymod</key>
-				<integer>393216</integer>
-				<key>overridewithargument</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.dispatchkeycombo</string>
-			<key>uid</key>
-			<string>11531E72-FAF9-44A9-94EB-FDDE3A81388F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>count</key>
-				<integer>1</integer>
-				<key>keychar</key>
-				<string>h</string>
-				<key>keycode</key>
-				<integer>-1</integer>
-				<key>keymod</key>
-				<integer>1572864</integer>
-				<key>overridewithargument</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.dispatchkeycombo</string>
-			<key>uid</key>
-			<string>89E0FA42-ABA3-487F-87F7-F9EBBA8EDF44</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -546,15 +493,55 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>2</integer>
+				<key>hotmod</key>
+				<integer>786432</integer>
+				<key>hotstring</key>
+				<string>D</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>D60256A2-3200-4394-9FAE-8FF05F53BD15</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>query=$1
+				<string>set -eou pipefail
 
-defaults -currentHost write com.apple.notificationcenterui doNotDisturb -bool "$query"
-killall NotificationCenter</string>
+# From https://heyfocus.com/enabling-do-not-disturb-mode and
+# https://apple.stackexchange.com/questions/145487
+
+if [[ $(defaults -currentHost read ~/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturb) -eq 0 ]]; then
+  defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturb -boolean true
+  defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturbDate -date "`date -u +\"%Y-%m-%d %H:%M:%S +000\"`"
+  killall NotificationCenter
+else
+  defaults -currentHost write ~/Library/Preferences/ByHost/com.apple.notificationcenterui doNotDisturb -boolean false
+  killall NotificationCenter
+fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -725,25 +712,18 @@ killall NotificationCenter</string>
 			<key>note</key>
 			<string>Click Notification</string>
 			<key>xpos</key>
-			<integer>665</integer>
+			<integer>580</integer>
 			<key>ypos</key>
 			<integer>335</integer>
-		</dict>
-		<key>11531E72-FAF9-44A9-94EB-FDDE3A81388F</key>
-		<dict>
-			<key>xpos</key>
-			<integer>575</integer>
-			<key>ypos</key>
-			<integer>640</integer>
 		</dict>
 		<key>1C335C24-1FDD-4766-BEE3-553C75083B66</key>
 		<dict>
 			<key>note</key>
 			<string>delete on state file</string>
 			<key>xpos</key>
-			<integer>405</integer>
+			<integer>545</integer>
 			<key>ypos</key>
-			<integer>780</integer>
+			<integer>785</integer>
 		</dict>
 		<key>29564986-4D50-4F3E-88C3-A5E572B09F05</key>
 		<dict>
@@ -755,11 +735,11 @@ killall NotificationCenter</string>
 		<key>37E347D2-50DA-4841-A45E-6AD628E971DC</key>
 		<dict>
 			<key>note</key>
-			<string>enable / disable do not disturb</string>
+			<string>toggle DND</string>
 			<key>xpos</key>
-			<integer>255</integer>
+			<integer>395</integer>
 			<key>ypos</key>
-			<integer>940</integer>
+			<integer>945</integer>
 		</dict>
 		<key>4DD0D130-BAC2-492D-8D71-A6C6F3F2290A</key>
 		<dict>
@@ -773,7 +753,7 @@ killall NotificationCenter</string>
 			<key>note</key>
 			<string>Click Button at Index</string>
 			<key>xpos</key>
-			<integer>665</integer>
+			<integer>580</integer>
 			<key>ypos</key>
 			<integer>55</integer>
 		</dict>
@@ -789,7 +769,7 @@ killall NotificationCenter</string>
 			<key>note</key>
 			<string>Click All Notifications</string>
 			<key>xpos</key>
-			<integer>665</integer>
+			<integer>580</integer>
 			<key>ypos</key>
 			<integer>485</integer>
 		</dict>
@@ -799,13 +779,6 @@ killall NotificationCenter</string>
 			<integer>145</integer>
 			<key>ypos</key>
 			<integer>1605</integer>
-		</dict>
-		<key>89E0FA42-ABA3-487F-87F7-F9EBBA8EDF44</key>
-		<dict>
-			<key>xpos</key>
-			<integer>745</integer>
-			<key>ypos</key>
-			<integer>640</integer>
 		</dict>
 		<key>8DCB27A0-4EDE-40DC-8C3D-65EBFFDFA7FE</key>
 		<dict>
@@ -828,9 +801,9 @@ killall NotificationCenter</string>
 			<key>note</key>
 			<string>check if focus will be turned on</string>
 			<key>xpos</key>
-			<integer>85</integer>
+			<integer>225</integer>
 			<key>ypos</key>
-			<integer>700</integer>
+			<integer>705</integer>
 		</dict>
 		<key>B64F3570-1129-41CB-A81B-446366197E22</key>
 		<dict>
@@ -853,27 +826,27 @@ killall NotificationCenter</string>
 			<key>note</key>
 			<string>will turn off</string>
 			<key>xpos</key>
-			<integer>295</integer>
+			<integer>435</integer>
 			<key>ypos</key>
-			<integer>810</integer>
+			<integer>815</integer>
 		</dict>
 		<key>C2C81719-18A0-4AE6-BEBF-17E67B61F77B</key>
 		<dict>
 			<key>note</key>
 			<string>will turn on</string>
 			<key>xpos</key>
-			<integer>295</integer>
+			<integer>435</integer>
 			<key>ypos</key>
-			<integer>670</integer>
+			<integer>675</integer>
 		</dict>
 		<key>C8C8E889-155F-43DD-B7F7-6633312FB041</key>
 		<dict>
 			<key>note</key>
 			<string>write on state file</string>
 			<key>xpos</key>
-			<integer>405</integer>
+			<integer>545</integer>
 			<key>ypos</key>
-			<integer>640</integer>
+			<integer>645</integer>
 		</dict>
 		<key>C95CF67D-885C-4004-98D0-398C7B8B1B0D</key>
 		<dict>
@@ -881,6 +854,13 @@ killall NotificationCenter</string>
 			<integer>405</integer>
 			<key>ypos</key>
 			<integer>335</integer>
+		</dict>
+		<key>D60256A2-3200-4394-9FAE-8FF05F53BD15</key>
+		<dict>
+			<key>xpos</key>
+			<integer>225</integer>
+			<key>ypos</key>
+			<integer>945</integer>
 		</dict>
 		<key>D790A51A-AEDC-4AF3-9B8F-EB14ED505A89</key>
 		<dict>
