@@ -120,6 +120,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>8B5E68D0-1598-408E-A09B-F834AE38FE85</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D65771B0-94B6-4C25-8B34-AD38CA36820A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>8DC2EDDE-FB37-4DC7-943B-A0A59E7C27B6</key>
 		<array>
 			<dict>
@@ -177,6 +190,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>4D0E1898-AA17-47C2-82BC-5C9B6F362180</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>BBF8CA51-5EF9-4B45-BD01-6F1210DD0B13</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8B5E68D0-1598-408E-A09B-F834AE38FE85</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1174,7 +1200,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>dates/today_date_format.rb</string>
+				<string>dates/now.py</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -1190,6 +1216,23 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<string>F3859476-8DFC-454E-80B2-64C6C6CBE477</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
+				<string>zi</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>BBF8CA51-5EF9-4B45-BD01-6F1210DD0B13</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1239,6 +1282,29 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<string>946E48D0-BE12-45D6-8399-0A7399E33206</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>date -u +"%Y%m%d%H%M%S "</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8B5E68D0-1598-408E-A09B-F834AE38FE85</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -1317,6 +1383,13 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>ypos</key>
 			<integer>795</integer>
 		</dict>
+		<key>8B5E68D0-1598-408E-A09B-F834AE38FE85</key>
+		<dict>
+			<key>xpos</key>
+			<integer>560</integer>
+			<key>ypos</key>
+			<integer>1215</integer>
+		</dict>
 		<key>8DC2EDDE-FB37-4DC7-943B-A0A59E7C27B6</key>
 		<dict>
 			<key>xpos</key>
@@ -1351,6 +1424,13 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<integer>20</integer>
 			<key>ypos</key>
 			<integer>810</integer>
+		</dict>
+		<key>BBF8CA51-5EF9-4B45-BD01-6F1210DD0B13</key>
+		<dict>
+			<key>xpos</key>
+			<integer>380</integer>
+			<key>ypos</key>
+			<integer>1215</integer>
 		</dict>
 		<key>C4786F88-E720-4DBE-A941-A7C2AA9C02FB</key>
 		<dict>
