@@ -2,22 +2,22 @@
   "entries": {
     "brew": {
       "pandoc": {
-        "version": "2.11.1.1",
+        "version": "2.11.2",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/pandoc-2.11.2.big_sur.bottle.tar.gz",
+              "sha256": "c0c2dfcfb22df26903844595a9d3983222b3b977d958b24b31b513c5a21acccb"
+            },
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/pandoc-2.11.1.1.catalina.bottle.tar.gz",
-              "sha256": "7cdcf09a97ea9156a2450f67f597099b31f6e9826d4e3cbcd1312871f05964f9"
+              "url": "https://homebrew.bintray.com/bottles/pandoc-2.11.2.catalina.bottle.tar.gz",
+              "sha256": "1f3e1a1274efd7f89c1a6881b9ccb14c19cda7bd4c2b2d31ab2ea9169a806643"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/pandoc-2.11.1.1.mojave.bottle.tar.gz",
-              "sha256": "5365310e20e9caa6f14f2c884c9a05348568d96398cd05b5c497ca65e2106a53"
-            },
-            "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/pandoc-2.11.1.1.high_sierra.bottle.tar.gz",
-              "sha256": "383bbdec7227f3c0a07b193d2ff00915c654e8d3bce59528f2450ec6a4d18d60"
+              "url": "https://homebrew.bintray.com/bottles/pandoc-2.11.2.mojave.bottle.tar.gz",
+              "sha256": "ad8a0e23ceafd4e661699dfb47ac42bc63d2c019f6bbb3e9214b84def01671c3"
             }
           }
         }
@@ -28,6 +28,10 @@
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/coreutils-8.32.big_sur.bottle.1.tar.gz",
+              "sha256": "ce8e32b05a59a6a7f2bd58544ff96902164780edc2a4804a1d97e11f28bc6cb6"
+            },
             "catalina": {
               "url": "https://homebrew.bintray.com/bottles/coreutils-8.32.catalina.bottle.1.tar.gz",
               "sha256": "f40ba727ec1bb54300c7c79804f410a62341b63f3fba41d78ef34e5d369fe9fc"
@@ -49,6 +53,10 @@
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/switchaudio-osx-1.0.0.big_sur.bottle.2.tar.gz",
+              "sha256": "d577b2297c1865399ecbe4c7f2ac491063d75c786387502246b30d32e2606ee7"
+            },
             "catalina": {
               "url": "https://homebrew.bintray.com/bottles/switchaudio-osx-1.0.0.catalina.bottle.2.tar.gz",
               "sha256": "4a1ad0824d878dcabb3d7ffe4ad911f850383dbf2db28100e58f28cbc96657b7"
@@ -73,22 +81,22 @@
         }
       },
       "blueutil": {
-        "version": "2.6.0",
+        "version": "2.7.0",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
+            "big_sur": {
+              "url": "https://homebrew.bintray.com/bottles/blueutil-2.7.0.big_sur.bottle.tar.gz",
+              "sha256": "1b868d1f1e57fe70234b70737b333aa528312e35e87b914c896e12265c83c2ae"
+            },
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/blueutil-2.6.0.catalina.bottle.tar.gz",
-              "sha256": "9e82b1bcb5a3737fb75474f4f1e793f1954d6cc2ebf8cde4c538efc046998dbf"
+              "url": "https://homebrew.bintray.com/bottles/blueutil-2.7.0.catalina.bottle.tar.gz",
+              "sha256": "7ab6e3a2ee2545185668cdf4adda1b99c98fc381148c8c73db14dbeb9f683f74"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/blueutil-2.6.0.mojave.bottle.tar.gz",
-              "sha256": "151d723172aaf7acd9b23cf2a0b41f0fe5100357f511fea170cf34bc05093bb5"
-            },
-            "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/blueutil-2.6.0.high_sierra.bottle.tar.gz",
-              "sha256": "afceca3182b5a43540b44c2b61bb0d510888f0744e924468ee3208d8ab612a4a"
+              "url": "https://homebrew.bintray.com/bottles/blueutil-2.7.0.mojave.bottle.tar.gz",
+              "sha256": "f858bea22c78dc5e807183ff23cda2d2af13b84e5d445702751214cf9a58b85b"
             }
           }
         }
@@ -98,9 +106,9 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.5.10",
+        "HOMEBREW_VERSION": "2.5.11",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "5b7a64565d59b242184a9e449c4500a3aabc9739",
+        "Homebrew/homebrew-core": "cf4a7ed594d9f018cfd41e8950fb3492cbfcc8b7",
         "CLT": "11.0.33.16",
         "Xcode": "11.5",
         "macOS": "10.15.7"
