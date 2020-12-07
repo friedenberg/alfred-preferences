@@ -11,17 +11,19 @@ import asyncio
 
 os.environ['PATH'] = '/usr/local/bin/:' + os.environ['PATH']
 
-@contextlib.contextmanager
-def output_wrapped_item_json():
-    print('{"items":[', end = '')
-    yield
-    print(']}')
+class JSONOutputter():
+    def __enter__(self):
+        print('{"items":[', end = '')
+        return self
 
-def output_item(item):
-    print(json.dumps(item),
-            ',',
-            sep = '',
-            end = '')
+    def item(self, item):
+        print(json.dumps(item),
+                ',',
+                sep = '',
+                end = '')
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        print(']}')
 
 class Chunker(abc.ABC):
     def __enter__(self):
@@ -48,7 +50,7 @@ class LineChunker(Chunker):
         self.acc.append(line)
 
         if len(self.acc) == self.line_count:
-            output_item(self.item_class(self.acc))
+            self.outputter.item(self.item_class(self.acc))
             self.acc = []
 
 class FullReadChunker(Chunker):
@@ -61,13 +63,13 @@ class FullReadChunker(Chunker):
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         collected = "".join(self.acc)
-        output_item(self.item_class(collected))
+        self.outputter.item(self.item_class(collected))
 
 class JSONChunker(FullReadChunker):
     def __exit__(self, exc_type, exc_val, exc_tb):
         collected = b"".join(self.acc)
         for obj in json.loads(collected):
-            output_item(self.item_class(obj))
+            self.outputter.item(self.item_class(obj))
 
 def pipeline(*commands, chunker = None):
     async def run_pipeline(*commands, chunker):
@@ -76,13 +78,17 @@ def pipeline(*commands, chunker = None):
                 for command in commands
                 ]
 
+        command = " | ".join([" ".join(a) for a in commands])
+
         process = await asyncio.create_subprocess_shell(
-                "|".join([" ".join(a) for a in commands]),
+                command,
                 stdin = asyncio.subprocess.DEVNULL,
                 stdout = asyncio.subprocess.PIPE,
                 )
 
-        with output_wrapped_item_json(), chunker:
+        with JSONOutputter() as out, chunker:
+            chunker.outputter = out
+
             while True:
                 if process.stdout.at_eof():
                     break
