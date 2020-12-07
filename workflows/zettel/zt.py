@@ -88,7 +88,7 @@ class Chunker(alfred.Chunker):
             pass
 
         if len(self.acc) > 0 and self.is_head_line(line):
-            alfred.output_item(Item(self.acc))
+            self.outputter.item(Item(self.acc))
             self.acc = [line]
         else:
             self.acc.append(line)
