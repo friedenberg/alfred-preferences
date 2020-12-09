@@ -55,17 +55,9 @@ class Item(dict):
         else:
             arg = f"thearchive://match/{zettel_id}"
 
-        match_words = []
-
-        for s in tail_matches:
-            match_words += s.split('-')
-
-        for s in title.split(' '):
-            match_words += s.split('-')
-
         self["title"] = title
         self["uid"] = uid
-        self["match"] = ' '.join(match_words)
+        self["match"] = alfred.match_terms(title + " " + lines[1])
         self["arg"] = arg
 
         if error is None:
