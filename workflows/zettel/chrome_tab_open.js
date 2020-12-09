@@ -16,35 +16,3 @@ function run(argv) {
     }
   }
 }
-
-function zip(obj) {
-  const arr = [];
-  const entries = Object.entries(obj);
-  const anchor = entries[0][1];
-
-  for (const idx in anchor) {
-    const newObj = {};
-
-    for (const entry of entries) {
-      const key = entry[0];
-      const value = entry[1][idx];
-      newObj[key] = value;
-    }
-
-    arr.push(newObj);
-  }
-
-  return arr;
-}
-
-function arrayFromObject(object, extractor = el => el) {
-  const nodes = [];
-  const length = object.length;
-
-  for (let i = 0; i < length; i++) {
-    const element = object[i];
-    nodes.push(extractor(element));
-  }
-
-  return nodes;
-};

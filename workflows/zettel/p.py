@@ -4,33 +4,10 @@ import os, sys
 
 sys.path.append(os.path.join(os.environ['alfred_preferences'], 'workflows'))
 
-import re
 import pathlib
 
 import alfred
-
-ptn_tags = re.compile(r'(?:\W|^)#(?P<tag>[-\w_]+)\b')
-
-class Item(dict):
-    def __init__(self, obj):
-        title = obj["name"]
-        url = obj["url"]
-        guid = obj["guid"]
-        matches_tags = re.findall(ptn_tags, title)
-
-        match_words = []
-
-        for s in matches_tags:
-            match_words += s.split('-')
-
-        for w in title.split(' '):
-            match_words += w.split('-')
-
-        self["title"] = title
-        self["uid"] = f"bk.{guid}"
-        self["match"] = ' '.join(match_words)
-        self["arg"] = url
-        self["subtitle"] = url
+import url_item
 
 chrome_path = "~/Library/Application Support/Google/Chrome/"
 abs_path = os.path.realpath(os.path.expanduser(chrome_path))
@@ -55,5 +32,10 @@ alfred.pipeline(
         #     'osascript',
         #     'chrome_bookmarks.scpt',
         #     ],
-        chunker = alfred.JSONChunker(Item),
+        chunker = alfred.JSONChunker(
+            lambda x: url_item.Item(
+                x["name"],
+                x["url"],
+                ),
+            ),
         )

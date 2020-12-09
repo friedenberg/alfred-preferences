@@ -8,20 +8,16 @@ import re
 import pathlib
 
 import alfred
-
-class Item(dict):
-    def __init__(self, obj):
-        title = obj["title"]
-        url = obj["url"]
-        guid = obj["id"]
-
-        self["title"] = title
-        self["arg"] = url
-        self["subtitle"] = url
+import url_item
 
 alfred.pipeline(
         [
             "./chrome_tabs.js",
             ],
-        chunker = alfred.JSONChunker(Item),
+        chunker = alfred.JSONChunker(
+            lambda x: url_item.Item(
+                x["title"],
+                x["url"],
+                ),
+            ),
         )
