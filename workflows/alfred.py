@@ -8,8 +8,16 @@ import sys
 import shlex
 import abc
 import asyncio
+import re
+import unicodedata
 
 os.environ['PATH'] = '/usr/local/bin/:' + os.environ['PATH']
+
+ptn_search_match = re.compile(r'\'s|[-\W]|\b(?:www|and|com|the|\w{,2})\b')
+
+def match_terms(string):
+    string = unicodedata.normalize('NFKD', string).encode('ASCII', 'ignore')
+    return ' '.join(ptn_search_match.split(string.decode('utf-8').lower()))
 
 class JSONOutputter():
     def __enter__(self):
