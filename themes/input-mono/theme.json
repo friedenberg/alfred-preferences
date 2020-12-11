@@ -51,7 +51,7 @@
       "paddingHorizontal" : 12,
       "width" : 559,
       "borderPadding" : 8,
-      "borderColor" : "#00000000",
+      "borderColor" : "#FFFFFFFF",
       "blur" : 15,
       "roundness" : 10,
       "paddingVertical" : 10
