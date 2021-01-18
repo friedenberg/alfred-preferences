@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>keywordPrefix</key>
-	<string>-</string>
+	<string></string>
 	<key>keywordSuffix</key>
 	<string>:</string>
 </dict>
