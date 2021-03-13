@@ -58,6 +58,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>2E8A98C0-A2A2-4DFE-A860-B43CC3AD995F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F279F1BE-03C1-4215-BBFD-F1F8473CAA7E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>30930345-AA9C-4FD7-AA0F-A43F3C2F303A</key>
 		<array>
 			<dict>
@@ -71,11 +84,76 @@
 				<false/>
 			</dict>
 		</array>
+		<key>373ACEAF-6E3D-4CD8-8EB7-466A2065ED59</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>46533162-B4F5-4DAE-94F0-B228BCF2CBE3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3978D0C8-7EB8-4357-86DC-9B6BCD1C7FC8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E19335C1-4F76-4D78-B939-8FD218F75E0E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3D2E2C57-27F3-40F6-A1A6-D02445977CEE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ADF00D2B-CEF3-4E4C-BD1C-30B8FF23BC77</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>46533162-B4F5-4DAE-94F0-B228BCF2CBE3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3978D0C8-7EB8-4357-86DC-9B6BCD1C7FC8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>4674A924-7291-408E-95C9-78C0BCD0D4F9</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>30930345-AA9C-4FD7-AA0F-A43F3C2F303A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>49073748-C4B6-4229-A0A3-B2FBE50D8A5D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>92EF8963-B17A-4150-A65B-03678241ED35</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -159,6 +237,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>7BA46CEF-1C98-4DE5-A55B-F08D72C2C3D1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>92EF8963-B17A-4150-A65B-03678241ED35</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>863BBE33-9F79-49AE-BF0C-CFC77BE1BFE0</key>
 		<array>
 			<dict>
@@ -203,6 +294,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>E37AE8D1-4C45-4563-84F3-82C25F7812CC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>92EF8963-B17A-4150-A65B-03678241ED35</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3978D0C8-7EB8-4357-86DC-9B6BCD1C7FC8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -368,6 +472,19 @@
 		</array>
 		<key>D13BDD21-2C6B-4053-BB45-F0C79157C1AC</key>
 		<array/>
+		<key>E19335C1-4F76-4D78-B939-8FD218F75E0E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2E8A98C0-A2A2-4DFE-A860-B43CC3AD995F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>E37AE8D1-4C45-4563-84F3-82C25F7812CC</key>
 		<array/>
 		<key>E3B4E655-675B-41F1-8660-407A06B87200</key>
@@ -422,11 +539,37 @@
 				<false/>
 			</dict>
 		</array>
+		<key>EAEE9F5A-CCC0-49C0-ADDC-4B26A75FFF77</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>46533162-B4F5-4DAE-94F0-B228BCF2CBE3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>EEA01FF2-A88B-49FF-96FA-1CF9C8697C99</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>F3859476-8DFC-454E-80B2-64C6C6CBE477</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F279F1BE-03C1-4215-BBFD-F1F8473CAA7E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F98350CF-C66E-4BEE-A4FC-7DD03F0031BA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -478,6 +621,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>1935C395-948C-4D90-89D5-02585AEAA75B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F98350CF-C66E-4BEE-A4FC-7DD03F0031BA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3D2E2C57-27F3-40F6-A1A6-D02445977CEE</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -787,29 +943,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>vim-format/vim-format.bash</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>E37AE8D1-4C45-4563-84F3-82C25F7812CC</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -857,6 +990,29 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>vim-format/vim-format.bash</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E37AE8D1-4C45-4563-84F3-82C25F7812CC</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -868,23 +1024,6 @@
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>0E7675B2-E28D-4C24-AF3E-6A9E9F56102F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>keyword</key>
-				<string>r</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.snippet</string>
-			<key>uid</key>
-			<string>9AAB7F05-208A-430F-86AD-2950FC5102C5</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -936,6 +1075,23 @@ osascript -e 'tell app "Finder" to set the clipboard to ( POSIX file "resume" )'
 			<string>C846FE09-8F1D-4EAA-8D42-4E436AF2B142</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
+				<string>-r</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>9AAB7F05-208A-430F-86AD-2950FC5102C5</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1045,7 +1201,7 @@ osascript -e 'tell app "Finder" to set the clipboard to ( POSIX file "resume" )'
 				<string>Searching for matching characters</string>
 				<key>script</key>
 				<string>set -ex
-. "$alfred_preferences/workflows/bootstrap.bash" 
+. "../lib/bootstrap.bash" 
 pushd unicode &gt;&amp;2
 make build/results-all-chars.json &gt;&amp;2
 cat build/results-all-chars.json</string>
@@ -1068,23 +1224,6 @@ cat build/results-all-chars.json</string>
 			<string>E7729357-C4ED-467D-83B0-3014754F2A81</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>keyword</key>
-				<string>u</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.snippet</string>
-			<key>uid</key>
-			<string>9C890B63-6E60-42C6-821A-6F06F1B89679</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1113,7 +1252,7 @@ cat build/results-all-chars.json</string>
 				<string></string>
 				<key>script</key>
 				<string>set -ex
-. "$alfred_preferences/workflows/bootstrap.bash" 
+. "../lib/bootstrap.bash" 
 pushd unicode &gt;&amp;2
 make build/results-fav-chars.json &gt;&amp;2
 cat build/results-fav-chars.json</string>
@@ -1136,6 +1275,23 @@ cat build/results-fav-chars.json</string>
 			<string>4D0E1898-AA17-47C2-82BC-5C9B6F362180</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
+				<string>-u</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>9C890B63-6E60-42C6-821A-6F06F1B89679</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1255,6 +1411,23 @@ cat build/results-fav-chars.json</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
+				<string>-t</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>EEA01FF2-A88B-49FF-96FA-1CF9C8697C99</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -1303,23 +1476,6 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<string>F3859476-8DFC-454E-80B2-64C6C6CBE477</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>keyword</key>
-				<string>t</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.snippet</string>
-			<key>uid</key>
-			<string>EEA01FF2-A88B-49FF-96FA-1CF9C8697C99</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1561,6 +1717,306 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
+				<string>#u</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>49073748-C4B6-4229-A0A3-B2FBE50D8A5D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>line_number</key>
+					<string>2</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>92EF8963-B17A-4150-A65B-03678241ED35</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>32</integer>
+				<key>hotmod</key>
+				<integer>393216</integer>
+				<key>hotstring</key>
+				<string>U</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>7BA46CEF-1C98-4DE5-A55B-F08D72C2C3D1</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>exec /usr/local/bin/fish
+
+set json "[{'title': 'Week Number', 'value':  '(date +%V)', 'id': 'snippets.date.week_number'}]"
+echo "$json" | tr "'" '"' | \
+jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, autocomplete: .value}]}"
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>pass/pass.py</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>3978D0C8-7EB8-4357-86DC-9B6BCD1C7FC8</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./pass/pass-line.bash "$1" "$line_number"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E19335C1-4F76-4D78-B939-8FD218F75E0E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>2E8A98C0-A2A2-4DFE-A860-B43CC3AD995F</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>3D2E2C57-27F3-40F6-A1A6-D02445977CEE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>Pasteboard cleared</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>ADF00D2B-CEF3-4E4C-BD1C-30B8FF23BC77</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>45</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>F279F1BE-03C1-4215-BBFD-F1F8473CAA7E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>REDACTED</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>F98350CF-C66E-4BEE-A4FC-7DD03F0031BA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
+				<string>#p</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>EAEE9F5A-CCC0-49C0-ADDC-4B26A75FFF77</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>line_number</key>
+					<string>1</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>46533162-B4F5-4DAE-94F0-B228BCF2CBE3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>35</integer>
+				<key>hotmod</key>
+				<integer>393216</integer>
+				<key>hotstring</key>
+				<string>P</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>373ACEAF-6E3D-4CD8-8EB7-466A2065ED59</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -1608,6 +2064,13 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>ypos</key>
 			<integer>40</integer>
 		</dict>
+		<key>2E8A98C0-A2A2-4DFE-A860-B43CC3AD995F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>810</integer>
+			<key>ypos</key>
+			<integer>2120</integer>
+		</dict>
 		<key>30930345-AA9C-4FD7-AA0F-A43F3C2F303A</key>
 		<dict>
 			<key>xpos</key>
@@ -1615,12 +2078,49 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>ypos</key>
 			<integer>1525</integer>
 		</dict>
+		<key>373ACEAF-6E3D-4CD8-8EB7-466A2065ED59</key>
+		<dict>
+			<key>xpos</key>
+			<integer>35</integer>
+			<key>ypos</key>
+			<integer>2305</integer>
+		</dict>
+		<key>3978D0C8-7EB8-4357-86DC-9B6BCD1C7FC8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>425</integer>
+			<key>ypos</key>
+			<integer>2120</integer>
+		</dict>
+		<key>3D2E2C57-27F3-40F6-A1A6-D02445977CEE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1140</integer>
+			<key>ypos</key>
+			<integer>2120</integer>
+		</dict>
+		<key>46533162-B4F5-4DAE-94F0-B228BCF2CBE3</key>
+		<dict>
+			<key>note</key>
+			<string>passwords</string>
+			<key>xpos</key>
+			<integer>280</integer>
+			<key>ypos</key>
+			<integer>2275</integer>
+		</dict>
 		<key>4674A924-7291-408E-95C9-78C0BCD0D4F9</key>
 		<dict>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
 			<integer>1495</integer>
+		</dict>
+		<key>49073748-C4B6-4229-A0A3-B2FBE50D8A5D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>35</integer>
+			<key>ypos</key>
+			<integer>1925</integer>
 		</dict>
 		<key>4B591F17-9CCC-4AD7-8858-956471069F9E</key>
 		<dict>
@@ -1656,6 +2156,13 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<integer>20</integer>
 			<key>ypos</key>
 			<integer>1370</integer>
+		</dict>
+		<key>7BA46CEF-1C98-4DE5-A55B-F08D72C2C3D1</key>
+		<dict>
+			<key>xpos</key>
+			<integer>35</integer>
+			<key>ypos</key>
+			<integer>2050</integer>
 		</dict>
 		<key>7DD5D6A7-C13E-427B-9716-FF5DCB0DA675</key>
 		<dict>
@@ -1693,6 +2200,15 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<integer>780</integer>
 			<key>ypos</key>
 			<integer>375</integer>
+		</dict>
+		<key>92EF8963-B17A-4150-A65B-03678241ED35</key>
+		<dict>
+			<key>note</key>
+			<string>usernames</string>
+			<key>xpos</key>
+			<integer>280</integer>
+			<key>ypos</key>
+			<integer>2020</integer>
 		</dict>
 		<key>946E48D0-BE12-45D6-8399-0A7399E33206</key>
 		<dict>
@@ -1736,6 +2252,13 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>ypos</key>
 			<integer>1400</integer>
 		</dict>
+		<key>ADF00D2B-CEF3-4E4C-BD1C-30B8FF23BC77</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1300</integer>
+			<key>ypos</key>
+			<integer>2120</integer>
+		</dict>
 		<key>BBF8CA51-5EF9-4B45-BD01-6F1210DD0B13</key>
 		<dict>
 			<key>xpos</key>
@@ -1778,6 +2301,13 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>ypos</key>
 			<integer>965</integer>
 		</dict>
+		<key>E19335C1-4F76-4D78-B939-8FD218F75E0E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>610</integer>
+			<key>ypos</key>
+			<integer>2120</integer>
+		</dict>
 		<key>E37AE8D1-4C45-4563-84F3-82C25F7812CC</key>
 		<dict>
 			<key>xpos</key>
@@ -1813,12 +2343,26 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>ypos</key>
 			<integer>225</integer>
 		</dict>
+		<key>EAEE9F5A-CCC0-49C0-ADDC-4B26A75FFF77</key>
+		<dict>
+			<key>xpos</key>
+			<integer>35</integer>
+			<key>ypos</key>
+			<integer>2180</integer>
+		</dict>
 		<key>EEA01FF2-A88B-49FF-96FA-1CF9C8697C99</key>
 		<dict>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
 			<integer>1090</integer>
+		</dict>
+		<key>F279F1BE-03C1-4215-BBFD-F1F8473CAA7E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>975</integer>
+			<key>ypos</key>
+			<integer>2150</integer>
 		</dict>
 		<key>F3859476-8DFC-454E-80B2-64C6C6CBE477</key>
 		<dict>
@@ -1840,6 +2384,13 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<integer>620</integer>
 			<key>ypos</key>
 			<integer>165</integer>
+		</dict>
+		<key>F98350CF-C66E-4BEE-A4FC-7DD03F0031BA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1060</integer>
+			<key>ypos</key>
+			<integer>2150</integer>
 		</dict>
 		<key>FBF7E92B-18E5-4858-A3DC-19F17DBB4163</key>
 		<dict>

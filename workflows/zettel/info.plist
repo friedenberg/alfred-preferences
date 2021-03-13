@@ -6,37 +6,11 @@
 	<string>com.linenisgreat.zettel</string>
 	<key>connections</key>
 	<dict>
-		<key>017C074C-2345-49E9-9F6D-C00608D1760D</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>053E2BCD-2185-4F37-82E3-1C3E9DA11564</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>37B634A3-5F9E-4B8C-9CBB-5B4363591AB1</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>E2E0671B-543F-4861-A33F-8645AEBD09E6</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>57FFBB8B-16C2-4781-A762-803E26CCACF1</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>017C074C-2345-49E9-9F6D-C00608D1760D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -108,86 +82,6 @@
 	<string>zettel</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>1</integer>
-				<key>hotmod</key>
-				<integer>786432</integer>
-				<key>hotstring</key>
-				<string>S</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>57FFBB8B-16C2-4781-A762-803E26CCACF1</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>URL="$(osascript -e 'tell application "Google Chrome"	set theUrl to URL of active tab of first windowend tellreturn theUrl'
-)"
-
-FILENAME="$(date '+%Y%m%d%H%M') ${*//\//-/}.md"
-ZETTEL_PATH_EXPANDED="$(readlink "${ZETTEL_PATH/#\~/$HOME}")"
-
-echo "#kind-pb" &gt;&gt; "$ZETTEL_PATH_EXPANDED/$FILENAME"
-echo "$URL" &gt;&gt; "$ZETTEL_PATH_EXPANDED/$FILENAME"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>053E2BCD-2185-4F37-82E3-1C3E9DA11564</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Enter title for resource note</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>017C074C-2345-49E9-9F6D-C00608D1760D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -346,7 +240,7 @@ ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>o</string>
+				<string>h</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -488,81 +382,60 @@ ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>017C074C-2345-49E9-9F6D-C00608D1760D</key>
-		<dict>
-			<key>xpos</key>
-			<integer>215</integer>
-			<key>ypos</key>
-			<integer>50</integer>
-		</dict>
-		<key>053E2BCD-2185-4F37-82E3-1C3E9DA11564</key>
-		<dict>
-			<key>xpos</key>
-			<integer>400</integer>
-			<key>ypos</key>
-			<integer>50</integer>
-		</dict>
 		<key>1E4B810A-D619-4BCD-9FF3-6E9A2203D2CC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>440</integer>
+			<integer>265</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>35</integer>
 		</dict>
 		<key>37B634A3-5F9E-4B8C-9CBB-5B4363591AB1</key>
 		<dict>
 			<key>note</key>
 			<string>bookkmarks</string>
 			<key>xpos</key>
-			<integer>215</integer>
+			<integer>40</integer>
 			<key>ypos</key>
-			<integer>350</integer>
-		</dict>
-		<key>57FFBB8B-16C2-4781-A762-803E26CCACF1</key>
-		<dict>
-			<key>xpos</key>
-			<integer>50</integer>
-			<key>ypos</key>
-			<integer>50</integer>
+			<integer>185</integer>
 		</dict>
 		<key>87C785A2-9F4D-494A-BDE7-BD5E0CC56A87</key>
 		<dict>
 			<key>note</key>
 			<string>tabs</string>
 			<key>xpos</key>
-			<integer>215</integer>
+			<integer>40</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>35</integer>
 		</dict>
 		<key>A423CA23-B66B-4C80-9EF4-10E49CA193D6</key>
 		<dict>
 			<key>note</key>
 			<string>history</string>
 			<key>xpos</key>
-			<integer>215</integer>
+			<integer>40</integer>
 			<key>ypos</key>
-			<integer>495</integer>
+			<integer>330</integer>
 		</dict>
 		<key>AD3F803A-5A0D-473C-B68D-A3DD4E69A343</key>
 		<dict>
 			<key>xpos</key>
-			<integer>215</integer>
+			<integer>40</integer>
 			<key>ypos</key>
-			<integer>775</integer>
+			<integer>610</integer>
 		</dict>
 		<key>E2E0671B-543F-4861-A33F-8645AEBD09E6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>395</integer>
+			<integer>220</integer>
 			<key>ypos</key>
-			<integer>495</integer>
+			<integer>330</integer>
 		</dict>
 		<key>FBA58F14-AD61-4D11-8E40-3C116C96D758</key>
 		<dict>
 			<key>xpos</key>
-			<integer>215</integer>
+			<integer>40</integer>
 			<key>ypos</key>
-			<integer>645</integer>
+			<integer>480</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
