@@ -85,6 +85,7 @@ def pipeline(*commands, chunker = None):
                 [shlex.quote(s) for s in command]
                 for command in commands
                 ]
+        #TODO enable use of callables or lambdas instead of shell commands
 
         command = " | ".join([" ".join(a) for a in commands])
 

@@ -1,16 +1,13 @@
 #! /usr/bin/python3
 
-import os, sys
-
-sys.path.append(os.path.join(os.environ['alfred_preferences'], 'workflows'))
-
+import os
+import sys
 import re
 import babel.dates
-
-import alfred
-
 from datetime import datetime, timedelta
 from pathlib import PurePosixPath
+
+import alfred
 
 ptn_xargs_header = re.compile(r'==>.*\/(?P<ts>\d+)\s+(?P<title>.*)\.\w+\s+<==')
 ptn_tags = re.compile(r'(?:\W|^)#(?P<tag>[-\w_]+)\b')

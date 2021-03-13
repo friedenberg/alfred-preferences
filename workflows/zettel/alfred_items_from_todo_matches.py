@@ -1,16 +1,13 @@
 #! /usr/bin/python3
 
-import os, sys
-
-sys.path.append(os.path.join(os.environ['alfred_preferences'], 'workflows'))
-
+import os
+import sys
 import re
+from datetime import datetime
+from pathlib import PurePosixPath
 
 import alfred
 import babel.dates
-
-from datetime import datetime
-from pathlib import PurePosixPath
 
 grep_pattern = re.compile(r'^(.*?):\d+:\d+:(.*)')
 archive_file_pattern = re.compile(r'^\d+')

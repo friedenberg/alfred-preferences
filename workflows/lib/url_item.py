@@ -1,8 +1,10 @@
+import os, sys
 
-import os
-import sys
+sys.path.append(os.path.join(os.environ['alfred_preferences'], 'workflows'))
+
 import urllib.parse
 import hashlib
+
 import url_normalize
 
 import alfred
@@ -19,7 +21,7 @@ class Item(dict):
 
         return ".".join(netloc_parts)
 
-    def __init__(self, title, url):
+    def __init__(self, title, url, description = "", tags = ""):
         urlNormalized = url_normalize.url_normalize(url)
         [scheme, netloc, path, query, fragment] = urllib.parse.urlsplit(urlNormalized)
         scheme = "https"
@@ -42,6 +44,6 @@ class Item(dict):
 
         self["title"] = title
         self["uid"] = f"url.{guid}"
-        self["match"] = alfred.match_terms(f"{title} {netloc}")
+        self["match"] = alfred.match_terms(f"{tags} {title} {description} {netloc}")
         self["arg"] = url
         self["subtitle"] = urlNormalized1

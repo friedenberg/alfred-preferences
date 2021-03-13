@@ -1,13 +1,15 @@
 #! /bin/bash
 
-PATH="/usr/local/bin/:$PATH"
+PATH="/usr/local/bin/:$HOME/Library/Python/3.9/bin:$PATH"
 
 json_escape () {
   printf '%s' "$1" | php -r 'echo json_encode(file_get_contents("php://stdin"));'
 }
 
 post-notification() {
+  # shellcheck disable=SC2086
   TITLE="$(echo -n $1 | sed 's/"/\\"/g')"
+  # shellcheck disable=SC2086
   BODY="$(echo -n $2 | sed 's/"/\\"/g')"
   osascript -e "display notification \"$BODY\" with title \"$TITLE\""
 }

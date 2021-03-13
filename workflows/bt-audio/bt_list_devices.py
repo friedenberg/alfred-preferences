@@ -1,18 +1,14 @@
 #! /usr/bin/python3
 
-import os, sys
-
-sys.path.append(os.path.join(os.environ['alfred_preferences'], 'workflows'))
-
+import os
+import sys
 import json
 import urllib.parse
+from datetime import timedelta, datetime
 
 import alfred
 import iso8601
-
-from datetime import timedelta, datetime
 from babel.dates import format_timedelta
-
 
 option = sys.argv[1]
 connected_status = ""

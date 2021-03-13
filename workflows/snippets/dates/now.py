@@ -1,12 +1,10 @@
 #! /usr/bin/python3
 
-import os, sys
-
-sys.path.append(os.path.join(os.environ['alfred_preferences'], 'workflows'))
+import os
+import sys
+from datetime import datetime
 
 import alfred
-
-from datetime import datetime
 
 class Date(dict):
     def __init__(self, title, value, identifier):

@@ -1,9 +1,7 @@
 #! /usr/bin/python3
 
-import os, sys
-
-sys.path.append(os.path.join(os.environ['alfred_preferences'], 'workflows'))
-
+import os
+import sys
 import sqlite3
 import tempfile
 import shutil

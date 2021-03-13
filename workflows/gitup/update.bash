@@ -1,11 +1,9 @@
 #! /bin/bash -e
 
-DIR_SELF="$(dirname "$0")"
-# shellcheck source=/dev/null
-. "$alfred_preferences/workflows/bootstrap.bash"
+. "./bootstrap.bash"
 
 # shellcheck disable=SC2154
-cd "$alfred_preferences/workflows/" || fail "Unable to cd into $alfred_preferences/workflows/"
+cd "../lib/" || fail "Unable to cd into ../lib"
 
 run-command() {
   TITLE="$1"
@@ -27,16 +25,8 @@ if [[ -z "$UPDATED" ]]; then
   post-notification "Updating Alfred workflows" ""
 
   run-command \
-    "Force Brewfile.lock.json to be unchanged" \
-    git update-index --assume-unchanged Brewfile.lock.json
-
-  run-command \
     "Pull Alfred Preferences" \
     git -c 'url.https://github.com/.insteadOf=git@github.com:' pull
-
-  run-command \
-    "Return Brewfile.lock.json to normal" \
-    git update-index --no-assume-unchanged Brewfile.lock.json
 
   UPDATED=1 exec "$0"
 fi
