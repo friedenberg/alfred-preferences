@@ -46,6 +46,7 @@ class Formatter
         "uid"           => p,
         "type"          => "file",
         "title"         => name,
+        "match"         => name.split(/\W/).join(' '),
         "subtitle"      => p.gsub(Dir.home, '~'),
         "arg"           => p,
         "autocomplete"  => name,
