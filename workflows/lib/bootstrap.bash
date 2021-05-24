@@ -12,6 +12,7 @@ post-notification() {
   # shellcheck disable=SC2086
   BODY="$(echo -n $2 | sed 's/"/\\"/g')"
   osascript -e "display notification \"$BODY\" with title \"$TITLE\""
+  echo "$TITLE" "$BODY" >&2
 }
 
 output-item() {
