@@ -13,7 +13,7 @@ import unicodedata
 
 os.environ['PATH'] = '/usr/local/bin/:' + os.environ['PATH']
 
-ptn_search_match = re.compile(r'\'s|[-\W]|\b(?:www|and|com|the|\w{,2})\b')
+ptn_search_match = re.compile(r'\'s|[-\W]|\b(?:www|and|com|the)\b')
 
 def match_terms(string):
     string = unicodedata.normalize('NFKD', string).encode('ASCII', 'ignore')
