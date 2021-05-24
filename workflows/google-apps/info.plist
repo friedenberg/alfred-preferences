@@ -8,19 +8,6 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
-		<key>14F8DFF4-1669-4F5D-AF95-10816EF41663</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>74138C34-B8A1-4DE4-9E30-E9DF8DFDD232</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>6BCE029C-1D0E-42B2-987E-B6C218BC2F8D</key>
 		<array>
 			<dict>
@@ -99,7 +86,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>mdfind -onlyin "$HOME/Google Drive" "kMDItemKind == 'Google document'" | ./alfred_from_file_list</string>
+				<string>mdfind -onlyin "$HOME/Google Drive" "kMDItemKind == 'Google document' || kMDItemKind == 'Google Shortcut' || kMDItemKind == 'Google spreadsheet' || kMDItemKind == 'Google presentation'" | ./alfred_from_file_list</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -132,55 +119,6 @@
 			<string>alfred.workflow.action.openfile</string>
 			<key>uid</key>
 			<string>74138C34-B8A1-4DE4-9E30-E9DF8DFDD232</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>gs</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>mdfind -onlyin "$HOME/Google Drive" "kMDItemKind == 'Google spreadsheet'" | ./alfred_from_file_list</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>14F8DFF4-1669-4F5D-AF95-10816EF41663</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -257,7 +195,7 @@
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>gd</string>
+				<string>gdo</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
@@ -277,13 +215,6 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>14F8DFF4-1669-4F5D-AF95-10816EF41663</key>
-		<dict>
-			<key>xpos</key>
-			<integer>95</integer>
-			<key>ypos</key>
-			<integer>195</integer>
-		</dict>
 		<key>6A472F9C-453A-4EF2-988F-CA3C92557CA3</key>
 		<dict>
 			<key>xpos</key>
@@ -303,14 +234,14 @@
 			<key>xpos</key>
 			<integer>305</integer>
 			<key>ypos</key>
-			<integer>55</integer>
+			<integer>190</integer>
 		</dict>
 		<key>8A5A7BFF-76CB-4EB3-8777-DAFD425AB0EE</key>
 		<dict>
 			<key>xpos</key>
 			<integer>95</integer>
 			<key>ypos</key>
-			<integer>55</integer>
+			<integer>190</integer>
 		</dict>
 		<key>ADB7A37C-A1DF-42EA-9932-5A2DD01FB84A</key>
 		<dict>
