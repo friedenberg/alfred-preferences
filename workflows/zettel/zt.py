@@ -38,7 +38,8 @@ class Item(dict):
             title = head_match.groupdict()['title']
             zettel_id = head_match.groupdict()['ts']
             uid = f"zettel.{zettel_id}"
-            zettel_date = datetime.strptime(zettel_id, "%Y%m%d%H%M")
+            zettel_date = datetime.fromtimestamp(int(zettel_id))
+            # zettel_date = time.ctime(zettel_id)
             formatted_date = babel.dates.format_date(zettel_date, locale='en_US')
         except AttributeError as e:
             print(lines[0], file = sys.stderr)
