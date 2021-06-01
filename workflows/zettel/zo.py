@@ -9,12 +9,10 @@ from pathlib import PurePosixPath
 
 import alfred
 
-ptn_xargs_header = re.compile(r'(?P<ts>\d+)[-\s](?P<title>.*?)(?:\.(?P<type>\w+))?\.\w+')
-
 class Item(dict):
     def __init__(self, lines):
         dict.__init__(self)
-        head_match = re.search(ptn_xargs_header, lines[0])
+        print(lines, file = sys.stderr)
 
         title = "not set"
         ts = ""
@@ -55,13 +53,14 @@ class Item(dict):
         else:
             self["subtitle"] = error
 
-alfred.pipeline(
-        [
-            'find',
-            os.path.realpath(os.path.expanduser(os.environ['ZETTEL_PATH'])),
-            '-type',
-            'f',
-            # '-print0',
-            ],
-        chunker = alfred.LineChunker(Item, 1),
-        )
+zettel_path = os.path.realpath(os.path.expanduser(os.environ['ZETTEL_PATH']))
+print(zettel_path, file=sys.stderr)
+command = os.path.join(zettel_path, "1622033013.awk")
+# print("wow", file=sys.stderr)
+print(command, file=sys.stderr)
+
+# alfred.pipeline(
+#         [command],
+#         ['/Users/sasha/Library/Python/3.9/bin/yq', '--slurp', '"[.[]]"'],
+#         chunker = alfred.JSONChunker
+#         )

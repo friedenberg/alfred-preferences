@@ -1,7 +1,8 @@
 Babel==2.8.0
 iso8601==0.1.13
-richxerox==1.0.1
-url-normalize==1.4.3
-requests==2.25.0
 requests-cache==0.5.2
+requests==2.25.0
+richxerox==1.0.1
 tacky==0.0.4
+url-normalize==1.4.3
+yq==2.12.0
