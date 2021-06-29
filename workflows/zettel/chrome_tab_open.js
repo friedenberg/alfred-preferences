@@ -1,4 +1,7 @@
 #! /usr/bin/osascript -l JavaScript
+# ---
+# description: open a chrome tab with the passed-in url
+# ...
 
 function run(argv) {
   const urlSelected = argv[0]
