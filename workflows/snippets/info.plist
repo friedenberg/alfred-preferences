@@ -198,6 +198,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>4EAF5DB2-DAF8-41F8-86B0-38ECB8EE4C3D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>10813C31-4AB3-4CF3-BC8D-6D1CB99792C8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>595FBA8E-DC1E-4837-B125-8844DA049505</key>
 		<array>
 			<dict>
@@ -229,6 +242,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>A606B3CA-1282-4949-9BE0-DF4EB29447AD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>79201A35-27CE-4412-8B58-3F41F161A63E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4EAF5DB2-DAF8-41F8-86B0-38ECB8EE4C3D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1574,6 +1600,40 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>keyword</key>
+				<string>@$</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>79201A35-27CE-4412-8B58-3F41F161A63E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>s Wallet-</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>4EAF5DB2-DAF8-41F8-86B0-38ECB8EE4C3D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
 				<string>@e</string>
 			</dict>
 			<key>type</key>
@@ -1788,6 +1848,76 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>3D2E2C57-27F3-40F6-A1A6-D02445977CEE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>Pasteboard cleared</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>ADF00D2B-CEF3-4E4C-BD1C-30B8FF23BC77</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>45</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>F279F1BE-03C1-4215-BBFD-F1F8473CAA7E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>REDACTED</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>F98350CF-C66E-4BEE-A4FC-7DD03F0031BA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -1882,76 +2012,6 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>3D2E2C57-27F3-40F6-A1A6-D02445977CEE</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string></string>
-				<key>title</key>
-				<string>Pasteboard cleared</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>ADF00D2B-CEF3-4E4C-BD1C-30B8FF23BC77</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>seconds</key>
-				<string>45</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.delay</string>
-			<key>uid</key>
-			<string>F279F1BE-03C1-4215-BBFD-F1F8473CAA7E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>REDACTED</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>F98350CF-C66E-4BEE-A4FC-7DD03F0031BA</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>focusedappvariable</key>
 				<false/>
 				<key>focusedappvariablename</key>
@@ -2032,9 +2092,9 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 		<key>10813C31-4AB3-4CF3-BC8D-6D1CB99792C8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>420</integer>
+			<integer>440</integer>
 			<key>ypos</key>
-			<integer>1585</integer>
+			<integer>1630</integer>
 		</dict>
 		<key>1703B780-0EF6-4696-814C-C7DD881E75A7</key>
 		<dict>
@@ -2055,7 +2115,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>1750</integer>
+			<integer>1855</integer>
 		</dict>
 		<key>1DF8E1D4-385D-49E7-8AEB-9720C13E4CC7</key>
 		<dict>
@@ -2069,28 +2129,28 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>xpos</key>
 			<integer>810</integer>
 			<key>ypos</key>
-			<integer>2120</integer>
+			<integer>2180</integer>
 		</dict>
 		<key>30930345-AA9C-4FD7-AA0F-A43F3C2F303A</key>
 		<dict>
 			<key>xpos</key>
 			<integer>240</integer>
 			<key>ypos</key>
-			<integer>1525</integer>
+			<integer>1630</integer>
 		</dict>
 		<key>373ACEAF-6E3D-4CD8-8EB7-466A2065ED59</key>
 		<dict>
 			<key>xpos</key>
 			<integer>35</integer>
 			<key>ypos</key>
-			<integer>2305</integer>
+			<integer>2365</integer>
 		</dict>
 		<key>3978D0C8-7EB8-4357-86DC-9B6BCD1C7FC8</key>
 		<dict>
 			<key>xpos</key>
 			<integer>425</integer>
 			<key>ypos</key>
-			<integer>2120</integer>
+			<integer>2180</integer>
 		</dict>
 		<key>3D2E2C57-27F3-40F6-A1A6-D02445977CEE</key>
 		<dict>
@@ -2106,21 +2166,21 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>xpos</key>
 			<integer>280</integer>
 			<key>ypos</key>
-			<integer>2275</integer>
+			<integer>2335</integer>
 		</dict>
 		<key>4674A924-7291-408E-95C9-78C0BCD0D4F9</key>
 		<dict>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>1495</integer>
+			<integer>1600</integer>
 		</dict>
 		<key>49073748-C4B6-4229-A0A3-B2FBE50D8A5D</key>
 		<dict>
 			<key>xpos</key>
 			<integer>35</integer>
 			<key>ypos</key>
-			<integer>1925</integer>
+			<integer>1985</integer>
 		</dict>
 		<key>4B591F17-9CCC-4AD7-8858-956471069F9E</key>
 		<dict>
@@ -2136,6 +2196,13 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>ypos</key>
 			<integer>810</integer>
 		</dict>
+		<key>4EAF5DB2-DAF8-41F8-86B0-38ECB8EE4C3D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>240</integer>
+			<key>ypos</key>
+			<integer>1370</integer>
+		</dict>
 		<key>595FBA8E-DC1E-4837-B125-8844DA049505</key>
 		<dict>
 			<key>xpos</key>
@@ -2148,21 +2215,28 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>xpos</key>
 			<integer>240</integer>
 			<key>ypos</key>
-			<integer>1650</integer>
+			<integer>1755</integer>
 		</dict>
 		<key>769E9698-BFE6-4E44-8F40-B7D624E3E5B9</key>
 		<dict>
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>1370</integer>
+			<integer>1475</integer>
+		</dict>
+		<key>79201A35-27CE-4412-8B58-3F41F161A63E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>20</integer>
+			<key>ypos</key>
+			<integer>1340</integer>
 		</dict>
 		<key>7BA46CEF-1C98-4DE5-A55B-F08D72C2C3D1</key>
 		<dict>
 			<key>xpos</key>
 			<integer>35</integer>
 			<key>ypos</key>
-			<integer>2050</integer>
+			<integer>2110</integer>
 		</dict>
 		<key>7DD5D6A7-C13E-427B-9716-FF5DCB0DA675</key>
 		<dict>
@@ -2208,7 +2282,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>xpos</key>
 			<integer>280</integer>
 			<key>ypos</key>
-			<integer>2020</integer>
+			<integer>2080</integer>
 		</dict>
 		<key>946E48D0-BE12-45D6-8399-0A7399E33206</key>
 		<dict>
@@ -2243,14 +2317,14 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>xpos</key>
 			<integer>20</integer>
 			<key>ypos</key>
-			<integer>1620</integer>
+			<integer>1725</integer>
 		</dict>
 		<key>A606B3CA-1282-4949-9BE0-DF4EB29447AD</key>
 		<dict>
 			<key>xpos</key>
 			<integer>240</integer>
 			<key>ypos</key>
-			<integer>1400</integer>
+			<integer>1505</integer>
 		</dict>
 		<key>ADF00D2B-CEF3-4E4C-BD1C-30B8FF23BC77</key>
 		<dict>
@@ -2306,7 +2380,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>xpos</key>
 			<integer>610</integer>
 			<key>ypos</key>
-			<integer>2120</integer>
+			<integer>2180</integer>
 		</dict>
 		<key>E37AE8D1-4C45-4563-84F3-82C25F7812CC</key>
 		<dict>
@@ -2348,7 +2422,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>xpos</key>
 			<integer>35</integer>
 			<key>ypos</key>
-			<integer>2180</integer>
+			<integer>2240</integer>
 		</dict>
 		<key>EEA01FF2-A88B-49FF-96FA-1CF9C8697C99</key>
 		<dict>
@@ -2397,7 +2471,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 			<key>xpos</key>
 			<integer>240</integer>
 			<key>ypos</key>
-			<integer>1780</integer>
+			<integer>1885</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
