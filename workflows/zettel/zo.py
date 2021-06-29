@@ -3,6 +3,8 @@
 import os
 import sys
 import re
+import glob
+import subprocess
 import babel.dates
 from datetime import datetime, time, timedelta
 from pathlib import PurePosixPath
@@ -53,14 +55,14 @@ class Item(dict):
         else:
             self["subtitle"] = error
 
-zettel_path = os.path.realpath(os.path.expanduser(os.environ['ZETTEL_PATH']))
+# zettel_path = os.path.realpath(os.path.expanduser(os.environ['ZETTEL_PATH']))
 print(zettel_path, file=sys.stderr)
 command = os.path.join(zettel_path, "1622033013.awk")
-# print("wow", file=sys.stderr)
-print(command, file=sys.stderr)
+
+print(subprocess.check_output([command] + glob.glob(f"{zettel_path}/*")),
+file=sys.stderr)
 
 # alfred.pipeline(
-#         [command],
-#         ['/Users/sasha/Library/Python/3.9/bin/yq', '--slurp', '"[.[]]"'],
-#         chunker = alfred.JSONChunker
+#         [command] + glob.glob(f"{zettel_path}/*"),
+#         chunker = alfred.PandocYamlChunker
 #         )

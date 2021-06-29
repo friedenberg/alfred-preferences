@@ -10,6 +10,7 @@ import abc
 import asyncio
 import re
 import unicodedata
+import yaml
 
 os.environ['PATH'] = '/usr/local/bin/:' + os.environ['PATH']
 
@@ -78,6 +79,33 @@ class JSONChunker(FullReadChunker):
         collected = b"".join(self.acc)
         for obj in json.loads(collected):
             self.outputter.item(self.item_class(obj))
+
+class PandocYamlChunker(Chunker):
+    def __init__(self, item_class):
+        self.acc = []
+        self.item_class = item_class
+
+    def process_line(self, line_b):
+        line = line_b.decode("utf-8")
+        if line == "---\n":
+            self.acc = []
+        elif line == "...\n":
+            obj = yaml.safe_load("".join(self.acc))
+
+            item = None
+
+            try:
+                item = self.item_class(obj)
+            except:
+                pass
+
+            if item is not None:
+                self.outputter.item(item)
+        else:
+            self.acc.append(line)
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        pass
 
 def pipeline(*commands, chunker = None):
     async def run_pipeline(*commands, chunker):
