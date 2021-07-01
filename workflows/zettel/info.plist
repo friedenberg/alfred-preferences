@@ -49,6 +49,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>B7B77939-217E-4ABC-A332-71414D14A7C4</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open and edit Zettel</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>240CED5C-F644-4451-9FCD-2D9B40771A49</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
@@ -140,7 +150,31 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>set -e
-./z open --action "$1" &amp;</string>
+./z open --action --edit "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B7B77939-217E-4ABC-A332-71414D14A7C4</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>set -e
+./z open --action "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -261,7 +295,7 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 				<integer>102</integer>
 				<key>script</key>
 				<string>set -e
-./z edit "$1" &amp;</string>
+./z edit "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -521,14 +555,14 @@ ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
 			<key>xpos</key>
 			<integer>55</integer>
 			<key>ypos</key>
-			<integer>160</integer>
+			<integer>275</integer>
 		</dict>
 		<key>1E4B810A-D619-4BCD-9FF3-6E9A2203D2CC</key>
 		<dict>
 			<key>xpos</key>
 			<integer>280</integer>
 			<key>ypos</key>
-			<integer>520</integer>
+			<integer>635</integer>
 		</dict>
 		<key>240CED5C-F644-4451-9FCD-2D9B40771A49</key>
 		<dict>
@@ -537,7 +571,7 @@ ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
 			<key>xpos</key>
 			<integer>585</integer>
 			<key>ypos</key>
-			<integer>15</integer>
+			<integer>130</integer>
 		</dict>
 		<key>37B634A3-5F9E-4B8C-9CBB-5B4363591AB1</key>
 		<dict>
@@ -546,7 +580,7 @@ ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
 			<key>xpos</key>
 			<integer>55</integer>
 			<key>ypos</key>
-			<integer>670</integer>
+			<integer>785</integer>
 		</dict>
 		<key>43E8283E-1D97-43EE-9656-79B5A372E008</key>
 		<dict>
@@ -555,7 +589,7 @@ ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
 			<key>xpos</key>
 			<integer>215</integer>
 			<key>ypos</key>
-			<integer>300</integer>
+			<integer>415</integer>
 		</dict>
 		<key>775320FD-3690-4555-9602-0BBAEE39B565</key>
 		<dict>
@@ -564,7 +598,7 @@ ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
 			<key>xpos</key>
 			<integer>55</integer>
 			<key>ypos</key>
-			<integer>15</integer>
+			<integer>130</integer>
 		</dict>
 		<key>84E814BA-7190-4987-B8B9-8302163358DB</key>
 		<dict>
@@ -573,7 +607,7 @@ ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
 			<key>xpos</key>
 			<integer>585</integer>
 			<key>ypos</key>
-			<integer>230</integer>
+			<integer>345</integer>
 		</dict>
 		<key>87C785A2-9F4D-494A-BDE7-BD5E0CC56A87</key>
 		<dict>
@@ -582,7 +616,7 @@ ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
 			<key>xpos</key>
 			<integer>55</integer>
 			<key>ypos</key>
-			<integer>520</integer>
+			<integer>635</integer>
 		</dict>
 		<key>A423CA23-B66B-4C80-9EF4-10E49CA193D6</key>
 		<dict>
@@ -591,14 +625,23 @@ ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
 			<key>xpos</key>
 			<integer>55</integer>
 			<key>ypos</key>
-			<integer>815</integer>
+			<integer>930</integer>
 		</dict>
 		<key>B25DCC72-385D-4538-91F1-28082AF95CFA</key>
 		<dict>
 			<key>xpos</key>
 			<integer>55</integer>
 			<key>ypos</key>
-			<integer>300</integer>
+			<integer>415</integer>
+		</dict>
+		<key>B7B77939-217E-4ABC-A332-71414D14A7C4</key>
+		<dict>
+			<key>note</key>
+			<string>z open --action --edit</string>
+			<key>xpos</key>
+			<integer>435</integer>
+			<key>ypos</key>
+			<integer>10</integer>
 		</dict>
 		<key>DF84B909-1E7A-4BD8-930B-B684AE486CC4</key>
 		<dict>
@@ -607,14 +650,14 @@ ag "#todo" "$(realpath "$ZETTEL_PATH")"</string>
 			<key>xpos</key>
 			<integer>215</integer>
 			<key>ypos</key>
-			<integer>160</integer>
+			<integer>275</integer>
 		</dict>
 		<key>E2E0671B-543F-4861-A33F-8645AEBD09E6</key>
 		<dict>
 			<key>xpos</key>
 			<integer>235</integer>
 			<key>ypos</key>
-			<integer>815</integer>
+			<integer>930</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
