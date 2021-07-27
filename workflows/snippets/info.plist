@@ -1310,7 +1310,7 @@ cat build/results-fav-chars.json</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>keyword</key>
-				<string>-u</string>
+				<string>u</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.snippet</string>
@@ -1442,7 +1442,7 @@ cat build/results-fav-chars.json</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>keyword</key>
-				<string>-t</string>
+				<string>t</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.snippet</string>
