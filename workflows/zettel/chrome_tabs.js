@@ -1,7 +1,4 @@
 #! /usr/bin/osascript -l JavaScript
-# ---
-# description: print the list of chrome tabs
-# ...
 
 function run(argv) {
   const chrome = Application("Google Chrome");
