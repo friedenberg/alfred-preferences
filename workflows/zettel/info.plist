@@ -47,6 +47,32 @@
 		</array>
 		<key>43E8283E-1D97-43EE-9656-79B5A372E008</key>
 		<array/>
+		<key>486C81D5-9C4F-46E2-9330-8FF327B98308</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6E394148-F0B0-4AD2-B0A9-1E9E7DF3A56D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6E394148-F0B0-4AD2-B0A9-1E9E7DF3A56D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>61F2BA51-DFAC-482A-BCA0-67082B2BE2EB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>775320FD-3690-4555-9602-0BBAEE39B565</key>
 		<array>
 			<dict>
@@ -190,29 +216,6 @@
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>chrome_get_current_url.z.js</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>13E9F113-DFEA-40CD-805E-ECEA23220CD8</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
 				<string>set -e
@@ -260,6 +263,29 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
 			<string>C0391AD3-407F-4787-98DC-0DECF44EAB9A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>chrome_get_current_url.z.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>13E9F113-DFEA-40CD-805E-ECEA23220CD8</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -336,30 +362,6 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>set -e
-./z edit -open -edit=false "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>240CED5C-F644-4451-9FCD-2D9B40771A49</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -407,6 +409,30 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 			<string>775320FD-3690-4555-9602-0BBAEE39B565</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>set -e
+./z edit -open -edit=false "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>240CED5C-F644-4451-9FCD-2D9B40771A49</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -494,25 +520,6 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>61F2BA51-DFAC-482A-BCA0-67082B2BE2EB</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -556,6 +563,25 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>E62888FE-94ED-4737-8F22-0ADAEA07B61C</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>61F2BA51-DFAC-482A-BCA0-67082B2BE2EB</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -675,6 +701,87 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>set -e
+z="${ZETTEL_PATH/#\~/$HOME}"
+./z cat -output-format metadata-json \
+      | jq -s '{items:[
+  [[.[] | .tags? // empty] | .[] | .[]] | unique | .[] | {
+  #       "uid": "desktop",
+  #      "type": "file",
+         "title": .,
+  #       "subtitle": "~/Desktop",
+          "arg": .,
+          "match": (. / "-" | join(" ")),
+  #       "autocomplete": "Desktop",
+  #        "icon": {
+  #            "type": "fileicon",
+  #            "path": "~/Desktop"
+  #        }
+      }
+  ]}'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>6E394148-F0B0-4AD2-B0A9-1E9E7DF3A56D</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
+				<string>zm</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>486C81D5-9C4F-46E2-9330-8FF327B98308</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -719,12 +826,26 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 			<key>ypos</key>
 			<integer>375</integer>
 		</dict>
+		<key>486C81D5-9C4F-46E2-9330-8FF327B98308</key>
+		<dict>
+			<key>xpos</key>
+			<integer>45</integer>
+			<key>ypos</key>
+			<integer>845</integer>
+		</dict>
 		<key>61F2BA51-DFAC-482A-BCA0-67082B2BE2EB</key>
 		<dict>
 			<key>xpos</key>
 			<integer>545</integer>
 			<key>ypos</key>
 			<integer>590</integer>
+		</dict>
+		<key>6E394148-F0B0-4AD2-B0A9-1E9E7DF3A56D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>200</integer>
+			<key>ypos</key>
+			<integer>845</integer>
 		</dict>
 		<key>775320FD-3690-4555-9602-0BBAEE39B565</key>
 		<dict>
