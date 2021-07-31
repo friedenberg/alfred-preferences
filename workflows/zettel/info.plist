@@ -45,6 +45,39 @@
 				<false/>
 			</dict>
 		</array>
+		<key>36D125A8-8491-4163-994E-59EB603A0271</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BA1EB113-6529-4E29-A012-4145B8B7D080</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open and edit Zettel</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>DDBC2449-8261-42A3-9F91-700D5B2F8D63</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Open the attached file or url</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D910F483-4149-442B-AD2B-94B873CEFAF2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>43E8283E-1D97-43EE-9656-79B5A372E008</key>
 		<array/>
 		<key>486C81D5-9C4F-46E2-9330-8FF327B98308</key>
@@ -219,6 +252,252 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>set -e
+./z edit -open -query "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B7B77939-217E-4ABC-A332-71414D14A7C4</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>set -e
+./z edit -open "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>BA1EB113-6529-4E29-A012-4145B8B7D080</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>set -e
+./z edit -open -edit=false "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DDBC2449-8261-42A3-9F91-700D5B2F8D63</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>zq</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>set -e
+z="${ZETTEL_PATH/#\~/$HOME}"
+./z cat -output-format metadata-json | ./print_unique_tag_items.jq</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>z</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>775320FD-3690-4555-9602-0BBAEE39B565</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>zo</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>set -e
+z="${ZETTEL_PATH/#\~/$HOME}"
+./z cat --output-format alfred-json</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>z</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>36D125A8-8491-4163-994E-59EB603A0271</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>set -e
+./z edit -open -edit=false -query "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>240CED5C-F644-4451-9FCD-2D9B40771A49</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>set -e
+./z edit -query "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>84E814BA-7190-4987-B8B9-8302163358DB</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>set -e
+./z edit "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>D910F483-4149-442B-AD2B-94B873CEFAF2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>set -e
 z="${ZETTEL_PATH/#\~/$HOME}"
 ./z new --with-url "$1"</string>
 				<key>scriptargtype</key>
@@ -298,30 +577,6 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 				<integer>102</integer>
 				<key>script</key>
 				<string>set -e
-./z edit -open "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>B7B77939-217E-4ABC-A332-71414D14A7C4</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>set -e
 z="${ZETTEL_PATH/#\~/$HOME}"
 ./z new</string>
 				<key>scriptargtype</key>
@@ -362,77 +617,19 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
+				<key>acceptsmulti</key>
 				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>2</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>zo</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>set -e
-z="${ZETTEL_PATH/#\~/$HOME}"
-./z cat --output-format alfred-json</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>z</string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
+				<key>filetypes</key>
+				<array/>
+				<key>name</key>
+				<string>Move to Zettelkasten</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.trigger.action</string>
 			<key>uid</key>
-			<string>775320FD-3690-4555-9602-0BBAEE39B565</string>
+			<string>B25DCC72-385D-4538-91F1-28082AF95CFA</string>
 			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>set -e
-./z edit -open -edit=false "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>240CED5C-F644-4451-9FCD-2D9B40771A49</string>
-			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -462,47 +659,6 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>acceptsmulti</key>
-				<true/>
-				<key>filetypes</key>
-				<array/>
-				<key>name</key>
-				<string>Move to Zettelkasten</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.action</string>
-			<key>uid</key>
-			<string>B25DCC72-385D-4538-91F1-28082AF95CFA</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>set -e
-./z edit "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>84E814BA-7190-4987-B8B9-8302163358DB</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>focusedappvariable</key>
 				<false/>
 				<key>focusedappvariablename</key>
@@ -523,7 +679,7 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>argumenttreatemptyqueryasnil</key>
 				<true/>
 				<key>argumenttrimmode</key>
@@ -658,7 +814,7 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>argumenttreatemptyqueryasnil</key>
 				<true/>
 				<key>argumenttrimmode</key>
@@ -707,7 +863,7 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>argumenttreatemptyqueryasnil</key>
 				<true/>
 				<key>argumenttrimmode</key>
@@ -729,22 +885,7 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 				<key>script</key>
 				<string>set -e
 z="${ZETTEL_PATH/#\~/$HOME}"
-./z cat -output-format metadata-json \
-      | jq -s '{items:[
-  [[.[] | .tags? // empty] | .[] | .[]] | unique | .[] | {
-  #       "uid": "desktop",
-  #      "type": "file",
-         "title": .,
-  #       "subtitle": "~/Desktop",
-          "arg": .,
-          "match": (. / "-" | join(" ")),
-  #       "autocomplete": "Desktop",
-  #        "icon": {
-  #            "type": "fileicon",
-  #            "path": "~/Desktop"
-  #        }
-      }
-  ]}'</string>
+./z cat -output-format metadata-json | "$z/1627736961.jq"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -790,156 +931,192 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 		<key>00AFDE95-80F8-4BC7-8892-CE76CF46CA51</key>
 		<dict>
 			<key>xpos</key>
-			<integer>45</integer>
+			<integer>10</integer>
 			<key>ypos</key>
-			<integer>235</integer>
+			<integer>610</integer>
 		</dict>
 		<key>13E9F113-DFEA-40CD-805E-ECEA23220CD8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>205</integer>
+			<integer>170</integer>
 			<key>ypos</key>
-			<integer>95</integer>
+			<integer>470</integer>
 		</dict>
 		<key>240CED5C-F644-4451-9FCD-2D9B40771A49</key>
 		<dict>
 			<key>note</key>
 			<string>only open attachments</string>
 			<key>xpos</key>
-			<integer>750</integer>
+			<integer>780</integer>
 			<key>ypos</key>
-			<integer>360</integer>
+			<integer>155</integer>
 		</dict>
 		<key>347AC3E7-3632-41A7-907C-226816744196</key>
 		<dict>
 			<key>xpos</key>
-			<integer>375</integer>
+			<integer>340</integer>
 			<key>ypos</key>
-			<integer>590</integer>
+			<integer>965</integer>
+		</dict>
+		<key>36D125A8-8491-4163-994E-59EB603A0271</key>
+		<dict>
+			<key>note</key>
+			<string>z cat --output-format alfred-json</string>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>155</integer>
 		</dict>
 		<key>43E8283E-1D97-43EE-9656-79B5A372E008</key>
 		<dict>
 			<key>note</key>
 			<string>z new --with-file</string>
 			<key>xpos</key>
-			<integer>205</integer>
+			<integer>170</integer>
 			<key>ypos</key>
-			<integer>375</integer>
+			<integer>750</integer>
 		</dict>
 		<key>486C81D5-9C4F-46E2-9330-8FF327B98308</key>
 		<dict>
 			<key>xpos</key>
-			<integer>45</integer>
+			<integer>10</integer>
 			<key>ypos</key>
-			<integer>845</integer>
+			<integer>1220</integer>
 		</dict>
 		<key>61F2BA51-DFAC-482A-BCA0-67082B2BE2EB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>545</integer>
+			<integer>510</integer>
 			<key>ypos</key>
-			<integer>590</integer>
+			<integer>965</integer>
 		</dict>
 		<key>6E394148-F0B0-4AD2-B0A9-1E9E7DF3A56D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>200</integer>
+			<integer>165</integer>
 			<key>ypos</key>
-			<integer>845</integer>
+			<integer>1220</integer>
 		</dict>
 		<key>775320FD-3690-4555-9602-0BBAEE39B565</key>
 		<dict>
 			<key>note</key>
 			<string>z cat --output-format alfred-json</string>
 			<key>xpos</key>
-			<integer>475</integer>
+			<integer>505</integer>
 			<key>ypos</key>
-			<integer>360</integer>
+			<integer>155</integer>
 		</dict>
 		<key>84E814BA-7190-4987-B8B9-8302163358DB</key>
 		<dict>
 			<key>note</key>
 			<string>only edit</string>
 			<key>xpos</key>
-			<integer>750</integer>
+			<integer>780</integer>
 			<key>ypos</key>
-			<integer>505</integer>
+			<integer>300</integer>
 		</dict>
 		<key>900C44A0-C4ED-41E4-9DBC-8C56D9AB6D65</key>
 		<dict>
 			<key>note</key>
 			<string>z new</string>
 			<key>xpos</key>
-			<integer>380</integer>
+			<integer>345</integer>
 			<key>ypos</key>
-			<integer>95</integer>
+			<integer>470</integer>
 		</dict>
 		<key>B25DCC72-385D-4538-91F1-28082AF95CFA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>45</integer>
+			<integer>10</integer>
 			<key>ypos</key>
-			<integer>375</integer>
+			<integer>750</integer>
 		</dict>
 		<key>B36D47B4-EBF8-4401-ADA3-3A87E824E1E1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>375</integer>
+			<integer>340</integer>
 			<key>ypos</key>
-			<integer>720</integer>
+			<integer>1095</integer>
 		</dict>
 		<key>B7B77939-217E-4ABC-A332-71414D14A7C4</key>
 		<dict>
 			<key>note</key>
 			<string>open and edit</string>
 			<key>xpos</key>
-			<integer>750</integer>
+			<integer>780</integer>
 			<key>ypos</key>
-			<integer>215</integer>
+			<integer>10</integer>
+		</dict>
+		<key>BA1EB113-6529-4E29-A012-4145B8B7D080</key>
+		<dict>
+			<key>note</key>
+			<string>open and edit</string>
+			<key>xpos</key>
+			<integer>285</integer>
+			<key>ypos</key>
+			<integer>10</integer>
 		</dict>
 		<key>C0391AD3-407F-4787-98DC-0DECF44EAB9A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>45</integer>
+			<integer>10</integer>
 			<key>ypos</key>
-			<integer>95</integer>
+			<integer>470</integer>
 		</dict>
 		<key>C77AC6A2-AC57-4817-AE11-A9B51FBB00D9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>45</integer>
+			<integer>10</integer>
 			<key>ypos</key>
-			<integer>720</integer>
+			<integer>1095</integer>
 		</dict>
 		<key>C822DAF0-D9F7-43B4-907B-C5A8856CE025</key>
 		<dict>
 			<key>xpos</key>
-			<integer>45</integer>
+			<integer>10</integer>
 			<key>ypos</key>
-			<integer>590</integer>
+			<integer>965</integer>
+		</dict>
+		<key>D910F483-4149-442B-AD2B-94B873CEFAF2</key>
+		<dict>
+			<key>note</key>
+			<string>only edit</string>
+			<key>xpos</key>
+			<integer>285</integer>
+			<key>ypos</key>
+			<integer>300</integer>
+		</dict>
+		<key>DDBC2449-8261-42A3-9F91-700D5B2F8D63</key>
+		<dict>
+			<key>note</key>
+			<string>only open attachments</string>
+			<key>xpos</key>
+			<integer>285</integer>
+			<key>ypos</key>
+			<integer>155</integer>
 		</dict>
 		<key>DF84B909-1E7A-4BD8-930B-B684AE486CC4</key>
 		<dict>
 			<key>note</key>
 			<string>z new</string>
 			<key>xpos</key>
-			<integer>205</integer>
+			<integer>170</integer>
 			<key>ypos</key>
-			<integer>235</integer>
+			<integer>610</integer>
 		</dict>
 		<key>E62888FE-94ED-4737-8F22-0ADAEA07B61C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>200</integer>
+			<integer>165</integer>
 			<key>ypos</key>
-			<integer>590</integer>
+			<integer>965</integer>
 		</dict>
 		<key>F60AF8A6-A89F-4B56-9FE0-3C117CBF0AB3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>200</integer>
+			<integer>165</integer>
 			<key>ypos</key>
-			<integer>720</integer>
+			<integer>1095</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
