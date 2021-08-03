@@ -345,7 +345,7 @@
 				<key>script</key>
 				<string>set -e
 z="${ZETTEL_PATH/#\~/$HOME}"
-./z cat -output-format metadata-json | ./print_unique_tag_items.jq</string>
+./z cat -output-format alfred-expanded-tags</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -885,7 +885,7 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 				<key>script</key>
 				<string>set -e
 z="${ZETTEL_PATH/#\~/$HOME}"
-./z cat -output-format metadata-json | "$z/1627736961.jq"</string>
+./z cat -output-format alfred-tags</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
