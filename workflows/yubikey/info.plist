@@ -187,9 +187,9 @@
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<false/>
+				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>argumenttreatemptyqueryasnil</key>
 				<true/>
 				<key>argumenttrimmode</key>
@@ -210,9 +210,10 @@
 				<string></string>
 				<key>script</key>
 				<string>ykman oath accounts list \
-	| cut -d: -f1 \
-	| xargs printf '"%s"\n' \
-	| jq -s '{items:[.[] | {title: ., arg: .}]}'</string>
+      | cut -d: -f1 \
+      | tr \\n \\0 \
+      | xargs -0 -L1 printf '"%s"\n' \
+      | jq -s '{items:[.[] | {title: ., arg: .}]}'</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
