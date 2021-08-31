@@ -270,6 +270,19 @@
 		</array>
 		<key>DF84B909-1E7A-4BD8-930B-B684AE486CC4</key>
 		<array/>
+		<key>E1D8A30D-4702-4D11-9B7E-AD0B66DB2564</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F63E80DD-2D11-4A18-8141-74CE49C17A19</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>E62888FE-94ED-4737-8F22-0ADAEA07B61C</key>
 		<array>
 			<dict>
@@ -301,6 +314,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>B36D47B4-EBF8-4401-ADA3-3A87E824E1E1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FF3EA45B-AB46-43B9-A4DE-A68193B90D7E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E1D8A30D-4702-4D11-9B7E-AD0B66DB2564</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -810,6 +836,82 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 			<string>62AA6EFA-0EE7-4281-A486-86668304065D</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>set -ex
+~/Zettelkasten/1630274941.js \
+	| jq -r ".[]" \
+	| xargs ./z add -kind urls -actions edit -tags "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F63E80DD-2D11-4A18-8141-74CE49C17A19</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Enter tags to add</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>E1D8A30D-4702-4D11-9B7E-AD0B66DB2564</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>13</integer>
+				<key>hotmod</key>
+				<integer>393216</integer>
+				<key>hotstring</key>
+				<string>W</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>FF3EA45B-AB46-43B9-A4DE-A68193B90D7E</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1333,7 +1435,7 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>1095</integer>
+			<integer>1205</integer>
 		</dict>
 		<key>0A97E65A-0E20-46AA-AF37-B416C64CD811</key>
 		<dict>
@@ -1347,28 +1449,28 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>xpos</key>
 			<integer>170</integer>
 			<key>ypos</key>
-			<integer>955</integer>
+			<integer>1065</integer>
 		</dict>
 		<key>1D5814ED-C16F-416D-995E-7738869CBAD3</key>
 		<dict>
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>1995</integer>
+			<integer>2105</integer>
 		</dict>
 		<key>221284B2-02B3-4610-B94B-9B84A715BF8C</key>
 		<dict>
 			<key>xpos</key>
 			<integer>340</integer>
 			<key>ypos</key>
-			<integer>1865</integer>
+			<integer>1975</integer>
 		</dict>
 		<key>347AC3E7-3632-41A7-907C-226816744196</key>
 		<dict>
 			<key>xpos</key>
 			<integer>340</integer>
 			<key>ypos</key>
-			<integer>1450</integer>
+			<integer>1560</integer>
 		</dict>
 		<key>36D125A8-8491-4163-994E-59EB603A0271</key>
 		<dict>
@@ -1391,21 +1493,21 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>xpos</key>
 			<integer>170</integer>
 			<key>ypos</key>
-			<integer>1235</integer>
+			<integer>1345</integer>
 		</dict>
 		<key>486C81D5-9C4F-46E2-9330-8FF327B98308</key>
 		<dict>
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>1705</integer>
+			<integer>1815</integer>
 		</dict>
 		<key>61F2BA51-DFAC-482A-BCA0-67082B2BE2EB</key>
 		<dict>
 			<key>xpos</key>
 			<integer>510</integer>
 			<key>ypos</key>
-			<integer>1450</integer>
+			<integer>1560</integer>
 		</dict>
 		<key>62AA6EFA-0EE7-4281-A486-86668304065D</key>
 		<dict>
@@ -1433,7 +1535,7 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>xpos</key>
 			<integer>165</integer>
 			<key>ypos</key>
-			<integer>1705</integer>
+			<integer>1815</integer>
 		</dict>
 		<key>775320FD-3690-4555-9602-0BBAEE39B565</key>
 		<dict>
@@ -1456,14 +1558,14 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>xpos</key>
 			<integer>345</integer>
 			<key>ypos</key>
-			<integer>955</integer>
+			<integer>1065</integer>
 		</dict>
 		<key>90647509-B5DB-4537-A47E-CF41C643CE75</key>
 		<dict>
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>1865</integer>
+			<integer>1975</integer>
 		</dict>
 		<key>978B92DE-060B-4473-B0DB-BA79D1D1448D</key>
 		<dict>
@@ -1477,14 +1579,14 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>1235</integer>
+			<integer>1345</integer>
 		</dict>
 		<key>B36D47B4-EBF8-4401-ADA3-3A87E824E1E1</key>
 		<dict>
 			<key>xpos</key>
 			<integer>340</integer>
 			<key>ypos</key>
-			<integer>1580</integer>
+			<integer>1690</integer>
 		</dict>
 		<key>B7A02362-197C-4662-866C-6E5BAE05658B</key>
 		<dict>
@@ -1505,21 +1607,21 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>955</integer>
+			<integer>1065</integer>
 		</dict>
 		<key>C77AC6A2-AC57-4817-AE11-A9B51FBB00D9</key>
 		<dict>
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>1580</integer>
+			<integer>1690</integer>
 		</dict>
 		<key>C822DAF0-D9F7-43B4-907B-C5A8856CE025</key>
 		<dict>
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>1450</integer>
+			<integer>1560</integer>
 		</dict>
 		<key>D4F368CC-C58F-467D-AB29-217054621BCA</key>
 		<dict>
@@ -1544,14 +1646,21 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>xpos</key>
 			<integer>170</integer>
 			<key>ypos</key>
-			<integer>1095</integer>
+			<integer>1205</integer>
+		</dict>
+		<key>E1D8A30D-4702-4D11-9B7E-AD0B66DB2564</key>
+		<dict>
+			<key>xpos</key>
+			<integer>170</integer>
+			<key>ypos</key>
+			<integer>935</integer>
 		</dict>
 		<key>E62888FE-94ED-4737-8F22-0ADAEA07B61C</key>
 		<dict>
 			<key>xpos</key>
 			<integer>165</integer>
 			<key>ypos</key>
-			<integer>1450</integer>
+			<integer>1560</integer>
 		</dict>
 		<key>F1965525-E762-44A7-B05A-55F53E60E6DD</key>
 		<dict>
@@ -1565,7 +1674,21 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>xpos</key>
 			<integer>165</integer>
 			<key>ypos</key>
-			<integer>1580</integer>
+			<integer>1690</integer>
+		</dict>
+		<key>F63E80DD-2D11-4A18-8141-74CE49C17A19</key>
+		<dict>
+			<key>xpos</key>
+			<integer>345</integer>
+			<key>ypos</key>
+			<integer>935</integer>
+		</dict>
+		<key>FF3EA45B-AB46-43B9-A4DE-A68193B90D7E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>935</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
