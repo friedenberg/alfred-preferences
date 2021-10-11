@@ -194,7 +194,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>6BC312FA-7600-4F60-9DE5-8FABCFFB936C</string>
+				<string>DCE16CC3-BED6-4E1E-B410-652A38F97DCA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -374,9 +374,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>set -e
-eval `/usr/libexec/path_helper -s`
-z="${ZETTEL_PATH/#\~/$HOME}"
+				<string>source up.bash
 ./z cat -output-format alfred-expanded-tags -query h-f</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -422,12 +420,12 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 			<key>config</key>
 			<dict>
 				<key>concurrently</key>
-				<false/>
+				<true/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>set -ex
-./z edit -query "$1" -actions "$actions"</string>
+				<string>source up.bash
+nohup ./z edit -query "$1" -actions "$actions"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -470,9 +468,7 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>set -e
-eval `/usr/libexec/path_helper -s`
-z="${ZETTEL_PATH/#\~/$HOME}"
+				<string>source up.bash
 ./z cat -output-format alfred-expanded-tags -query h-u</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -542,9 +538,7 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>set -e
-eval `/usr/libexec/path_helper -s`
-z="${ZETTEL_PATH/#\~/$HOME}"
+				<string>source up.bash
 ./z cat -output-format alfred-expanded-tags</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -653,8 +647,7 @@ esac</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>set -e
-z="${ZETTEL_PATH/#\~/$HOME}"
+				<string>source up.bash
 ./z cat --output-format alfred-json-urls</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -723,9 +716,8 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>set -e
-z="${ZETTEL_PATH/#\~/$HOME}"
-./z cat --output-format alfred-json-files</string>
+				<string>source up.bash
+z cat --output-format alfred-json-files</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -749,29 +741,37 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
+				<key>concurrently</key>
+				<true/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>source up.bash
+nohup ./z edit -actions open-files "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
 				<string></string>
-				<key>sourcefile</key>
-				<string></string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>6BC312FA-7600-4F60-9DE5-8FABCFFB936C</string>
+			<string>DCE16CC3-BED6-4E1E-B410-652A38F97DCA</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>concurrently</key>
-				<false/>
+				<true/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>set -ex
-
-./z edit "$1"</string>
+				<string>source up.bash
+nohup ./z edit "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -814,8 +814,7 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>set -e
-z="${ZETTEL_PATH/#\~/$HOME}"
+				<string>source up.bash
 ./z cat --output-format alfred-json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -841,14 +840,15 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 			<key>config</key>
 			<dict>
 				<key>concurrently</key>
-				<false/>
+				<true/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>set -ex
+				<string>source up.bash
+
 ~/Zettelkasten/1630274941.js \
 	| jq -r ".[]" \
-	| xargs ./z add -kind urls -actions edit -tags "$1"</string>
+	| xargs nohup ./z add -kind urls -actions edit -tags "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -948,13 +948,13 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 			<key>config</key>
 			<dict>
 				<key>concurrently</key>
-				<false/>
+				<true/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>set -e
-z="${ZETTEL_PATH/#\~/$HOME}"
-./z new --with-url "$1"</string>
+				<string>source up.bash
+
+nohup ./z new --with-url "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1000,9 +1000,9 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>set -e
-z="${ZETTEL_PATH/#\~/$HOME}"
-./z new</string>
+				<string>source up.bash
+
+nohup ./z new &amp;</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1042,13 +1042,13 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 			<key>config</key>
 			<dict>
 				<key>concurrently</key>
-				<false/>
+				<true/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>set -e
-z="${ZETTEL_PATH/#\~/$HOME}"
-./z add-files "$@"</string>
+				<string>source up.bash
+
+nohup ./z add -kind files -actions edit,open-files "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1084,12 +1084,12 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 			<key>config</key>
 			<dict>
 				<key>concurrently</key>
-				<false/>
+				<true/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>set -ex
-z="${ZETTEL_PATH/#\~/$HOME}"
+				<string>source up.bash
+
 ./z cat --output-format "%b" "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1167,8 +1167,8 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>set -e
-z="${ZETTEL_PATH/#\~/$HOME}"
+				<string>source up.bash
+
 ./z cat --output-format alfred-json-snippets</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1216,8 +1216,8 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>set -e
-z="${ZETTEL_PATH/#\~/$HOME}"
+				<string>source up.bash
+
 ./z cat --output-format alfred-json</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1243,12 +1243,12 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 			<key>config</key>
 			<dict>
 				<key>concurrently</key>
-				<false/>
+				<true/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>set -ex
-z="${ZETTEL_PATH/#\~/$HOME}"
+				<string>source up.bash
+
 ./z cat --output-format "%z" "$@" | tr -d '\n'</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1307,8 +1307,8 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>set -e
-z="${ZETTEL_PATH/#\~/$HOME}"
+				<string>source up.bash
+
 ./z cat -output-format alfred-tags</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1386,7 +1386,7 @@ z="${ZETTEL_PATH/#\~/$HOME}"
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>set -e
+				<string>source up.bash
 
 cd ~/Zettelkasten/1630158745
 open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string>
@@ -1523,13 +1523,6 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>ypos</key>
 			<integer>185</integer>
 		</dict>
-		<key>6BC312FA-7600-4F60-9DE5-8FABCFFB936C</key>
-		<dict>
-			<key>xpos</key>
-			<integer>235</integer>
-			<key>ypos</key>
-			<integer>635</integer>
-		</dict>
 		<key>6E394148-F0B0-4AD2-B0A9-1E9E7DF3A56D</key>
 		<dict>
 			<key>xpos</key>
@@ -1638,6 +1631,13 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<integer>410</integer>
 			<key>ypos</key>
 			<integer>500</integer>
+		</dict>
+		<key>DCE16CC3-BED6-4E1E-B410-652A38F97DCA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>235</integer>
+			<key>ypos</key>
+			<integer>635</integer>
 		</dict>
 		<key>DF84B909-1E7A-4BD8-930B-B684AE486CC4</key>
 		<dict>
