@@ -94,6 +94,19 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>C0232952-F052-4304-A158-9C6EBCE8C077</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C0232952-F052-4304-A158-9C6EBCE8C077</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
 				<string>58D86035-968B-4B0C-8711-EB2EA05C95DC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -167,6 +180,29 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>get_tab_domain.js</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C0232952-F052-4304-A158-9C6EBCE8C077</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
@@ -217,13 +253,13 @@
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string></string>
+				<string>print_alfred_totp_options.bash</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
 				<string></string>
 				<key>type</key>
-				<integer>0</integer>
+				<integer>8</integer>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -348,42 +384,42 @@
 		<key>016D731D-FBB9-46FC-9A5E-6928792624A3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>430</integer>
+			<integer>635</integer>
 			<key>ypos</key>
 			<integer>10</integer>
 		</dict>
 		<key>0C98C835-10BA-4626-995D-ECF16E60FE5D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>540</integer>
+			<integer>745</integer>
 			<key>ypos</key>
 			<integer>10</integer>
 		</dict>
 		<key>2632CA74-3E28-4BA7-B4CA-D904AC16C5B9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>540</integer>
+			<integer>745</integer>
 			<key>ypos</key>
 			<integer>160</integer>
 		</dict>
 		<key>4944535F-9DFB-4524-AF15-C997BF0DD72C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>390</integer>
+			<integer>595</integer>
 			<key>ypos</key>
 			<integer>315</integer>
 		</dict>
 		<key>55F2CC56-35B0-48E1-B91B-43366A7EBDC9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>390</integer>
+			<integer>595</integer>
 			<key>ypos</key>
 			<integer>160</integer>
 		</dict>
 		<key>58D86035-968B-4B0C-8711-EB2EA05C95DC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>185</integer>
+			<integer>390</integer>
 			<key>ypos</key>
 			<integer>160</integer>
 		</dict>
@@ -397,14 +433,21 @@
 		<key>B190AE68-9BFD-4B1B-9616-23339F11C228</key>
 		<dict>
 			<key>xpos</key>
-			<integer>535</integer>
+			<integer>740</integer>
 			<key>ypos</key>
 			<integer>315</integer>
+		</dict>
+		<key>C0232952-F052-4304-A158-9C6EBCE8C077</key>
+		<dict>
+			<key>xpos</key>
+			<integer>210</integer>
+			<key>ypos</key>
+			<integer>160</integer>
 		</dict>
 		<key>F2BF1328-DD02-4146-8D13-AE08C51DCA92</key>
 		<dict>
 			<key>xpos</key>
-			<integer>430</integer>
+			<integer>635</integer>
 			<key>ypos</key>
 			<integer>75</integer>
 		</dict>
