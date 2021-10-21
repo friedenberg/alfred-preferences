@@ -1,4 +1,4 @@
-Babel==2.8.0
+Babel==2.9.1
 iso8601==0.1.13
 pyyaml==5.4.1
 requests-cache==0.5.2
