@@ -1,1 +1,0 @@
-../../lib/alfred.py
