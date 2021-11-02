@@ -71,13 +71,24 @@
 				<false/>
 			</dict>
 		</array>
-		<key>43E8283E-1D97-43EE-9656-79B5A372E008</key>
-		<array/>
 		<key>486C81D5-9C4F-46E2-9330-8FF327B98308</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>6E394148-F0B0-4AD2-B0A9-1E9E7DF3A56D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4EF55715-BDFA-4F65-BFBF-B86952B87130</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>591C4D35-1327-4991-A803-84171A901C0A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -138,6 +149,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>7C84E71B-3981-4226-A420-31E84E93C20A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4EF55715-BDFA-4F65-BFBF-B86952B87130</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>90647509-B5DB-4537-A47E-CF41C643CE75</key>
 		<array>
 			<dict>
@@ -164,11 +188,34 @@
 				<false/>
 			</dict>
 		</array>
+		<key>9EEA61D6-0625-470B-903C-EF9A53572FF5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D4626ED2-6585-4F85-8F85-16126374007D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>B25DCC72-385D-4538-91F1-28082AF95CFA</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>43E8283E-1D97-43EE-9656-79B5A372E008</string>
+				<string>9EEA61D6-0625-470B-903C-EF9A53572FF5</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Open file</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D4626ED2-6585-4F85-8F85-16126374007D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -255,11 +302,37 @@
 				<false/>
 			</dict>
 		</array>
+		<key>D4626ED2-6585-4F85-8F85-16126374007D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>591C4D35-1327-4991-A803-84171A901C0A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>D4F368CC-C58F-467D-AB29-217054621BCA</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>84E814BA-7190-4987-B8B9-8302163358DB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D761F97C-7340-4373-9717-EB499709B092</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CBD7690E-326B-4130-AC0C-928BA90D0CAB</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -292,6 +365,29 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E930A5C7-5894-49B1-A64C-58F1EA230567</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4EF55715-BDFA-4F65-BFBF-B86952B87130</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7C84E71B-3981-4226-A420-31E84E93C20A</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Open file</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -349,6 +445,48 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>acceptsmulti</key>
+				<integer>1</integer>
+				<key>filetypes</key>
+				<array/>
+				<key>name</key>
+				<string>Move to Zettelkasten</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>D761F97C-7340-4373-9717-EB499709B092</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<true/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>source up.bash
+
+nohup ./z add -kind files -actions edit,open-files "$@"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>CBD7690E-326B-4130-AC0C-928BA90D0CAB</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -375,7 +513,7 @@
 				<string></string>
 				<key>script</key>
 				<string>source up.bash
-./z cat -output-format alfred-expanded-tags -query h-f</string>
+./z cat -output-format alfred-tags -query f-</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -425,6 +563,8 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>source up.bash
+echo $1 &gt;&amp;2
+echo $action &gt;&amp;2
 nohup ./z edit -query "$1" -actions "$actions"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -469,7 +609,7 @@ nohup ./z edit -query "$1" -actions "$actions"</string>
 				<string></string>
 				<key>script</key>
 				<string>source up.bash
-./z cat -output-format alfred-expanded-tags -query h-u</string>
+./z cat -output-format alfred-tags -query u-</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -539,7 +679,7 @@ nohup ./z edit -query "$1" -actions "$actions"</string>
 				<string></string>
 				<key>script</key>
 				<string>source up.bash
-./z cat -output-format alfred-expanded-tags</string>
+./z cat -output-format alfred-tags</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -717,7 +857,7 @@ esac</string>
 				<string></string>
 				<key>script</key>
 				<string>source up.bash
-z cat --output-format alfred-json-files</string>
+./z cat --output-format alfred-json-files</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -954,7 +1094,7 @@ nohup ./z edit "$1"</string>
 				<key>script</key>
 				<string>source up.bash
 
-nohup ./z new --with-url "$1"</string>
+nohup ./z add -kind urls -actions edit "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -973,7 +1113,7 @@ nohup ./z new --with-url "$1"</string>
 			<key>config</key>
 			<dict>
 				<key>concurrently</key>
-				<false/>
+				<true/>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
@@ -1041,14 +1181,72 @@ nohup ./z new &amp;</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>acceptsmulti</key>
+				<integer>1</integer>
+				<key>filetypes</key>
+				<array/>
+				<key>name</key>
+				<string>Copy to Zettelkasten</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>E930A5C7-5894-49B1-A64C-58F1EA230567</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>kind</key>
+					<string>files-copy</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>4EF55715-BDFA-4F65-BFBF-B86952B87130</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>actions</key>
+					<string>edit,open-files</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>7C84E71B-3981-4226-A420-31E84E93C20A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<true/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
 				<string>source up.bash
+actions="${actions:-edit}"
 
-nohup ./z add -kind files -actions edit,open-files "$@"</string>
+nohup ./z add -kind "$kind" -actions "$actions" "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1059,9 +1257,29 @@ nohup ./z add -kind files -actions edit,open-files "$@"</string>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>43E8283E-1D97-43EE-9656-79B5A372E008</string>
+			<string>591C4D35-1327-4991-A803-84171A901C0A</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>actions</key>
+					<string>edit,open-files</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>9EEA61D6-0625-470B-903C-EF9A53572FF5</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1077,6 +1295,26 @@ nohup ./z add -kind files -actions edit,open-files "$@"</string>
 			<string>alfred.workflow.trigger.action</string>
 			<key>uid</key>
 			<string>B25DCC72-385D-4538-91F1-28082AF95CFA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>kind</key>
+					<string>files</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>D4626ED2-6585-4F85-8F85-16126374007D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1456,21 +1694,21 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>2105</integer>
+			<integer>2390</integer>
 		</dict>
 		<key>221284B2-02B3-4610-B94B-9B84A715BF8C</key>
 		<dict>
 			<key>xpos</key>
 			<integer>340</integer>
 			<key>ypos</key>
-			<integer>1975</integer>
+			<integer>2260</integer>
 		</dict>
 		<key>347AC3E7-3632-41A7-907C-226816744196</key>
 		<dict>
 			<key>xpos</key>
 			<integer>340</integer>
 			<key>ypos</key>
-			<integer>1560</integer>
+			<integer>1845</integer>
 		</dict>
 		<key>36D125A8-8491-4163-994E-59EB603A0271</key>
 		<dict>
@@ -1486,28 +1724,37 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>ypos</key>
 			<integer>765</integer>
 		</dict>
-		<key>43E8283E-1D97-43EE-9656-79B5A372E008</key>
-		<dict>
-			<key>note</key>
-			<string>z new --with-file</string>
-			<key>xpos</key>
-			<integer>170</integer>
-			<key>ypos</key>
-			<integer>1345</integer>
-		</dict>
 		<key>486C81D5-9C4F-46E2-9330-8FF327B98308</key>
 		<dict>
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>1815</integer>
+			<integer>2100</integer>
+		</dict>
+		<key>4EF55715-BDFA-4F65-BFBF-B86952B87130</key>
+		<dict>
+			<key>note</key>
+			<string>-kind files-copy</string>
+			<key>xpos</key>
+			<integer>360</integer>
+			<key>ypos</key>
+			<integer>1400</integer>
+		</dict>
+		<key>591C4D35-1327-4991-A803-84171A901C0A</key>
+		<dict>
+			<key>note</key>
+			<string>z new --with-file</string>
+			<key>xpos</key>
+			<integer>510</integer>
+			<key>ypos</key>
+			<integer>1500</integer>
 		</dict>
 		<key>61F2BA51-DFAC-482A-BCA0-67082B2BE2EB</key>
 		<dict>
 			<key>xpos</key>
 			<integer>510</integer>
 			<key>ypos</key>
-			<integer>1560</integer>
+			<integer>1845</integer>
 		</dict>
 		<key>62AA6EFA-0EE7-4281-A486-86668304065D</key>
 		<dict>
@@ -1521,28 +1768,37 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>xpos</key>
 			<integer>210</integer>
 			<key>ypos</key>
-			<integer>185</integer>
+			<integer>235</integer>
 		</dict>
 		<key>6E394148-F0B0-4AD2-B0A9-1E9E7DF3A56D</key>
 		<dict>
 			<key>xpos</key>
 			<integer>165</integer>
 			<key>ypos</key>
-			<integer>1815</integer>
+			<integer>2100</integer>
 		</dict>
 		<key>775320FD-3690-4555-9602-0BBAEE39B565</key>
 		<dict>
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>155</integer>
+			<integer>205</integer>
+		</dict>
+		<key>7C84E71B-3981-4226-A420-31E84E93C20A</key>
+		<dict>
+			<key>note</key>
+			<string>-actions edit,open-files</string>
+			<key>xpos</key>
+			<integer>225</integer>
+			<key>ypos</key>
+			<integer>1470</integer>
 		</dict>
 		<key>84E814BA-7190-4987-B8B9-8302163358DB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>375</integer>
+			<integer>470</integer>
 			<key>ypos</key>
-			<integer>155</integer>
+			<integer>205</integer>
 		</dict>
 		<key>900C44A0-C4ED-41E4-9DBC-8C56D9AB6D65</key>
 		<dict>
@@ -1558,28 +1814,37 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>1975</integer>
+			<integer>2260</integer>
 		</dict>
 		<key>978B92DE-060B-4473-B0DB-BA79D1D1448D</key>
 		<dict>
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>300</integer>
+			<integer>350</integer>
+		</dict>
+		<key>9EEA61D6-0625-470B-903C-EF9A53572FF5</key>
+		<dict>
+			<key>note</key>
+			<string>-actions edit,open-files</string>
+			<key>xpos</key>
+			<integer>225</integer>
+			<key>ypos</key>
+			<integer>1555</integer>
 		</dict>
 		<key>B25DCC72-385D-4538-91F1-28082AF95CFA</key>
 		<dict>
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>1345</integer>
+			<integer>1605</integer>
 		</dict>
 		<key>B36D47B4-EBF8-4401-ADA3-3A87E824E1E1</key>
 		<dict>
 			<key>xpos</key>
 			<integer>340</integer>
 			<key>ypos</key>
-			<integer>1690</integer>
+			<integer>1975</integer>
 		</dict>
 		<key>B7A02362-197C-4662-866C-6E5BAE05658B</key>
 		<dict>
@@ -1593,7 +1858,7 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>xpos</key>
 			<integer>210</integer>
 			<key>ypos</key>
-			<integer>40</integer>
+			<integer>135</integer>
 		</dict>
 		<key>C0391AD3-407F-4787-98DC-0DECF44EAB9A</key>
 		<dict>
@@ -1607,21 +1872,46 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>1690</integer>
+			<integer>1975</integer>
 		</dict>
 		<key>C822DAF0-D9F7-43B4-907B-C5A8856CE025</key>
 		<dict>
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>1560</integer>
+			<integer>1845</integer>
+		</dict>
+		<key>CBD7690E-326B-4130-AC0C-928BA90D0CAB</key>
+		<dict>
+			<key>note</key>
+			<string>z new --with-file</string>
+			<key>xpos</key>
+			<integer>470</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>D4626ED2-6585-4F85-8F85-16126374007D</key>
+		<dict>
+			<key>note</key>
+			<string>-kind files</string>
+			<key>xpos</key>
+			<integer>360</integer>
+			<key>ypos</key>
+			<integer>1635</integer>
 		</dict>
 		<key>D4F368CC-C58F-467D-AB29-217054621BCA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>205</integer>
+			<integer>210</integer>
 			<key>ypos</key>
-			<integer>330</integer>
+			<integer>380</integer>
+		</dict>
+		<key>D761F97C-7340-4373-9717-EB499709B092</key>
+		<dict>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>10</integer>
 		</dict>
 		<key>D910F483-4149-442B-AD2B-94B873CEFAF2</key>
 		<dict>
@@ -1660,7 +1950,14 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>xpos</key>
 			<integer>165</integer>
 			<key>ypos</key>
-			<integer>1560</integer>
+			<integer>1845</integer>
+		</dict>
+		<key>E930A5C7-5894-49B1-A64C-58F1EA230567</key>
+		<dict>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>1370</integer>
 		</dict>
 		<key>F1965525-E762-44A7-B05A-55F53E60E6DD</key>
 		<dict>
@@ -1674,7 +1971,7 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 			<key>xpos</key>
 			<integer>165</integer>
 			<key>ypos</key>
-			<integer>1690</integer>
+			<integer>1975</integer>
 		</dict>
 		<key>F63E80DD-2D11-4A18-8141-74CE49C17A19</key>
 		<dict>
@@ -1694,7 +1991,7 @@ open -na "Google Chrome" --args --new-window "$(./pick_class.bash "$1")"</string
 	<key>variables</key>
 	<dict>
 		<key>ZETTEL_PATH</key>
-		<string>~/Zettelkasten</string>
+		<string>~/z2</string>
 	</dict>
 	<key>version</key>
 	<string></string>
