@@ -16,7 +16,7 @@
       },
       "backgroundSelected" : "#063641FF",
       "text" : {
-        "size" : 18,
+        "size" : 16,
         "colorSelected" : "#EDE8D4FF",
         "font" : "Input Sans Compressed",
         "color" : "#839495FF"
@@ -35,10 +35,10 @@
       "paddingHorizontal" : 8,
       "spacing" : 8,
       "text" : {
-        "size" : 38,
+        "size" : 24,
         "colorSelected" : "#92A0A0FF",
         "font" : "Input Sans Compressed",
-        "color" : "#92A0A0FF"
+        "color" : "#FFFFFFFF"
       },
       "background" : "#002B36FF",
       "roundness" : 0,
