@@ -1,6 +1,6 @@
-#! /usr/bin/env /Users/sasha/Zettelkasten/1630272875.js
+#! /usr/bin/env /Users/sasha/Zettelkasten/1560e60.js
 
-const lib = require("~/Zettelkasten/1630272891.js");
+const lib = require("~/Zettelkasten/fde749d.js");
 
 function main(argv) {
   const chrome = Application("Google Chrome");
