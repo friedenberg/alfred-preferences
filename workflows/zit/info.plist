@@ -19,6 +19,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>055AD868-B2EC-4355-A89E-DC2B2195E6A0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>61F2BA51-DFAC-482A-BCA0-67082B2BE2EB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>064D3FF9-4A53-4386-A85C-ADBC071A4B45</key>
 		<array>
 			<dict>
@@ -220,6 +233,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>D4626ED2-6585-4F85-8F85-16126374007D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A4B5282D-8B29-4FB5-B5AA-3B29DC84E388</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>055AD868-B2EC-4355-A89E-DC2B2195E6A0</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1359,6 +1385,71 @@ zit cat-alfred -type etikett</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>source up.bash
+zit push snippet-address</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>055AD868-B2EC-4355-A89E-DC2B2195E6A0</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
+				<string>@a</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>A4B5282D-8B29-4FB5-B5AA-3B29DC84E388</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -1370,6 +1461,13 @@ zit cat-alfred -type etikett</string>
 			<integer>25</integer>
 			<key>ypos</key>
 			<integer>900</integer>
+		</dict>
+		<key>055AD868-B2EC-4355-A89E-DC2B2195E6A0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>180</integer>
+			<key>ypos</key>
+			<integer>2115</integer>
 		</dict>
 		<key>064D3FF9-4A53-4386-A85C-ADBC071A4B45</key>
 		<dict>
@@ -1512,6 +1610,13 @@ zit cat-alfred -type etikett</string>
 			<integer>240</integer>
 			<key>ypos</key>
 			<integer>1535</integer>
+		</dict>
+		<key>A4B5282D-8B29-4FB5-B5AA-3B29DC84E388</key>
+		<dict>
+			<key>xpos</key>
+			<integer>25</integer>
+			<key>ypos</key>
+			<integer>2115</integer>
 		</dict>
 		<key>B25DCC72-385D-4538-91F1-28082AF95CFA</key>
 		<dict>
