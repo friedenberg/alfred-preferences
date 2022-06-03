@@ -58,6 +58,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>12514196-06D7-4396-A40C-C1958AD23AB6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8B720BD9-B13E-4656-BE1C-A2E9375F0A2E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>13E9F113-DFEA-40CD-805E-ECEA23220CD8</key>
 		<array>
 			<dict>
@@ -187,6 +200,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>4EF55715-BDFA-4F65-BFBF-B86952B87130</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8B720BD9-B13E-4656-BE1C-A2E9375F0A2E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>61F2BA51-DFAC-482A-BCA0-67082B2BE2EB</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -549,7 +575,7 @@ esac</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>z</string>
+				<string>zo</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -811,7 +837,12 @@ nohup z add -kind files -actions edit,open-files "$@"</string>
 				<integer>102</integer>
 				<key>script</key>
 				<string>source up.bash
-nohup zit new</string>
+
+if [[ "$#" -gt 0 ]]; then
+	zit new -edit -bezeichnung "$*"
+else
+	zit new -edit
+fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -838,7 +869,7 @@ nohup zit new</string>
 				<key>text</key>
 				<string>Create a new Zettel</string>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
@@ -1142,6 +1173,47 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
+				<string>zn</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>12514196-06D7-4396-A40C-C1958AD23AB6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<true/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>source up.bash
+zit new-empty</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8B720BD9-B13E-4656-BE1C-A2E9375F0A2E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<true/>
 				<key>escaping</key>
@@ -1412,7 +1484,7 @@ zit cat-alfred -type etikett</string>
 				<string></string>
 				<key>script</key>
 				<string>source up.bash
-zit push snippet-address</string>
+./.zit/bin/snippet-address</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1467,7 +1539,7 @@ zit push snippet-address</string>
 			<key>xpos</key>
 			<integer>180</integer>
 			<key>ypos</key>
-			<integer>2115</integer>
+			<integer>2240</integer>
 		</dict>
 		<key>064D3FF9-4A53-4386-A85C-ADBC071A4B45</key>
 		<dict>
@@ -1487,10 +1559,17 @@ zit push snippet-address</string>
 			<key>ypos</key>
 			<integer>155</integer>
 		</dict>
+		<key>12514196-06D7-4396-A40C-C1958AD23AB6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>25</integer>
+			<key>ypos</key>
+			<integer>1725</integer>
+		</dict>
 		<key>13E9F113-DFEA-40CD-805E-ECEA23220CD8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>185</integer>
+			<integer>235</integer>
 			<key>ypos</key>
 			<integer>1195</integer>
 		</dict>
@@ -1499,7 +1578,7 @@ zit push snippet-address</string>
 			<key>xpos</key>
 			<integer>395</integer>
 			<key>ypos</key>
-			<integer>1950</integer>
+			<integer>2075</integer>
 		</dict>
 		<key>2FADD146-953E-4E59-AC83-1D5DC61FB5B4</key>
 		<dict>
@@ -1513,14 +1592,14 @@ zit push snippet-address</string>
 			<key>xpos</key>
 			<integer>355</integer>
 			<key>ypos</key>
-			<integer>1730</integer>
+			<integer>1855</integer>
 		</dict>
 		<key>486C81D5-9C4F-46E2-9330-8FF327B98308</key>
 		<dict>
 			<key>xpos</key>
 			<integer>25</integer>
 			<key>ypos</key>
-			<integer>1985</integer>
+			<integer>2110</integer>
 		</dict>
 		<key>4EF55715-BDFA-4F65-BFBF-B86952B87130</key>
 		<dict>
@@ -1545,7 +1624,7 @@ zit push snippet-address</string>
 			<key>xpos</key>
 			<integer>590</integer>
 			<key>ypos</key>
-			<integer>1860</integer>
+			<integer>1985</integer>
 		</dict>
 		<key>62AA6EFA-0EE7-4281-A486-86668304065D</key>
 		<dict>
@@ -1568,7 +1647,7 @@ zit push snippet-address</string>
 			<key>xpos</key>
 			<integer>180</integer>
 			<key>ypos</key>
-			<integer>1985</integer>
+			<integer>2110</integer>
 		</dict>
 		<key>7C84E71B-3981-4226-A420-31E84E93C20A</key>
 		<dict>
@@ -1586,12 +1665,19 @@ zit push snippet-address</string>
 			<key>ypos</key>
 			<integer>465</integer>
 		</dict>
+		<key>8B720BD9-B13E-4656-BE1C-A2E9375F0A2E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>355</integer>
+			<key>ypos</key>
+			<integer>1725</integer>
+		</dict>
 		<key>900C44A0-C4ED-41E4-9DBC-8C56D9AB6D65</key>
 		<dict>
 			<key>note</key>
 			<string>z new</string>
 			<key>xpos</key>
-			<integer>360</integer>
+			<integer>440</integer>
 			<key>ypos</key>
 			<integer>1195</integer>
 		</dict>
@@ -1616,7 +1702,7 @@ zit push snippet-address</string>
 			<key>xpos</key>
 			<integer>25</integer>
 			<key>ypos</key>
-			<integer>2115</integer>
+			<integer>2240</integer>
 		</dict>
 		<key>B25DCC72-385D-4538-91F1-28082AF95CFA</key>
 		<dict>
@@ -1646,21 +1732,21 @@ zit push snippet-address</string>
 			<key>xpos</key>
 			<integer>25</integer>
 			<key>ypos</key>
-			<integer>1860</integer>
+			<integer>1985</integer>
 		</dict>
 		<key>C822DAF0-D9F7-43B4-907B-C5A8856CE025</key>
 		<dict>
 			<key>xpos</key>
 			<integer>25</integer>
 			<key>ypos</key>
-			<integer>1730</integer>
+			<integer>1855</integer>
 		</dict>
 		<key>CBD7690E-326B-4130-AC0C-928BA90D0CAB</key>
 		<dict>
 			<key>note</key>
 			<string>z new --with-file</string>
 			<key>xpos</key>
-			<integer>370</integer>
+			<integer>440</integer>
 			<key>ypos</key>
 			<integer>735</integer>
 		</dict>
@@ -1694,14 +1780,14 @@ zit push snippet-address</string>
 			<key>note</key>
 			<string>z new</string>
 			<key>xpos</key>
-			<integer>230</integer>
+			<integer>440</integer>
 			<key>ypos</key>
 			<integer>900</integer>
 		</dict>
 		<key>E1D8A30D-4702-4D11-9B7E-AD0B66DB2564</key>
 		<dict>
 			<key>xpos</key>
-			<integer>185</integer>
+			<integer>235</integer>
 			<key>ypos</key>
 			<integer>1065</integer>
 		</dict>
@@ -1710,7 +1796,7 @@ zit push snippet-address</string>
 			<key>xpos</key>
 			<integer>180</integer>
 			<key>ypos</key>
-			<integer>1730</integer>
+			<integer>1855</integer>
 		</dict>
 		<key>E930A5C7-5894-49B1-A64C-58F1EA230567</key>
 		<dict>
@@ -1733,12 +1819,12 @@ zit push snippet-address</string>
 			<key>xpos</key>
 			<integer>180</integer>
 			<key>ypos</key>
-			<integer>1860</integer>
+			<integer>1985</integer>
 		</dict>
 		<key>F63E80DD-2D11-4A18-8141-74CE49C17A19</key>
 		<dict>
 			<key>xpos</key>
-			<integer>360</integer>
+			<integer>440</integer>
 			<key>ypos</key>
 			<integer>1065</integer>
 		</dict>
