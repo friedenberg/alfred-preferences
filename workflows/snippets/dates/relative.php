@@ -15,7 +15,9 @@ if (!$did_set) {
   throw new RuntimeException("Failed to set default timezone to $tz");
 }
 
-$value = $argv[1];
+if (count($argv) > 1) {
+  $value = $argv[1];
+}
 
 if (empty($value)) {
   $value = "today";
