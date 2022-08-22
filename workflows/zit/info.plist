@@ -527,11 +527,11 @@
 set -x
 case "$actions" in
 	zettel)
-	nohup zit edit -include-akte=false "$1"
+	nohup zit edit -mode zettel-only "$1"
 	;;
 	
 	akte)
-	zit checkout -include-akte=true "$1"
+	zit checkout -mode akte-only "$1"
 	ext="$(zit cat-objekte -type zettel "$1" | grep "AkteExt" | cut -d' ' -f2)"
 	open "$1.$ext"
 	;;
@@ -1530,312 +1530,314 @@ zit cat-alfred -type etikett</string>
 		<key>00AFDE95-80F8-4BC7-8892-CE76CF46CA51</key>
 		<dict>
 			<key>xpos</key>
-			<integer>25</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>900</integer>
+			<real>900</real>
 		</dict>
 		<key>055AD868-B2EC-4355-A89E-DC2B2195E6A0</key>
 		<dict>
 			<key>xpos</key>
-			<integer>180</integer>
+			<real>180</real>
 			<key>ypos</key>
-			<integer>2240</integer>
+			<real>2240</real>
 		</dict>
 		<key>064D3FF9-4A53-4386-A85C-ADBC071A4B45</key>
 		<dict>
 			<key>note</key>
 			<string>zettel</string>
 			<key>xpos</key>
-			<integer>280</integer>
+			<real>280</real>
 			<key>ypos</key>
-			<integer>250</integer>
+			<real>250</real>
 		</dict>
 		<key>0C5B8A2B-102D-4F3B-8C3E-619FB90D0421</key>
 		<dict>
 			<key>note</key>
 			<string>akte</string>
 			<key>xpos</key>
-			<integer>280</integer>
+			<real>280</real>
 			<key>ypos</key>
-			<integer>155</integer>
+			<real>155</real>
 		</dict>
 		<key>12514196-06D7-4396-A40C-C1958AD23AB6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>25</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>1725</integer>
+			<real>1725</real>
 		</dict>
 		<key>13E9F113-DFEA-40CD-805E-ECEA23220CD8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>235</integer>
+			<real>235</real>
 			<key>ypos</key>
-			<integer>1195</integer>
+			<real>1195</real>
 		</dict>
 		<key>269A278F-6548-421F-9F51-4AC1E96D977C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>395</integer>
+			<real>395</real>
 			<key>ypos</key>
-			<integer>2075</integer>
+			<real>2075</real>
 		</dict>
 		<key>2FADD146-953E-4E59-AC83-1D5DC61FB5B4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>445</integer>
+			<real>445</real>
 			<key>ypos</key>
-			<integer>125</integer>
+			<real>125</real>
 		</dict>
 		<key>347AC3E7-3632-41A7-907C-226816744196</key>
 		<dict>
 			<key>xpos</key>
-			<integer>355</integer>
+			<real>355</real>
 			<key>ypos</key>
-			<integer>1855</integer>
+			<real>1855</real>
 		</dict>
 		<key>486C81D5-9C4F-46E2-9330-8FF327B98308</key>
 		<dict>
 			<key>xpos</key>
-			<integer>25</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>2110</integer>
+			<real>2110</real>
 		</dict>
 		<key>4EF55715-BDFA-4F65-BFBF-B86952B87130</key>
 		<dict>
 			<key>note</key>
 			<string>-kind files-copy</string>
 			<key>xpos</key>
-			<integer>375</integer>
+			<real>375</real>
 			<key>ypos</key>
-			<integer>1380</integer>
+			<real>1380</real>
 		</dict>
 		<key>591C4D35-1327-4991-A803-84171A901C0A</key>
 		<dict>
 			<key>note</key>
 			<string>z new --with-file</string>
 			<key>xpos</key>
-			<integer>525</integer>
+			<real>525</real>
 			<key>ypos</key>
-			<integer>1480</integer>
+			<real>1480</real>
 		</dict>
 		<key>61F2BA51-DFAC-482A-BCA0-67082B2BE2EB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>590</integer>
+			<real>590</real>
 			<key>ypos</key>
-			<integer>1985</integer>
+			<real>1985</real>
 		</dict>
 		<key>62AA6EFA-0EE7-4281-A486-86668304065D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>20</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>125</integer>
+			<real>125</real>
 		</dict>
 		<key>632E4A8B-3565-4FAE-83F4-E001EAC70D9F</key>
 		<dict>
 			<key>note</key>
 			<string>open urls</string>
 			<key>xpos</key>
-			<integer>275</integer>
+			<real>275</real>
 			<key>ypos</key>
-			<integer>495</integer>
+			<real>495</real>
 		</dict>
 		<key>6E394148-F0B0-4AD2-B0A9-1E9E7DF3A56D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>180</integer>
+			<real>180</real>
 			<key>ypos</key>
-			<integer>2110</integer>
+			<real>2110</real>
 		</dict>
 		<key>7C84E71B-3981-4226-A420-31E84E93C20A</key>
 		<dict>
 			<key>note</key>
 			<string>-actions edit,open-files</string>
 			<key>xpos</key>
-			<integer>240</integer>
+			<real>240</real>
 			<key>ypos</key>
-			<integer>1435</integer>
+			<real>1435</real>
 		</dict>
 		<key>84E814BA-7190-4987-B8B9-8302163358DB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>440</integer>
+			<real>440</real>
 			<key>ypos</key>
-			<integer>465</integer>
+			<real>465</real>
 		</dict>
 		<key>8B720BD9-B13E-4656-BE1C-A2E9375F0A2E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>355</integer>
+			<real>355</real>
 			<key>ypos</key>
-			<integer>1725</integer>
+			<real>1725</real>
 		</dict>
 		<key>900C44A0-C4ED-41E4-9DBC-8C56D9AB6D65</key>
 		<dict>
 			<key>note</key>
 			<string>z new</string>
 			<key>xpos</key>
-			<integer>440</integer>
+			<real>440</real>
 			<key>ypos</key>
-			<integer>1195</integer>
+			<real>1195</real>
 		</dict>
 		<key>978B92DE-060B-4473-B0DB-BA79D1D1448D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>20</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>465</integer>
+			<real>465</real>
 		</dict>
 		<key>9EEA61D6-0625-470B-903C-EF9A53572FF5</key>
 		<dict>
 			<key>note</key>
 			<string>-actions edit,open-files</string>
 			<key>xpos</key>
-			<integer>240</integer>
+			<real>240</real>
 			<key>ypos</key>
-			<integer>1535</integer>
+			<real>1535</real>
 		</dict>
 		<key>A4B5282D-8B29-4FB5-B5AA-3B29DC84E388</key>
 		<dict>
 			<key>xpos</key>
-			<integer>25</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>2240</integer>
+			<real>2240</real>
 		</dict>
 		<key>B25DCC72-385D-4538-91F1-28082AF95CFA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>25</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>1585</integer>
+			<real>1585</real>
 		</dict>
 		<key>B8D2EB26-99CB-4B04-8D22-2E09479FD16C</key>
 		<dict>
 			<key>note</key>
 			<string>open files</string>
 			<key>xpos</key>
-			<integer>275</integer>
+			<real>275</real>
 			<key>ypos</key>
-			<integer>410</integer>
+			<real>410</real>
 		</dict>
 		<key>C0391AD3-407F-4787-98DC-0DECF44EAB9A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>25</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>1195</integer>
+			<real>1195</real>
 		</dict>
 		<key>C77AC6A2-AC57-4817-AE11-A9B51FBB00D9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>25</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>1985</integer>
+			<real>1985</real>
 		</dict>
 		<key>C822DAF0-D9F7-43B4-907B-C5A8856CE025</key>
 		<dict>
 			<key>xpos</key>
-			<integer>25</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>1855</integer>
+			<real>1855</real>
 		</dict>
 		<key>CBD7690E-326B-4130-AC0C-928BA90D0CAB</key>
 		<dict>
 			<key>note</key>
 			<string>z new --with-file</string>
 			<key>xpos</key>
-			<integer>440</integer>
+			<real>440</real>
 			<key>ypos</key>
-			<integer>735</integer>
+			<real>735</real>
 		</dict>
 		<key>D4626ED2-6585-4F85-8F85-16126374007D</key>
 		<dict>
 			<key>note</key>
 			<string>-kind files</string>
 			<key>xpos</key>
-			<integer>375</integer>
+			<real>375</real>
 			<key>ypos</key>
-			<integer>1615</integer>
+			<real>1615</real>
 		</dict>
 		<key>D4F368CC-C58F-467D-AB29-217054621BCA</key>
 		<dict>
 			<key>note</key>
 			<string>edit</string>
 			<key>xpos</key>
-			<integer>275</integer>
+			<real>275</real>
 			<key>ypos</key>
-			<integer>580</integer>
+			<real>580</real>
 		</dict>
 		<key>D761F97C-7340-4373-9717-EB499709B092</key>
 		<dict>
 			<key>xpos</key>
-			<integer>20</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>735</integer>
+			<real>735</real>
 		</dict>
 		<key>DF84B909-1E7A-4BD8-930B-B684AE486CC4</key>
 		<dict>
 			<key>note</key>
 			<string>z new</string>
 			<key>xpos</key>
-			<integer>440</integer>
+			<real>440</real>
 			<key>ypos</key>
-			<integer>900</integer>
+			<real>900</real>
 		</dict>
 		<key>E1D8A30D-4702-4D11-9B7E-AD0B66DB2564</key>
 		<dict>
 			<key>xpos</key>
-			<integer>235</integer>
+			<real>235</real>
 			<key>ypos</key>
-			<integer>1065</integer>
+			<real>1065</real>
 		</dict>
 		<key>E62888FE-94ED-4737-8F22-0ADAEA07B61C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>180</integer>
+			<real>180</real>
 			<key>ypos</key>
-			<integer>1855</integer>
+			<real>1855</real>
 		</dict>
 		<key>E930A5C7-5894-49B1-A64C-58F1EA230567</key>
 		<dict>
 			<key>xpos</key>
-			<integer>25</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>1350</integer>
+			<real>1350</real>
 		</dict>
 		<key>EC3C07B8-3DDD-43D7-AA29-FD519DC81DD1</key>
 		<dict>
 			<key>note</key>
 			<string>both</string>
 			<key>xpos</key>
-			<integer>280</integer>
+			<real>280</real>
 			<key>ypos</key>
-			<integer>60</integer>
+			<real>60</real>
 		</dict>
 		<key>F60AF8A6-A89F-4B56-9FE0-3C117CBF0AB3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>180</integer>
+			<real>180</real>
 			<key>ypos</key>
-			<integer>1985</integer>
+			<real>1985</real>
 		</dict>
 		<key>F63E80DD-2D11-4A18-8141-74CE49C17A19</key>
 		<dict>
 			<key>xpos</key>
-			<integer>440</integer>
+			<real>440</real>
 			<key>ypos</key>
-			<integer>1065</integer>
+			<real>1065</real>
 		</dict>
 		<key>FF3EA45B-AB46-43B9-A4DE-A68193B90D7E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>25</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>1065</integer>
+			<real>1065</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>variables</key>
 	<dict>
 		<key>ZIT_DIR</key>
