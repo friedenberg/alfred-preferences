@@ -2,17 +2,14 @@
 
 function run(argv) {
   const chrome = Application("Google Chrome");
-  const windows = chrome.windows();
 
-  tabs = [];
+  urls = [];
 
-  for (let idxWindow in windows) {
-    for (let idxTab in windows[idxWindow].tabs) {
-      const tab = windows[idxWindow].tabs[idxTab].get();
-      tabs.push({title: tab.title(), url: tab.url()});
+  for (const urlsOfTab of chrome.windows.tabs.url()) {
+    for (const url of urlsOfTab) {
+      urls.push(url);
     }
   }
 
-  return JSON.stringify(tabs);
+  return JSON.stringify(urls);
 }
-

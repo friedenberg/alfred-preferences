@@ -27,6 +27,7 @@ $date = date_create($value);
 
 $formats = [
   ["Week Number",    "W",           "snippets.date.week_number"],
+  ["Year Week ",     "Y-\WW",       "snippets.date.year_week"],
   ["Time Zone",      "e",           "snippets.date.time_zone"],
   ["Unix",           "U",           "snippets.date.unix"],
   ["File Safe Date", "Y-m-d",       "snippets.date.file_safe_date"],
