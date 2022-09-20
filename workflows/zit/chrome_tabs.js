@@ -3,13 +3,11 @@
 function run(argv) {
   const chrome = Application("Google Chrome");
 
-  urls = [];
+  tabs = [];
 
-  for (const urlsOfTab of chrome.windows.tabs.url()) {
-    for (const url of urlsOfTab) {
-      urls.push(url);
-    }
+  for (let tab in chrome.windows.tabs.) {
+      tabs.push({ title: tabInfo.title(), url: tab.url() });
   }
 
-  return JSON.stringify(urls);
+  return JSON.stringify(tabs);
 }
