@@ -3,13 +3,14 @@
 function run(argv) {
   const chrome = Application("Google Chrome");
 
-  tabs = [];
+  count = 0;
 
   chrome.windows().forEach((window, winIdx) => {
     window.tabs().forEach((tab, tabIdx) => {
-      tabs.push({ title: tab.title(), url: tab.url() });
+      count += 1;
+      tab.close();
     });
   });
 
-  return JSON.stringify(tabs);
+  return JSON.stringify(count);
 }
