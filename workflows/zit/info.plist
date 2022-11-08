@@ -117,6 +117,32 @@
 				<false/>
 			</dict>
 		</array>
+		<key>23B95AB5-0935-42E5-BA4E-628B3E2D2096</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8445F8DA-955D-45F0-B885-50BC40C54D8A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>24B1F7F6-3BAB-45A2-90C6-6FE0E15B065D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>23B95AB5-0935-42E5-BA4E-628B3E2D2096</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>269A278F-6548-421F-9F51-4AC1E96D977C</key>
 		<array>
 			<dict>
@@ -161,6 +187,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>61F2BA51-DFAC-482A-BCA0-67082B2BE2EB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>44D0CD56-FD47-468D-A8FB-BE7C24D96B1C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A34229EC-1FD7-49E8-9596-7614BEAB4523</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -254,6 +293,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>6F1542BC-114F-4808-ADD1-EEC3BD6D4814</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>23B95AB5-0935-42E5-BA4E-628B3E2D2096</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7C84E71B-3981-4226-A420-31E84E93C20A</key>
 		<array>
 			<dict>
@@ -324,6 +376,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>B6B29721-37EA-486A-A5AF-559FF43D7156</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A34229EC-1FD7-49E8-9596-7614BEAB4523</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8445F8DA-955D-45F0-B885-50BC40C54D8A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -499,18 +564,7 @@
 			</dict>
 		</array>
 		<key>E65C2DBD-A2C5-4DC4-A97E-C9EE6512B17D</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8445F8DA-955D-45F0-B885-50BC40C54D8A</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
+		<array/>
 		<key>E930A5C7-5894-49B1-A64C-58F1EA230567</key>
 		<array>
 			<dict>
@@ -988,7 +1042,7 @@ zit push chrome "$@"</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>zus</string>
+				<string>zusa</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -1010,7 +1064,7 @@ zit pull chrome !toml-bookmark "$@"</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Open !toml-bookark Zettelen</string>
+				<string>Save all !toml-bookark Zettelen</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -1022,6 +1076,181 @@ zit pull chrome !toml-bookmark "$@"</string>
 			<string>E65C2DBD-A2C5-4DC4-A97E-C9EE6512B17D</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<true/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>source up.bash
+set -x
+tag="zz-import-$(date -u +%Y-%m-%d)"
+zit pull chrome "$tag"
+zit organize "$tag"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A34229EC-1FD7-49E8-9596-7614BEAB4523</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>zus</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>source up.bash
+set -x
+zit cat-alfred -type etikett !toml-bookmark</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>z</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Save !toml-bookark Zettelen using Etikett</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>44D0CD56-FD47-468D-A8FB-BE7C24D96B1C</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>zus</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>source up.bash
+set -x
+zit cat-alfred -type etikett !toml-bookmark</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>z</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Save !toml-bookark Zettelen using existing Etikett</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>24B1F7F6-3BAB-45A2-90C6-6FE0E15B065D</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<true/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>source up.bash
+set -x
+zit pull chrome "$@"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>23B95AB5-0935-42E5-BA4E-628B3E2D2096</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>zus</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Save !toml-bookark Zettelen using new Etikett</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>6F1542BC-114F-4808-ADD1-EEC3BD6D4814</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1769,14 +1998,14 @@ zit cat-alfred -type etikett</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>1175</real>
+			<real>1375</real>
 		</dict>
 		<key>055AD868-B2EC-4355-A89E-DC2B2195E6A0</key>
 		<dict>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>2575</real>
+			<real>2675</real>
 		</dict>
 		<key>064D3FF9-4A53-4386-A85C-ADBC071A4B45</key>
 		<dict>
@@ -1808,21 +2037,35 @@ zit cat-alfred -type etikett</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>2060</real>
+			<real>2160</real>
 		</dict>
 		<key>13E9F113-DFEA-40CD-805E-ECEA23220CD8</key>
 		<dict>
 			<key>xpos</key>
 			<real>235</real>
 			<key>ypos</key>
-			<real>1530</real>
+			<real>1635</real>
+		</dict>
+		<key>23B95AB5-0935-42E5-BA4E-628B3E2D2096</key>
+		<dict>
+			<key>xpos</key>
+			<real>245</real>
+			<key>ypos</key>
+			<real>965</real>
+		</dict>
+		<key>24B1F7F6-3BAB-45A2-90C6-6FE0E15B065D</key>
+		<dict>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>965</real>
 		</dict>
 		<key>269A278F-6548-421F-9F51-4AC1E96D977C</key>
 		<dict>
 			<key>xpos</key>
 			<real>395</real>
 			<key>ypos</key>
-			<real>2410</real>
+			<real>2510</real>
 		</dict>
 		<key>2F477343-B149-41BB-973F-4A74B2061F73</key>
 		<dict>
@@ -1843,7 +2086,14 @@ zit cat-alfred -type etikett</string>
 			<key>xpos</key>
 			<real>355</real>
 			<key>ypos</key>
-			<real>2190</real>
+			<real>2290</real>
+		</dict>
+		<key>44D0CD56-FD47-468D-A8FB-BE7C24D96B1C</key>
+		<dict>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>835</real>
 		</dict>
 		<key>46EA9F03-CB57-4F33-BA08-1DC6CDD95937</key>
 		<dict>
@@ -1857,7 +2107,7 @@ zit cat-alfred -type etikett</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>2445</real>
+			<real>2545</real>
 		</dict>
 		<key>4EF55715-BDFA-4F65-BFBF-B86952B87130</key>
 		<dict>
@@ -1866,7 +2116,7 @@ zit cat-alfred -type etikett</string>
 			<key>xpos</key>
 			<real>375</real>
 			<key>ypos</key>
-			<real>1715</real>
+			<real>1820</real>
 		</dict>
 		<key>591C4D35-1327-4991-A803-84171A901C0A</key>
 		<dict>
@@ -1875,14 +2125,14 @@ zit cat-alfred -type etikett</string>
 			<key>xpos</key>
 			<real>525</real>
 			<key>ypos</key>
-			<real>1815</real>
+			<real>1920</real>
 		</dict>
 		<key>61F2BA51-DFAC-482A-BCA0-67082B2BE2EB</key>
 		<dict>
 			<key>xpos</key>
 			<real>590</real>
 			<key>ypos</key>
-			<real>2320</real>
+			<real>2420</real>
 		</dict>
 		<key>62AA6EFA-0EE7-4281-A486-86668304065D</key>
 		<dict>
@@ -1896,7 +2146,14 @@ zit cat-alfred -type etikett</string>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>2445</real>
+			<real>2545</real>
+		</dict>
+		<key>6F1542BC-114F-4808-ADD1-EEC3BD6D4814</key>
+		<dict>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>1095</real>
 		</dict>
 		<key>7C84E71B-3981-4226-A420-31E84E93C20A</key>
 		<dict>
@@ -1905,7 +2162,7 @@ zit cat-alfred -type etikett</string>
 			<key>xpos</key>
 			<real>240</real>
 			<key>ypos</key>
-			<real>1770</real>
+			<real>1875</real>
 		</dict>
 		<key>8445F8DA-955D-45F0-B885-50BC40C54D8A</key>
 		<dict>
@@ -1928,7 +2185,7 @@ zit cat-alfred -type etikett</string>
 			<key>xpos</key>
 			<real>355</real>
 			<key>ypos</key>
-			<real>2060</real>
+			<real>2160</real>
 		</dict>
 		<key>900C44A0-C4ED-41E4-9DBC-8C56D9AB6D65</key>
 		<dict>
@@ -1937,7 +2194,7 @@ zit cat-alfred -type etikett</string>
 			<key>xpos</key>
 			<real>440</real>
 			<key>ypos</key>
-			<real>1530</real>
+			<real>1635</real>
 		</dict>
 		<key>950160DE-830C-4407-BD99-4B01572757EC</key>
 		<dict>
@@ -1955,7 +2212,7 @@ zit cat-alfred -type etikett</string>
 			<key>xpos</key>
 			<real>240</real>
 			<key>ypos</key>
-			<real>1870</real>
+			<real>1975</real>
 		</dict>
 		<key>A06D2CD5-673F-419A-AB99-A550A0EACFC5</key>
 		<dict>
@@ -1966,19 +2223,26 @@ zit cat-alfred -type etikett</string>
 			<key>ypos</key>
 			<real>260</real>
 		</dict>
+		<key>A34229EC-1FD7-49E8-9596-7614BEAB4523</key>
+		<dict>
+			<key>xpos</key>
+			<real>245</real>
+			<key>ypos</key>
+			<real>835</real>
+		</dict>
 		<key>A4B5282D-8B29-4FB5-B5AA-3B29DC84E388</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>2575</real>
+			<real>2675</real>
 		</dict>
 		<key>B25DCC72-385D-4538-91F1-28082AF95CFA</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>1920</real>
+			<real>2025</real>
 		</dict>
 		<key>B6B29721-37EA-486A-A5AF-559FF43D7156</key>
 		<dict>
@@ -1992,21 +2256,21 @@ zit cat-alfred -type etikett</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>1530</real>
+			<real>1635</real>
 		</dict>
 		<key>C77AC6A2-AC57-4817-AE11-A9B51FBB00D9</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>2320</real>
+			<real>2420</real>
 		</dict>
 		<key>C822DAF0-D9F7-43B4-907B-C5A8856CE025</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>2190</real>
+			<real>2290</real>
 		</dict>
 		<key>CBD7690E-326B-4130-AC0C-928BA90D0CAB</key>
 		<dict>
@@ -2015,7 +2279,7 @@ zit cat-alfred -type etikett</string>
 			<key>xpos</key>
 			<real>440</real>
 			<key>ypos</key>
-			<real>1010</real>
+			<real>1235</real>
 		</dict>
 		<key>D4626ED2-6585-4F85-8F85-16126374007D</key>
 		<dict>
@@ -2024,14 +2288,14 @@ zit cat-alfred -type etikett</string>
 			<key>xpos</key>
 			<real>375</real>
 			<key>ypos</key>
-			<real>1950</real>
+			<real>2055</real>
 		</dict>
 		<key>D761F97C-7340-4373-9717-EB499709B092</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>1010</real>
+			<real>1235</real>
 		</dict>
 		<key>DF84B909-1E7A-4BD8-930B-B684AE486CC4</key>
 		<dict>
@@ -2040,35 +2304,35 @@ zit cat-alfred -type etikett</string>
 			<key>xpos</key>
 			<real>440</real>
 			<key>ypos</key>
-			<real>1175</real>
+			<real>1375</real>
 		</dict>
 		<key>E1D8A30D-4702-4D11-9B7E-AD0B66DB2564</key>
 		<dict>
 			<key>xpos</key>
 			<real>235</real>
 			<key>ypos</key>
-			<real>1400</real>
+			<real>1505</real>
 		</dict>
 		<key>E62888FE-94ED-4737-8F22-0ADAEA07B61C</key>
 		<dict>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>2190</real>
+			<real>2290</real>
 		</dict>
 		<key>E65C2DBD-A2C5-4DC4-A97E-C9EE6512B17D</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>855</real>
+			<real>830</real>
 		</dict>
 		<key>E930A5C7-5894-49B1-A64C-58F1EA230567</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>1685</real>
+			<real>1790</real>
 		</dict>
 		<key>EC3C07B8-3DDD-43D7-AA29-FD519DC81DD1</key>
 		<dict>
@@ -2084,21 +2348,21 @@ zit cat-alfred -type etikett</string>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>2320</real>
+			<real>2420</real>
 		</dict>
 		<key>F63E80DD-2D11-4A18-8141-74CE49C17A19</key>
 		<dict>
 			<key>xpos</key>
 			<real>440</real>
 			<key>ypos</key>
-			<real>1400</real>
+			<real>1505</real>
 		</dict>
 		<key>FF3EA45B-AB46-43B9-A4DE-A68193B90D7E</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>1400</real>
+			<real>1505</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
