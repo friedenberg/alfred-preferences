@@ -868,7 +868,7 @@ nohup zit edit -mode "$actions" "$1"</string>
 				<key>script</key>
 				<string>source up.bash
 set -x
-zit cat-alfred</string>
+zit cat-alfred :z,e</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -941,7 +941,7 @@ zit cat-alfred</string>
 				<key>text</key>
 				<string>{query}</string>
 				<key>title</key>
-				<string>Results of zit new</string>
+				<string>Zit Results</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -1011,7 +1011,7 @@ zit cat-alfred !toml-bookmark</string>
 				<key>script</key>
 				<string>source up.bash
 set -x
-zit push chrome "$@"</string>
+.zit/bin/chrome push "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1088,7 +1088,7 @@ zit pull chrome !toml-bookmark "$@"</string>
 				<string>source up.bash
 set -x
 tag="zz-import-$(date -u +%Y-%m-%d)"
-zit pull chrome "$tag"
+.zit/bin/chrome pull "$tag"
 zit organize "$tag"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1216,7 +1216,7 @@ zit cat-alfred -type etikett !toml-bookmark</string>
 				<key>script</key>
 				<string>source up.bash
 set -x
-zit pull chrome "$@"</string>
+.zit/bin/chrome pull "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1305,9 +1305,9 @@ nohup z add -kind files -actions edit,open-files "$@"</string>
 				<string>source up.bash
 
 if [[ "$#" -gt 0 ]]; then
-	zit new -edit -bezeichnung "$*"
+	zit new -edit=true -bezeichnung "$*"
 else
-	zit new -edit
+	zit new -edit=true
 fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1686,7 +1686,7 @@ zit new-empty</string>
 				<integer>102</integer>
 				<key>script</key>
 				<string>source up.bash
-zit cat-objekte -type akte "$@"</string>
+zit format-zettel -mode akte text "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1885,7 +1885,7 @@ zit cat-alfred -type hinweis</string>
 				<string></string>
 				<key>script</key>
 				<string>source up.bash
-zit cat-alfred -type etikett</string>
+zit cat-alfred :e</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
