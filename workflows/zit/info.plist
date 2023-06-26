@@ -104,19 +104,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>13E9F113-DFEA-40CD-805E-ECEA23220CD8</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>900C44A0-C4ED-41E4-9DBC-8C56D9AB6D65</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>23B95AB5-0935-42E5-BA4E-628B3E2D2096</key>
 		<array>
 			<dict>
@@ -446,19 +433,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>C0391AD3-407F-4787-98DC-0DECF44EAB9A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>13E9F113-DFEA-40CD-805E-ECEA23220CD8</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>C77AC6A2-AC57-4817-AE11-A9B51FBB00D9</key>
 		<array>
 			<dict>
@@ -537,19 +511,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>E1D8A30D-4702-4D11-9B7E-AD0B66DB2564</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>F63E80DD-2D11-4A18-8141-74CE49C17A19</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>E62888FE-94ED-4737-8F22-0ADAEA07B61C</key>
 		<array>
 			<dict>
@@ -606,19 +567,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>269A278F-6548-421F-9F51-4AC1E96D977C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>FF3EA45B-AB46-43B9-A4DE-A68193B90D7E</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>E1D8A30D-4702-4D11-9B7E-AD0B66DB2564</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -686,9 +634,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>source up.bash
-set -x
-zit cat-alfred -include-hidden</string>
+				<string>./run.bash zit cat-alfred :?z,e</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -717,21 +663,19 @@ zit cat-alfred -include-hidden</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>source up.bash
-set -x
-case "$actions" in
+				<string>case "$actions" in
 	zettel)
-	nohup zit edit -mode zettel-only "$1"
+	nohup ./run.bash zit edit -mode zettel-only "$1"
 	;;
 	
 	akte)
-	zit checkout -mode akte-only "$1"
-	ext="$(zit cat-objekte -type zettel "$1" | grep "AkteExt" | cut -d' ' -f2)"
+	./run.bash zit checkout -mode akte-only "$1"
+	ext="$(./run.bash zit cat-objekte -type zettel "$1" | grep "AkteExt" | cut -d' ' -f2)"
 	open "$1.$ext"
 	;;
 	
 	both)
-	nohup zit edit "$1"
+	nohup ./run.bash zit edit "$1"
 	;;
 
 	*)
@@ -821,9 +765,8 @@ esac</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>source up.bash
-set -x
-nohup zit edit -mode "$actions" "$1"</string>
+				<string>set -x
+nohup ./run.bash zit edit -mode "$actions" "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -866,9 +809,7 @@ nohup zit edit -mode "$actions" "$1"</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>source up.bash
-set -x
-zit cat-alfred :z,e</string>
+				<string>./run.bash zit cat-alfred :z,e</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -978,9 +919,7 @@ zit cat-alfred :z,e</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>source up.bash
-set -x
-zit cat-alfred !toml-bookmark</string>
+				<string>./run.bash zit cat-alfred !toml-bookmark</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1089,7 +1028,7 @@ zit pull chrome !toml-bookmark "$@"</string>
 set -x
 tag="zz-import-$(date -u +%Y-%m-%d)"
 .zit/bin/chrome pull "$tag"
-zit organize "$tag"</string>
+./run.bash zit organize "$tag"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1132,9 +1071,7 @@ zit organize "$tag"</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>source up.bash
-set -x
-zit cat-alfred -type etikett !toml-bookmark</string>
+				<string>./run.bash zit cat-alfred !toml-bookmark:e</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1183,9 +1120,7 @@ zit cat-alfred -type etikett !toml-bookmark</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>source up.bash
-set -x
-zit cat-alfred -type etikett !toml-bookmark</string>
+				<string>./run.bash zit cat-alfred !toml-bookmark:e</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1279,7 +1214,7 @@ set -x
 				<key>script</key>
 				<string>source up.bash
 
-nohup z add -kind files -actions edit,open-files "$@"</string>
+nohup ./run.bash zit add -organize -delete "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1302,12 +1237,10 @@ nohup z add -kind files -actions edit,open-files "$@"</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>source up.bash
-
-if [[ "$#" -gt 0 ]]; then
-	zit new -edit=true -bezeichnung "$*"
+				<string>if [[ "$#" -gt 0 ]]; then
+	./run.bash zit new -edit=true -bezeichnung "$*"
 else
-	zit new -edit=true
+	./run.bash zit new -edit=true
 fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1343,158 +1276,6 @@ fi</string>
 			<string>00AFDE95-80F8-4BC7-8892-CE76CF46CA51</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<true/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>source up.bash
-
-z exec 1630274941 \
-	| jq -r ".[]" \
-	| nohup xargs z add -kind urls -actions edit -tags "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>F63E80DD-2D11-4A18-8141-74CE49C17A19</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Enter tags to add</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>E1D8A30D-4702-4D11-9B7E-AD0B66DB2564</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>0</integer>
-				<key>hotmod</key>
-				<integer>0</integer>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>FF3EA45B-AB46-43B9-A4DE-A68193B90D7E</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>0</integer>
-				<key>hotmod</key>
-				<integer>0</integer>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>C0391AD3-407F-4787-98DC-0DECF44EAB9A</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<true/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>source up.bash
-nohup z add -kind urls -actions edit "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>900C44A0-C4ED-41E4-9DBC-8C56D9AB6D65</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<true/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>source up.bash
-z exec 1640193865</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>chrome_get_current_url.z.js</string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>13E9F113-DFEA-40CD-805E-ECEA23220CD8</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1661,8 +1442,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>source up.bash
-zit new-empty</string>
+				<string>./run.bash zit new-empty</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1685,8 +1465,7 @@ zit new-empty</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>source up.bash
-zit format-zettel -mode akte text "$@"</string>
+				<string>./run.bash zit format-zettel -mode akte text "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1744,8 +1523,7 @@ zit format-zettel -mode akte text "$@"</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>source up.bash
-zit cat-alfred -type zettel</string>
+				<string>./run.bash zit cat-alfred :z</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1792,8 +1570,7 @@ zit cat-alfred -type zettel</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>source up.bash
-zit cat-alfred -type hinweis</string>
+				<string>./run.bash zit cat-alfred :</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1884,8 +1661,7 @@ zit cat-alfred -type hinweis</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>source up.bash
-zit cat-alfred :e</string>
+				<string>./run.bash zit cat-alfred :e</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -2039,13 +1815,6 @@ zit cat-alfred :e</string>
 			<key>ypos</key>
 			<real>2160</real>
 		</dict>
-		<key>13E9F113-DFEA-40CD-805E-ECEA23220CD8</key>
-		<dict>
-			<key>xpos</key>
-			<real>235</real>
-			<key>ypos</key>
-			<real>1635</real>
-		</dict>
 		<key>23B95AB5-0935-42E5-BA4E-628B3E2D2096</key>
 		<dict>
 			<key>xpos</key>
@@ -2187,15 +1956,6 @@ zit cat-alfred :e</string>
 			<key>ypos</key>
 			<real>2160</real>
 		</dict>
-		<key>900C44A0-C4ED-41E4-9DBC-8C56D9AB6D65</key>
-		<dict>
-			<key>note</key>
-			<string>z new</string>
-			<key>xpos</key>
-			<real>440</real>
-			<key>ypos</key>
-			<real>1635</real>
-		</dict>
 		<key>950160DE-830C-4407-BD99-4B01572757EC</key>
 		<dict>
 			<key>note</key>
@@ -2251,13 +2011,6 @@ zit cat-alfred :e</string>
 			<key>ypos</key>
 			<real>135</real>
 		</dict>
-		<key>C0391AD3-407F-4787-98DC-0DECF44EAB9A</key>
-		<dict>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>1635</real>
-		</dict>
 		<key>C77AC6A2-AC57-4817-AE11-A9B51FBB00D9</key>
 		<dict>
 			<key>xpos</key>
@@ -2306,13 +2059,6 @@ zit cat-alfred :e</string>
 			<key>ypos</key>
 			<real>1375</real>
 		</dict>
-		<key>E1D8A30D-4702-4D11-9B7E-AD0B66DB2564</key>
-		<dict>
-			<key>xpos</key>
-			<real>235</real>
-			<key>ypos</key>
-			<real>1505</real>
-		</dict>
 		<key>E62888FE-94ED-4737-8F22-0ADAEA07B61C</key>
 		<dict>
 			<key>xpos</key>
@@ -2349,20 +2095,6 @@ zit cat-alfred :e</string>
 			<real>180</real>
 			<key>ypos</key>
 			<real>2420</real>
-		</dict>
-		<key>F63E80DD-2D11-4A18-8141-74CE49C17A19</key>
-		<dict>
-			<key>xpos</key>
-			<real>440</real>
-			<key>ypos</key>
-			<real>1505</real>
-		</dict>
-		<key>FF3EA45B-AB46-43B9-A4DE-A68193B90D7E</key>
-		<dict>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>1505</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
