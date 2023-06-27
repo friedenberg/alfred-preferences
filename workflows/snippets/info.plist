@@ -1349,8 +1349,7 @@ jq ".[] | {items: [{uid: .id, title: .title, arg: .value, subtitle: .value, auto
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>eval "$(/usr/libexec/path_helper)" &gt;/dev/null
-./dates/relative.php "$@"</string>
+				<string>../run.bash php ./dates/relative.php "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

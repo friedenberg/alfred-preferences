@@ -22,19 +22,17 @@
         with
         pkgs;
         {
-          apps.zit = {
-            type = "app";
-            program = "${zit.packages.${system}.default}/bin/zit";
+          packages.zit = zit.packages.${system}.default;
+          packages.php = pkgs.php;
+          packages.bash = pkgs.bash;
+
+          devShells.default = pkgs.mkShell {
+            buildInputs = with pkgs; [
+              zit.packages.${system}.default
+              php
+              bash
+            ];
           };
-          packages.default = zit.packages.${system}.default;
-          devShells.default =
-            mkShell
-              {
-                buildInputs =
-                  [
-                    zit.packages.${system}.default
-                  ];
-              };
         }
       );
 }

@@ -634,7 +634,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./run.bash zit cat-alfred :?z,e</string>
+				<string>../run.bash zit cat-alfred :?z,e</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -665,17 +665,17 @@
 				<key>script</key>
 				<string>case "$actions" in
 	zettel)
-	nohup ./run.bash zit edit -mode zettel-only "$1"
+	nohup ../run.bash zit edit -mode zettel-only "$1"
 	;;
 	
 	akte)
-	./run.bash zit checkout -mode akte-only "$1"
-	ext="$(./run.bash zit cat-objekte -type zettel "$1" | grep "AkteExt" | cut -d' ' -f2)"
+	../run.bash zit checkout -mode akte-only "$1"
+	ext="$(../run.bash zit cat-objekte -type zettel "$1" | grep "AkteExt" | cut -d' ' -f2)"
 	open "$1.$ext"
 	;;
 	
 	both)
-	nohup ./run.bash zit edit "$1"
+	nohup ../run.bash zit edit "$1"
 	;;
 
 	*)
@@ -766,7 +766,7 @@ esac</string>
 				<integer>102</integer>
 				<key>script</key>
 				<string>set -x
-nohup ./run.bash zit edit -mode "$actions" "$1"</string>
+nohup ../run.bash zit edit -mode "$actions" "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -809,7 +809,7 @@ nohup ./run.bash zit edit -mode "$actions" "$1"</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./run.bash zit cat-alfred :z,e</string>
+				<string>../run.bash zit cat-alfred :z,e</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -919,7 +919,7 @@ nohup ./run.bash zit edit -mode "$actions" "$1"</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./run.bash zit cat-alfred !toml-bookmark</string>
+				<string>../run.bash zit cat-alfred !toml-bookmark</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1028,7 +1028,7 @@ zit pull chrome !toml-bookmark "$@"</string>
 set -x
 tag="zz-import-$(date -u +%Y-%m-%d)"
 .zit/bin/chrome pull "$tag"
-./run.bash zit organize "$tag"</string>
+../run.bash zit organize "$tag"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1071,7 +1071,7 @@ tag="zz-import-$(date -u +%Y-%m-%d)"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./run.bash zit cat-alfred !toml-bookmark:e</string>
+				<string>../run.bash zit cat-alfred !toml-bookmark:e</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1120,7 +1120,7 @@ tag="zz-import-$(date -u +%Y-%m-%d)"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./run.bash zit cat-alfred !toml-bookmark:e</string>
+				<string>../run.bash zit cat-alfred !toml-bookmark:e</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1214,7 +1214,7 @@ set -x
 				<key>script</key>
 				<string>source up.bash
 
-nohup ./run.bash zit add -organize -delete "$@"</string>
+nohup ../run.bash zit add -organize -delete "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1238,9 +1238,9 @@ nohup ./run.bash zit add -organize -delete "$@"</string>
 				<integer>102</integer>
 				<key>script</key>
 				<string>if [[ "$#" -gt 0 ]]; then
-	./run.bash zit new -edit=true -bezeichnung "$*"
+	../run.bash zit new -edit=true -bezeichnung "$*"
 else
-	./run.bash zit new -edit=true
+	../run.bash zit new -edit=true
 fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1442,7 +1442,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./run.bash zit new-empty</string>
+				<string>../run.bash zit new-empty</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1465,7 +1465,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./run.bash zit format-zettel -mode akte text "$@"</string>
+				<string>../run.bash zit format-zettel -mode akte text "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1523,7 +1523,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./run.bash zit cat-alfred :z</string>
+				<string>../run.bash zit cat-alfred :z</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1570,7 +1570,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./run.bash zit cat-alfred :</string>
+				<string>../run.bash zit cat-alfred :</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1661,7 +1661,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./run.bash zit cat-alfred :e</string>
+				<string>../run.bash zit cat-alfred :e</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
