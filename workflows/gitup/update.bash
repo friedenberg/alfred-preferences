@@ -14,19 +14,17 @@ run-command() {
 
   post-notification "Starting: $TITLE" "$COMMAND_STRING"
 
-  if ! ERROR=$("$@" 2>&1); then
+  if ! ERROR=$(../run.bash "$@" 2>&1); then
     fail "Failed: $TITLE" "$ERROR"
   fi
 
   post-notification "Succeeded: $TITLE" "$COMMAND_STRING"
 }
 
-if [[ -z "$UPDATED" ]]; then
+if [[ -z $UPDATED ]]; then
   post-notification "Updating Alfred workflows" ""
 
-  run-command \
-    "Pull Alfred Preferences" \
-    git -c 'url.https://github.com/.insteadOf=git@github.com:' pull
+  run-command "Pull Alfred Preferences" git pull
 
   UPDATED=1 exec "$0"
 fi
@@ -40,4 +38,3 @@ run-command \
   brew bundle install
 
 post-notification "Successfully updated Alfred workflows." ""
-

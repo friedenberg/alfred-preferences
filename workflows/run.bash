@@ -1,12 +1,8 @@
 #! /bin/bash -e
 
 dir_parent="$(dirname "$0")"
-dirs_to_add=("$dir_parent"/result*/bin)
-
-for dir in "${dirs_to_add[@]}"; do
-  dir="$(realpath "$dir")"
-  PATH="$dir:$PATH"
-done
+dir_first_path="$(realpath "$dir_parent/result/bin")"
+PATH="$dir_first_path:$PATH"
 
 ZIT_DIR="${ZIT_DIR/#\~/$HOME}"
 

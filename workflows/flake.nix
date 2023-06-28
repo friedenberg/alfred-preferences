@@ -21,10 +21,23 @@
         in
         with
         pkgs;
-        {
-          packages.zit = zit.packages.${system}.default;
-          packages.php = pkgs.php;
-          packages.bash = pkgs.bash;
+        rec {
+          packages = {
+            all = pkgs.symlinkJoin {
+              name = "all";
+              paths =
+                with
+                pkgs;
+                [
+                  php
+                  bash
+                  git
+                  zit.packages.${system}.default
+                ];
+            };
+
+            default = packages.all;
+          };
 
           devShells.default = pkgs.mkShell {
             buildInputs = with pkgs; [
